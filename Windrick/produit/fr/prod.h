@@ -1,3 +1,5 @@
+/** @struct cette structure qui caracterise le produit et leur environnement favorable
+ */
 typedef struct produit {
 	char nom[20];
 	int type;
