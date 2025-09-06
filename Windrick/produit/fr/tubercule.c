@@ -3,6 +3,10 @@
 #include<stdlib.h>
 #include<string.h>
 
+/** @fn cette fonction qui stock le donnée de tubercule
+ * @param void
+ * @return prod*
+ */
 prod* tubercule() 
 {
 	int n = 4;
