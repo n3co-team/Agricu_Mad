@@ -1,9 +1,0 @@
-<map id="conven.c" name="conven.c">
-<area shape="rect" id="Node000001" title="programme qui contient les definitions des conventions sur les caracteristiques des produits" alt="" coords="92,5,172,31"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,72,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,33,66,72,63,68,115,29"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="97,79,167,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="135,31,135,65,129,65,129,31"/>
-<area shape="rect" id="Node000004" href="$conven_8h.html" title="fichier contiont les declarations des fonctions des convension pour les caracteristiques des produits" alt="" coords="191,79,273,104"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="150,29,206,68,203,73,147,33"/>
-</map>
