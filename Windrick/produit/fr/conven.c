@@ -5,10 +5,11 @@
 
 #include<stdio.h>
 #include<string.h>
+#include"conven.h"
 
 /** @fn cette fonction qui convertie la saison int ent char
- * @param int
- * @return char*
+ *  @param int
+ *  @return char*
  */
 char* c_saison(int i)
 {
@@ -21,7 +22,7 @@ char* c_saison(int i)
 		default: strcpy(s,"indefinie"); break;
 	}
 
-	char* res = malloc(strlen(s));	//resultat
+	char* res = malloc(strlen(s)+1);	//resultat
 	strcpy(res,s);	
 
 	return res;
@@ -29,8 +30,8 @@ char* c_saison(int i)
 
 
 /** @fn cette fonction qui convertie le type de produit int ent char
- * @param int
- * @return char*
+ *  @param int
+ *  @return char*
  */
 char* c_type_prod(int i)
 {
@@ -45,15 +46,15 @@ char* c_type_prod(int i)
 		default: strcpy(t,"indefine"); break;
 	}
 	
-	char* res = malloc(strlen(t));	//resultat
+	char* res = malloc(strlen(t)+1);	//resultat
 	strcpy(res,t);	
 
 	return res;
 }
 
 /** @fn cette fonction qui convertie le mois int ent char
- * @param int
- * @return char*
+ *  @param int
+ *  @return char*
  */
 char* c_mois(int i)
 {
@@ -63,26 +64,26 @@ char* c_mois(int i)
 		case 2: strcpy(m,"Fevrier"); break;
 		case 3: strcpy(m,"Mars"); break;
 		case 4: strcpy(m,"Avril"); break;
-		case 5: strcpy(m,"Mais"); break;
+		case 5: strcpy(m,"Mai"); break;
 		case 6: strcpy(m,"Juin"); break;
 		case 6: strcpy(m,"Juillet"); break;
 		case 6: strcpy(m,"Août"); break;
-		case 6: strcpy(m,"Septptembre"); break;
+		case 6: strcpy(m,"Septembre"); break;
 		case 6: strcpy(m,"Octobre"); break;
 		case 6: strcpy(m,"Novembre"); break;
 		case 6: strcpy(m,"Decembre"); break;
 		default: strcpy(m,"indefine"); break;
 	}
 	
-	char* res = malloc(strlen(m));	//resultat
-	strcpy(res,s);	
+	char* res = malloc(strlen(m)+1);	//resultat
+	strcpy(res,m);	
 
 	return res;
 }
 
 /** @fn cette fonction qui convertie le type de sol int ent char
- * @param int
- * @return char*
+ *  @param int
+ *  @return char*
  */
 char* c_sol(int i)
 {
@@ -94,7 +95,7 @@ char* c_sol(int i)
 		default: strcpy(s,"indefine"); break;
 	}
 	
-	char* res = malloc(strlen(s));	//resultat
+	char* res = malloc(strlen(s)+1);	//resultat
 	strcpy(res,s);	
 
 	return res;

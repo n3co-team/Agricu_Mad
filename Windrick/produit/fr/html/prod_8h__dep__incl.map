@@ -1,0 +1,5 @@
+<map id="prod.h" name="prod.h">
+<area shape="rect" id="Node000001" title="fichier qui contient les declarations des fonctions nessesaires pour la base de donnée des produits" alt="" coords="21,5,84,31"/>
+<area shape="rect" id="Node000002" href="$tubercule_8c.html" title="cette programme qui stock les information basique des tubercules" alt="" coords="5,79,100,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,44,55,79,50,79,50,44"/>
+</map>

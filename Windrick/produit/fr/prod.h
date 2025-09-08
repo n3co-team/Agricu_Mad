@@ -1,6 +1,6 @@
 /** @file prod.h
-* @brief fichier qui contient les declarations des fonctions nessesaires pour la base de donnée des produits
-*@author Windrick
+*  @brief fichier qui contient les declarations des fonctions nessesaires pour la base de donnée des produits
+*  @author Windrick
 */
 
 /** @struct cette structure qui caracterise le produit et leur environnement favorable
@@ -14,8 +14,8 @@ typedef struct produit {
 } prod;
 
 /** @fn cette fonction qui stock le donnée de tubercule
- * @param void
- * @return prod*
+ *  @param void
+ *  @return prod*
  */
 prod* tubercule();
  
