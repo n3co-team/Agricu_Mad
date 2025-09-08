@@ -1,3 +1,7 @@
+/**@file tubercule.c
+ * @brief cette programme qui stock les information basique des tubercules
+ * @author Windrick
+ */
 #include"prod.h"
 #include<stdio.h>
 #include<stdlib.h>
@@ -25,4 +29,18 @@ prod* tubercule()
 	tub[0]->mois[2] = 12;
 	tub[0]->sais[0] = 1;
 	tub[0]->sais[0] = 2;
+
+	strcpy(tub[1]->nom,"Patate douce");
+	tub[1]->6;
+	tub[1]->type[0] = 1;
+	tub[1]->type[1] = 2;
+	tub[1]->mois[0] = 1;
+	tub[1]->mois[1] = 2;
+	tub[1]->mois[2] = 3;
+	tub[1]->mois[3] = 4;
+	tub[1]->mois[4] = 5;
+	tub[1]->mois[5] = 6;
+	tub[1]->mois[6] = 11;
+	tub[1]->mois[7] = 12;
+	tub[1]->sais[0] = 0;
 }

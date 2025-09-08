@@ -1,3 +1,8 @@
+/** @file conven.c
+*@brief programme qui contient les definitions des conventions sur les caracteristiques des produits
+*@author Windrick
+*/
+
 #include<stdio.h>
 #include<string.h>
 

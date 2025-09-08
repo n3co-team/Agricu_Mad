@@ -1,3 +1,8 @@
+/** @file prod.h
+* @brief fichier qui contient les declarations des fonctions nessesaires pour la base de donnée des produits
+*@author Windrick
+*/
+
 /** @struct cette structure qui caracterise le produit et leur environnement favorable
  */
 typedef struct produit {
@@ -8,4 +13,9 @@ typedef struct produit {
 	int mois[12];
 } prod;
 
+/** @fn cette fonction qui stock le donnée de tubercule
+ * @param void
+ * @return prod*
+ */
+prod* tubercule();
  
