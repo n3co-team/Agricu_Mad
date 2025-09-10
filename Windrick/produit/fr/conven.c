@@ -5,6 +5,7 @@
 
 #include<stdio.h>
 #include<string.h>
+#include<stdlib.h>
 #include"conven.h"
 
 /** @fn cette fonction qui convertie la saison int ent char
@@ -66,12 +67,12 @@ char* c_mois(int i)
 		case 4: strcpy(m,"Avril"); break;
 		case 5: strcpy(m,"Mai"); break;
 		case 6: strcpy(m,"Juin"); break;
-		case 6: strcpy(m,"Juillet"); break;
-		case 6: strcpy(m,"Août"); break;
-		case 6: strcpy(m,"Septembre"); break;
-		case 6: strcpy(m,"Octobre"); break;
-		case 6: strcpy(m,"Novembre"); break;
-		case 6: strcpy(m,"Decembre"); break;
+		case 7: strcpy(m,"Juillet"); break;
+		case 8: strcpy(m,"Août"); break;
+		case 9: strcpy(m,"Septembre"); break;
+		case 10: strcpy(m,"Octobre"); break;
+		case 11: strcpy(m,"Novembre"); break;
+		case 12: strcpy(m,"Decembre"); break;
 		default: strcpy(m,"indefine"); break;
 	}
 	
