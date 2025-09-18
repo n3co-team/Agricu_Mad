@@ -50,7 +50,7 @@ echo -e "=======================================================================
 
 echo "Addition des dossier fichier dans dossier courant dans depot git ,branche $CURRENT_BRANCH ..."
 git add .
-# git rm --cached $0
+git rm --cached $0
 verfication
 
 echo "Ajout de commit ..."
