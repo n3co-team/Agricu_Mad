@@ -1,0 +1,3 @@
+[submodule "src/script/prodgen"]
+	path = src/script/prodgen
+	url = git@github.com:WindRk511/prodgen.git
