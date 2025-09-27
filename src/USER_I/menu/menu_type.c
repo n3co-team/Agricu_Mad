@@ -51,10 +51,17 @@ void me_pri(prod* p)
 
 	switch choix {
 		case 0: prod_apropos(); break;
-		case 1: me_list(1,p);
-		case 2: me_list(2,p);
-		case 3: me_list(3,p);
-		case 4: me_list(4,p);
+		case 1: lctype(p);
+me_list(1,p);
+break;
+		case 2: lcsol(p);
+ me_list(2,p);
+		case 3: lcsaison(p);
+me_list(3,p);
+		case 4: lcmois(p);
+ me_list(4,p);
+break;
+default : break;
 	} 	
 }
 
