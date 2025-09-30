@@ -56,10 +56,14 @@ void me_pri(prod* p)
 
 	switch choix {
 		case 0: prod_apropos(); break;
-		case 1: me_list(1,p);
-		case 2: me_list(2,p);
-		case 3: me_list(3,p);
-		case 4: me_list(4,p);
+		case 1:lctype(p);
+			 me_list(1,p); break;
+		case 2: lcsol(p);
+			 me_list(2,p); break;
+		case 3: lcsoison(p);
+			me_list(3,p); break;
+		case 4: lcmois(p);
+			 me_list(4,p); break;
 	} 	
 }
 
@@ -92,11 +96,14 @@ void me_sty (prod* p)
 
 	switch choix {
 		case 0: prod_apropos(); break;
-		case 1: prod_list(p);
-		case 2: me_list(2,p);
-		case 3: me_list(3,p);
-		case 4: me_list(4,p);
-		case 5: anadon(p);
+		case 1: prod_list(p); break;
+		case 2: lcsol(p);
+			me_list(2,p); break;
+		case 3:lcsaison(p);
+			 me_list(3,p); break;
+		case 4: lcmois(p);
+			 me_list(4,p); break;
+		case 5: anadon(p); break;
 	}
 }
 
@@ -130,9 +137,12 @@ void me_sso (prod* p)
 	switch choix {
 		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
-		case 2: me_list(1,p); break;
-		case 3: me_list(3,p); break;
-		case 4: me_list(4,p); break;
+		case 2: lctype(p);
+			me_list(1,p); break;
+		case 3:lcsaison(p);
+			 me_list(3,p); break;
+		case 4: lcmois(p);
+			 me_list(4,p); break;
 		case 5: anadon(p); break;
 	}
 
@@ -168,9 +178,12 @@ void me_ssa (prod* p)
 	switch choix {
 		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
-		case 2: me_list(1,p); break;
-		case 3: me_list(2,p); break;
-		case 4: me_list(4,p); break;
+		case 2: lctype(p);
+			me_list(1,p); break;
+		case 3:  lcsol(p);
+			me_list(2,p); break;
+		case 4: lcmois(p);
+			 me_list(4,p); break;
 		case 5: anadon(p); break;
 	}
 
@@ -206,9 +219,12 @@ void me_smo (prod* p)
 	switch choix {
 		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
-		case 2: me_list(1,p); break;
-		case 3: me_list(2,p); break;
-		case 4: me_list(4,p); break;
+		case 2: lctype(p);
+			me_list(1,p); break;
+		case 3: lcsol(p);
+			 me_list(2,p); break;
+		case 4: lcmois(p);
+			 me_list(4,p); break;
 		case 5: anadon(p); break;
 	}
 
@@ -243,8 +259,10 @@ void me_ssamo (prod* p)
 	switch choix {
 		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
-		case 2: me_list(1,p); break;
-		case 3: me_list(2,p); break;
+		case 2: lctype(p);
+			me_list(1,p); break;
+		case 3: lcsol(p);
+			 me_list(2,p); break;
 		case 4: anadon(p); break;
 	}
 
@@ -280,7 +298,8 @@ void me_styso (prod* p)
 		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
 		case 2: me_list(3,p); break;
-		case 3: me_list(4,p); break;
+		case 3: lcmois(p);
+			 me_list(4,p); break;
 		case 4: anadon(p); break;
 	}
 
@@ -295,9 +314,9 @@ void me_stysamo (prod* p)
 {
 	int choix;
 
-	printf("CHOISIR UN OPTION :\n"); break;
-	printf("1) List de produit"); break;
-	printf("2) Sol"); break;
+	printf("CHOISIR UN OPTION :\n");
+	printf("1) List de produit");
+	printf("2) Sol");
 	printf("3) Je neglise tout les autres choix");
 	
 	while (1)
@@ -314,7 +333,8 @@ void me_stysamo (prod* p)
 	switch choix {
 		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
-		case 2: me_list(2,p); break;
+		case 2:lcsol(p);
+			me_list(2,p); break;
 		case 3: anadon(p); break;
 	}
 
@@ -348,8 +368,9 @@ void me_ssosamo (prod* p)
 	switch choix {
 		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
-		case 2: me_list(1,p); break;
-		case 3: anadon(p);
+		case 2: lctype(p);
+			me_list(1,p); break;
+		case 3: anadon(p); break;
 	}
 
 }
