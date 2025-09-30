@@ -32,10 +32,10 @@ void lcmois (prond* p)
 	printf("11) Novembre\n");
 	printf("12) Décembre\n");
 
-	p->mois[0]=choix(1,12);
+	p->mois[0]=choix_car(1,12);
 }
 
-void lctype ()
+void lctype (prod* p)
 {
 	printf("Choisir le type de produit:\n");
 	printf("1) Cereale\n" );
@@ -45,9 +45,11 @@ void lctype ()
         printf("5) Tubercule\n" );
         printf("6) Racine\n");
         printf("7) INDEFINIT\n");
+	
+	p->type=choix_car(1,7);
 }
 
-void lcsol ()
+void lcsol (prod* p)
 {
 	printf("Choisir le type de sol:\n");
 	 printf("1) Sol sableux,\n");
@@ -62,6 +64,8 @@ void lcsol ()
          printf("10) Léger\n");
          printf("11) Drainé\n");
          printf("12) INDEFINIT,\n");
+
+	p->sol[0]=choix_car(1,12);
 }
 
 void lcsaison () 
@@ -73,6 +77,8 @@ void lcsaison ()
         printf("4) sec,\n");
         printf("5) tempéré,\n");
         printf( "6) INDEFINIT,\n");
+
+	p->saison[0]=choix_car(1,6);
 }
 
 
