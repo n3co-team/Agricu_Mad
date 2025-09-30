@@ -2,6 +2,20 @@
 #include<stdlib.h>
 #include<string.h>
 
+int choix_car(int ch_min, int ch_max)
+{
+	int choix;
+	while (1) {
+		printf("Entrer votre choix : ");
+		scanf("%d",choix);
+		if (choix >= ch_min && choix <= ch_max) {
+			return choix;
+		}
+		fprintf(stderr,"Votre choix doit entre %d et %d\n",ch_min,ch_max);
+		printf("Veuillez reessayer s'il vous plait\n");
+	}
+		
+}
 void lcmois (prond* p) 
 {
 	printf("Choisir le mois:\n");
@@ -18,7 +32,7 @@ void lcmois (prond* p)
 	printf("11) Novembre\n");
 	printf("12) Décembre\n");
 
-	
+	p->mois[0]=choix(1,12);
 }
 
 void lctype ()
@@ -53,12 +67,12 @@ void lcsol ()
 void lcsaison () 
 {
 	printf("Choisir la saison :\n");
- 	printf("2) froid,\n");
+ 	printf("1) froid,\n");
         printf("2) chaud,\n");
-        printf("2) pluie,\n");
-        printf("2) sec,\n");
-        printf("2) tempéré,\n");
-        printf( "2) INDEFINIT,\n");
+        printf("3) pluie,\n");
+        printf("4) sec,\n");
+        printf("5) tempéré,\n");
+        printf( "6) INDEFINIT,\n");
 }
 
 
