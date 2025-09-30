@@ -5,7 +5,6 @@
 */
 
 #include<stdio.h>
-#include"conven.h"
 #include"menu_ui.h"
 
 /** @fn menu_list
@@ -20,8 +19,8 @@ void me_list (int i, prod* p) {
 		case 2: me_sso(p); break;
 	//	case 3: me_ssa(p); break;
 	//	case 4: me_smo(p); break;
-		case 3: me_ styso(p); break;
-		case 4: me_ssamoi(p); break;
+		case 3: me_styso(p); break;
+		case 4: me_ssamo(p); break;
 		case 5: me_stysamo(p); break;
 		case 6: me_ssosamo(p); break;
 	}
@@ -54,13 +53,13 @@ void me_pri(prod* p)
 		printf("R");
 	}
 
-	switch choix {
+	switch (choix) {
 		case 0: prod_apropos(); break;
 		case 1:lctype(p);
 			 me_list(1,p); break;
 		case 2: lcsol(p);
 			 me_list(2,p); break;
-		case 3: lcsoison(p);
+		case 3: lcsaison(p);
 			me_list(3,p); break;
 		case 4: lcmois(p);
 			 me_list(4,p); break;
@@ -94,7 +93,7 @@ void me_sty (prod* p)
 		printf("R");
 	}
 
-	switch choix {
+	switch (choix) {
 		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
 		case 2: lcsol(p);
@@ -134,7 +133,7 @@ void me_sso (prod* p)
 		printf("R");
 	}
 
-	switch choix {
+	switch (choix) {
 		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
 		case 2: lctype(p);
@@ -175,7 +174,7 @@ void me_ssa (prod* p)
 		printf("R");
 	}
 
-	switch choix {
+	switch (choix) {
 		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
 		case 2: lctype(p);
@@ -216,7 +215,7 @@ void me_smo (prod* p)
 		printf("R");
 	}
 
-	switch choix {
+	switch (choix) {
 		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
 		case 2: lctype(p);
@@ -256,7 +255,7 @@ void me_ssamo (prod* p)
 		printf("R");
 	}
 
-	switch choix {
+	switch (choix) {
 		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
 		case 2: lctype(p);
@@ -287,6 +286,12 @@ void me_styso (prod* p)
 	{
 		printf("Entrer votre choix : ");
 		scanf("%d",&choix);
+/** @fn me_styso
+* @details menu sans choix de saison et  mois
+* @param struct produit
+* @return void
+*/
+void me_styso (prod* p)
 		if (choix >= 1 && choix <= 5) {
 			break;
 		}
@@ -294,7 +299,7 @@ void me_styso (prod* p)
 		printf("R");
 	}
 
-	switch choix {
+	switch (choix) {
 		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
 		case 2: me_list(3,p); break;
@@ -330,7 +335,7 @@ void me_stysamo (prod* p)
 		printf("R");
 	}
 
-	switch choix {
+	switch (choix) {
 		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
 		case 2:lcsol(p);
@@ -365,7 +370,7 @@ void me_ssosamo (prod* p)
 		printf("R");
 	}
 
-	switch choix {
+	switch (choix) {
 		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
 		case 2: lctype(p);
