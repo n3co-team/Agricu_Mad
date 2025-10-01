@@ -72,3 +72,4 @@ verfication
 
 echo "mise a jour"
 git pull
+verfication
