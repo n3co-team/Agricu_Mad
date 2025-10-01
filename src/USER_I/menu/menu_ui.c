@@ -63,6 +63,8 @@ void me_pri(prod* p)
 			me_list(3,p); break;
 		case 4: lcmois(p);
 			 me_list(4,p); break;
+		default: fprintf(stderr,"Erreur");
+			exit 1; break;
 	} 	
 }
 
@@ -102,7 +104,8 @@ void me_sty (prod* p)
 			 me_list(3,p); break;
 		case 4: lcmois(p);
 			 me_list(4,p); break;
-		case 5: anadon(p); break;
+		default: fprintf(stderr,"Erreur");
+			exit 1; break;
 	}
 }
 
@@ -142,7 +145,8 @@ void me_sso (prod* p)
 			 me_list(3,p); break;
 		case 4: lcmois(p);
 			 me_list(4,p); break;
-		case 5: anadon(p); break;
+		default: fprintf(stderr,"Erreur");
+			exit 1; break;
 	}
 
 }
@@ -183,7 +187,8 @@ void me_ssa (prod* p)
 			me_list(2,p); break;
 		case 4: lcmois(p);
 			 me_list(4,p); break;
-		case 5: anadon(p); break;
+		default: fprintf(stderr,"Erreur");
+			exit 1; break;
 	}
 
 }
@@ -224,7 +229,8 @@ void me_smo (prod* p)
 			 me_list(2,p); break;
 		case 4: lcmois(p);
 			 me_list(4,p); break;
-		case 5: anadon(p); break;
+		default: fprintf(stderr,"Erreur");
+			exit 1; break;
 	}
 
 }
@@ -262,7 +268,8 @@ void me_ssamo (prod* p)
 			me_list(1,p); break;
 		case 3: lcsol(p);
 			 me_list(2,p); break;
-		case 4: anadon(p); break;
+		default: fprintf(stderr,"Erreur");
+			exit 1; break;
 	}
 
 }
@@ -305,7 +312,8 @@ void me_styso (prod* p)
 		case 2: me_list(3,p); break;
 		case 3: lcmois(p);
 			 me_list(4,p); break;
-		case 4: anadon(p); break;
+		default: fprintf(stderr,"Erreur");
+			exit 1; break;
 	}
 
 }
@@ -340,7 +348,8 @@ void me_stysamo (prod* p)
 		case 1: prod_list(p); break;
 		case 2:lcsol(p);
 			me_list(2,p); break;
-		case 3: anadon(p); break;
+		default: fprintf(stderr,"Erreur");
+			exit 1; break;
 	}
 
 }
@@ -375,7 +384,8 @@ void me_ssosamo (prod* p)
 		case 1: prod_list(p); break;
 		case 2: lctype(p);
 			me_list(1,p); break;
-		case 3: anadon(p); break;
+		default: fprintf(stderr,"Erreur");
+			exit 1; break;
 	}
 
 }
