@@ -1,7 +1,0 @@
-# rehefa avy nanao modification ireto commande telo reto no ampiasaina
-
-git add .
-git commit -m "messazinao"
-git push origin master
-
-## "master" io branche izay misy anao
