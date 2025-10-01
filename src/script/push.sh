@@ -1,5 +1,5 @@
 #!/bin/bash
-
+cat $0>p$0
 VERT="\e[42m"
 ROUGE="\e[41m"
 DEFAUT="\e[0m"
@@ -65,3 +65,8 @@ verfication
 echo "Pousser vers github ..."
 git push 
 verfication
+
+rm p$0
+
+echo "mise a jour"
+git pull
