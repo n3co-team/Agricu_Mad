@@ -69,7 +69,7 @@ void me_pri(prod* p)
 }
 
 /** @fn me_sty
-* @details menu sans choix type de produit
+* @details menu sans choix types de produits
 * @param struct produit
 * @return void
 */
