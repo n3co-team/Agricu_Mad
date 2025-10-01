@@ -236,7 +236,7 @@ void me_smo (prod* p)
 */
 void me_ssamo (prod* p) 
 {
-	int choix; break;
+	int choix;
 
 	printf("CHOISIR UN OPTION :\n");
 	printf("1) List de produit");
