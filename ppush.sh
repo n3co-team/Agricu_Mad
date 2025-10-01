@@ -1,5 +1,5 @@
 #!/bin/bash
-if [[ ! -e ppush.sh ]]
+if [[ ! -e ppush.sh ]] || [[ "$0" != "ppush.sh" ]]
 then
 	cat $0>ppush.sh
 fi
@@ -72,3 +72,4 @@ verfication
 
 echo "mise a jour"
 git pull
+verfication
