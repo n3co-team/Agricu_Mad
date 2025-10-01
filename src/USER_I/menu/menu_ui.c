@@ -5,6 +5,7 @@
 */
 
 #include<stdio.h>
+#include<stdlib.h>
 #include"menu_ui.h"
 
 /** @fn menu_list
@@ -64,7 +65,7 @@ void me_pri(prod* p)
 		case 4: lcmois(p);
 			 me_list(4,p); break;
 		default: fprintf(stderr,"Erreur");
-			exit 1; break;
+			exit (1); break;
 	} 	
 }
 
@@ -105,7 +106,7 @@ void me_sty (prod* p)
 		case 4: lcmois(p);
 			 me_list(4,p); break;
 		default: fprintf(stderr,"Erreur");
-			exit 1; break;
+			exit (1); break;
 	}
 }
 
@@ -146,7 +147,7 @@ void me_sso (prod* p)
 		case 4: lcmois(p);
 			 me_list(4,p); break;
 		default: fprintf(stderr,"Erreur");
-			exit 1; break;
+			exit (1); break;
 	}
 
 }
@@ -188,7 +189,7 @@ void me_ssa (prod* p)
 		case 4: lcmois(p);
 			 me_list(4,p); break;
 		default: fprintf(stderr,"Erreur");
-			exit 1; break;
+			exit (1); break;
 	}
 
 }
@@ -230,7 +231,7 @@ void me_smo (prod* p)
 		case 4: lcmois(p);
 			 me_list(4,p); break;
 		default: fprintf(stderr,"Erreur");
-			exit 1; break;
+			exit (1); break;
 	}
 
 }
@@ -269,7 +270,7 @@ void me_ssamo (prod* p)
 		case 3: lcsol(p);
 			 me_list(2,p); break;
 		default: fprintf(stderr,"Erreur");
-			exit 1; break;
+			exit (1); break;
 	}
 
 }
@@ -293,12 +294,6 @@ void me_styso (prod* p)
 	{
 		printf("Entrer votre choix : ");
 		scanf("%d",&choix);
-/** @fn me_styso
-* @details menu sans choix de saison et  mois
-* @param struct produit
-* @return void
-*/
-void me_styso (prod* p)
 		if (choix >= 1 && choix <= 5) {
 			break;
 		}
@@ -313,7 +308,7 @@ void me_styso (prod* p)
 		case 3: lcmois(p);
 			 me_list(4,p); break;
 		default: fprintf(stderr,"Erreur");
-			exit 1; break;
+			exit (1); break;
 	}
 
 }
@@ -349,7 +344,7 @@ void me_stysamo (prod* p)
 		case 2:lcsol(p);
 			me_list(2,p); break;
 		default: fprintf(stderr,"Erreur");
-			exit 1; break;
+			exit (1); break;
 	}
 
 }
@@ -385,7 +380,7 @@ void me_ssosamo (prod* p)
 		case 2: lctype(p);
 			me_list(1,p); break;
 		default: fprintf(stderr,"Erreur");
-			exit 1; break;
+			exit (1); break;
 	}
 
 }
