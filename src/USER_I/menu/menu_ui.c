@@ -36,23 +36,14 @@ void me_pri(prod* p)
 {
 	int choix;
 
-	printf("CHOISIR UN OPTION :\n");
-	printf("1) Type de produit");
-	printf("2) Caracteristique du sol");
-	printf("3) Saison");
-	printf("4) Mois");
-	printf("0) à propos ");
+	printf("\nCHOISIR UN OPTION :\n");
+	printf("1) Type de produit\n");
+	printf("2) Caracteristique du sol\n");
+	printf("3) Saison\n");
+	printf("4) Mois\n");
+	printf("0) à propos\n ");
 	
-	while (1)
-	{
-		printf("Entrer votre choix : ");
-		scanf("%d",&choix);
-		if (choix >= 0 && choix <= 4) {
-			break;
-		}
-		printf("choix incorrect !!!\n");
-		printf("R");
-	}
+	choix = choix_car(1,5);
 
 	switch (choix) {
 		case 0: prod_apropos(); break;
@@ -61,7 +52,7 @@ void me_pri(prod* p)
 		case 2: lcsol(p);
 			 me_list(2,p); break;
 		case 3: lcsaison(p);
-			me_list(3,p); break;
+			me_list(4,p); break;
 		case 4: lcmois(p);
 			 me_list(4,p); break;
 		default: fprintf(stderr,"Erreur");
@@ -78,33 +69,24 @@ void me_sty (prod* p)
 {
 	int choix;
 
-	printf("CHOISIR UN OPTION :\n");
-	printf("1) List de produit");
-	printf("2) Caracteristique du sol");
-	printf("3) Saison");
-	printf("4) Mois");
-	printf("5) Je neglise tout les autres choix");
+	printf("\nCHOISIR UN OPTION :\n");
+	printf("1) List de produit\n");
+	printf("2) Caracteristique du sol\n");
+	printf("3) Saison\n");
+	printf("4) Mois\n");
+	printf("5) Je neglise tout les autres choix\n");
 	
-	while (1)
-	{
-		printf("Entrer votre choix : ");
-		scanf("%d",&choix);
-		if (choix >= 1 && choix <= 5) {
-			break;
-		}
-		printf("choix incorrect !!!\n");
-		printf("R");
-	}
+	choix = choix_car(1,5);
 
 	switch (choix) {
 		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
 		case 2: lcsol(p);
-			me_list(2,p); break;
+			me_list(3,p); break;
 		case 3:lcsaison(p);
-			 me_list(3,p); break;
+			 me_list(5,p); break;
 		case 4: lcmois(p);
-			 me_list(4,p); break;
+			 me_list(5,p); break;
 		default: fprintf(stderr,"Erreur");
 			exit (1); break;
 	}
@@ -119,33 +101,24 @@ void me_sso (prod* p)
 {
 	int choix;
 
-	printf("CHOISIR UN OPTION :\n");
-	printf("1) List de produit");
-	printf("2) Type de produit"); 
-	printf("3) Saison");
-	printf("4) Mois");
-	printf("5) Je neglise tout les autres choix");
+	printf("\nCHOISIR UN OPTION :\n");
+	printf("1) List de produit\n");
+	printf("2) Type de produit\n"); 
+	printf("3) Saison\n");
+	printf("4) Mois\n");
+//	printf("5) Je neglise tout les autres choix\n");
 	
-	while (1)
-	{
-		printf("Entrer votre choix : ");
-		scanf("%d",&choix);
-		if (choix >= 1 && choix <= 5) {
-			break;
-		}
-		printf("choix incorrect !!!\n");
-		printf("R");
-	}
+	choix = choix_car(1,4);
 
 	switch (choix) {
 		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
 		case 2: lctype(p);
-			me_list(1,p); break;
+			me_list(3,p); break;
 		case 3:lcsaison(p);
-			 me_list(3,p); break;
+			 me_list(6,p); break;
 		case 4: lcmois(p);
-			 me_list(4,p); break;
+			 me_list(6,p); break;
 		default: fprintf(stderr,"Erreur");
 			exit (1); break;
 	}
@@ -161,33 +134,24 @@ void me_ssa (prod* p)
 {
 	int choix;
 
-	printf("CHOISIR UN OPTION :\n");
-	printf("1) List de produit");
-	printf("2) Type de produit"); 
-	printf("3) Sol");
-	printf("4) Mois");
-	printf("5) Je neglise tout les autres choix");
+	printf("\nCHOISIR UN OPTION :\n");
+	printf("1) List de produit\n");
+	printf("2) Type de produit\n"); 
+	printf("3) Sol\n");
+//	printf("4) Mois\n");
+//	printf("5) Je neglise tout les autres choix\n");
 	
-	while (1)
-	{
-		printf("Entrer votre choix : ");
-		scanf("%d",&choix);
-		if (choix >= 1 && choix <= 5) {
-			break;
-		}
-		printf("choix incorrect !!!\n");
-		printf("R");
-	}
+	choix = choix_car(1,3);
 
 	switch (choix) {
 		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
 		case 2: lctype(p);
-			me_list(1,p); break;
+			me_list(5,p); break;
 		case 3:  lcsol(p);
-			me_list(2,p); break;
-		case 4: lcmois(p);
-			 me_list(4,p); break;
+			me_list(6,p); break;
+	//	case 4: lcmois(p);
+	//		 me_list(4,p); break;
 		default: fprintf(stderr,"Erreur");
 			exit (1); break;
 	}
@@ -203,33 +167,24 @@ void me_smo (prod* p)
 {
 	int choix;
 
-	printf("CHOISIR UN OPTION :\n");
+	printf("\nCHOISIR UN OPTION :\n");
 	printf("1) List de produit");
 	printf("2) Type de produit"); 
 	printf("3) Sol");
-	printf("4) Mois");
-	printf("5) Je neglise tout les autres choix");
+//	printf("4) Mois");
+//	printf("5) Je neglise tout les autres choix");
 	
-	while (1)
-	{
-		printf("Entrer votre choix : ");
-		scanf("%d",&choix);
-		if (choix >= 1 && choix <= 5) {
-			break;
-		}
-		printf("choix incorrect !!!\n");
-		printf("R");
-	}
+	choix = choix_car(1,3);
 
 	switch (choix) {
 		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
 		case 2: lctype(p);
-			me_list(1,p); break;
+			me_list(5,p); break;
 		case 3: lcsol(p);
-			 me_list(2,p); break;
-		case 4: lcmois(p);
-			 me_list(4,p); break;
+			 me_list(6,p); break;
+//		case 4: lcmois(p);
+//			 me_list(4,p); break;
 		default: fprintf(stderr,"Erreur");
 			exit (1); break;
 	}
@@ -245,30 +200,21 @@ void me_ssamo (prod* p)
 {
 	int choix;
 
-	printf("CHOISIR UN OPTION :\n");
-	printf("1) List de produit");
-	printf("2) Type de produit"); 
-	printf("3) Sol");
-	printf("4) Je neglise tout les autres choix");
+	printf("\nCHOISIR UN OPTION :\n");
+	printf("1) List de produit\n");
+	printf("2) Type de produit\n"); 
+	printf("3) Sol\n");
+	printf("4) Je neglise tout les autres choix\n");
 	
-	while (1)
-	{
-		printf("Entrer votre choix : ");
-		scanf("%d",&choix);
-		if (choix >= 1 && choix <= 5) {
-			break;
-		}
-		printf("choix incorrect !!!\n");
-		printf("R");
-	}
+	choix = choix_car(1,3);	
 
 	switch (choix) {
 		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
 		case 2: lctype(p);
-			me_list(1,p); break;
+			me_list(5,p); break;
 		case 3: lcsol(p);
-			 me_list(2,p); break;
+			 me_list(6,p); break;
 		default: fprintf(stderr,"Erreur");
 			exit (1); break;
 	}
@@ -284,29 +230,21 @@ void me_styso (prod* p)
 {
 	int choix;
 
-	printf("CHOISIR UN OPTION :\n");
-	printf("1) List de produit");
-	printf("2) Saison"); 
-	printf("3) Mois");
-	printf("4) Je neglise tout les autres choix");
+	printf("\nCHOISIR UN OPTION :\n");
+	printf("1) List de produit\n");
+	printf("2) Saison\n"); 
+	printf("3) Mois\n");
+	printf("4) Je neglise tout les autres choix\n");
 	
-	while (1)
-	{
-		printf("Entrer votre choix : ");
-		scanf("%d",&choix);
-		if (choix >= 1 && choix <= 5) {
-			break;
-		}
-		printf("choix incorrect !!!\n");
-		printf("R");
-	}
+	choix = choix_car(1,3);	
 
 	switch (choix) {
 		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
-		case 2: me_list(3,p); break;
+		case 2: lcsaison(p);
+			prod_list(p); break;
 		case 3: lcmois(p);
-			 me_list(4,p); break;
+			 prod_list(p); break;
 		default: fprintf(stderr,"Erreur");
 			exit (1); break;
 	}
@@ -322,27 +260,17 @@ void me_stysamo (prod* p)
 {
 	int choix;
 
-	printf("CHOISIR UN OPTION :\n");
-	printf("1) List de produit");
-	printf("2) Sol");
-	printf("3) Je neglise tout les autres choix");
+	printf("\nCHOISIR UN OPTION :\n");
+	printf("1) List de produit\n");
+	printf("2) Sol\n");
+//	printf("3) Je neglise tout les autres choix\n");
 	
-	while (1)
-	{
-		printf("Entrer votre choix : ");
-		scanf("%d",&choix);
-		if (choix >= 1 && choix <= 5) {
-			break;
-		}
-		printf("choix incorrect !!!\n");
-		printf("R");
-	}
+	choix = choix_car(1,2);	
 
 	switch (choix) {
-		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
 		case 2:lcsol(p);
-			me_list(2,p); break;
+			prod_list(p); break;
 		default: fprintf(stderr,"Erreur");
 			exit (1); break;
 	}
@@ -358,27 +286,17 @@ void me_ssosamo (prod* p)
 {
 	int choix;
 
-	printf("CHOISIR UN OPTION :\n");
-	printf("1) List de produit");
-	printf("2) Type de produit");
-	printf("3) Je neglise tout les autres choix");
+	printf("\nCHOISIR UN OPTION :\n");
+	printf("1) List de produit\n");
+	printf("2) Type de produit\n");
+//	printf("3) Je neglise tout les autres choix\n");
 	
-	while (1)
-	{
-		printf("Entrer votre choix : ");
-		scanf("%d",&choix);
-		if (choix >= 1 && choix <= 5) {
-			break;
-		}
-		printf("choix incorrect !!!\n");
-		printf("R");
-	}
+	choix = choix_car(1,2);	
 
 	switch (choix) {
-		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
 		case 2: lctype(p);
-			me_list(1,p); break;
+			prod_list; break;
 		default: fprintf(stderr,"Erreur");
 			exit (1); break;
 	}

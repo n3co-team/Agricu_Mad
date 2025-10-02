@@ -1,5 +1,6 @@
 #include<stdio.h>
-#include<menu_iu.h>
+#include<stdlib.h>
+#include"menu_ui.h"
 
 int aide() {
 	printf("Ne pas disponible");
@@ -8,7 +9,7 @@ int aide() {
 
 void prod_list(prod* p) {
 	printf("Pas disponible");
-	exit (1)
+	exit (1);
 }
 
 void prod_apropos() {
