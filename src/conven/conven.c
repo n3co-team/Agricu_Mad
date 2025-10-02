@@ -13,7 +13,7 @@
  */
 char* c_saison(int i)
 {
-	char s[10];
+	char s[50];
 	switch (i) {
 		case 1: strcpy(s,"pluie"); break;
 		case 2: strcpy(s,"sans pluie"); break;
@@ -86,7 +86,7 @@ char* c_mois(int i)
  */
 char* c_sol(int i)
 {
-	char s[15];
+	char s[50];
 	switch (i) {
 		case 1: strcpy(s,"gorgé d'eau"); break;
 		case 2: strcpy(s,"assez d'eau"); break;
