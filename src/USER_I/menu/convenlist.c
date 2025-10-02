@@ -109,3 +109,4 @@ void lcsaison(prod* p)
 
     p->sais[0] = choix_car(1, 6);
 }
+

@@ -105,4 +105,8 @@ void lcsol(prod *p);
 * @param prod*
 * @return void
 */
-void lcsaison(prod* p); 
+void lcsaison(prod* p);
+
+// ce deux fonction est n'est pas permanant
+void prod_apropos();
+void prod_list(prod* p);
