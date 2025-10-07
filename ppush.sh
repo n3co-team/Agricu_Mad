@@ -71,5 +71,5 @@ git push origin $CURRENT_BRANCH
 verfication
 
 echo "mise a jour"
-git pull $CURRENT_BRANCH
+git pull origin $CURRENT_BRANCH
 verfication
