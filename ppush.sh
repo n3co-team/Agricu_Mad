@@ -7,6 +7,7 @@ fi
 VERT="\e[42m"
 ROUGE="\e[41m"
 DEFAUT="\e[0m"
+GRAS="\e[1m"
 UNDERLINE="\e[4m"
 CURRENT_BRANCH=$(git branch | grep "^\*" | cut -d" " -f2)
 
@@ -52,12 +53,12 @@ fi
 #git status
 #echo -e "==================================================================================================\n"
 
-echo "Addition des dossier fichier dans dossier courant dans depot git ,branche $CURRENT_BRANCH ..."
+echo "${GRAS}Addition des dossier fichier dans dossier courant dans depot git ,branche $CURRENT_BRANCH ${DEFAUT}..."
 git add .
 git rm --cached $0
 verfication
 
-echo "Ajout de commit ..."
+echo -e "${GRAS}Ajout de commit${DEFAUT} ..."
 if [[ -z $1 ]]
 then
 	git commit -m "$(date +%D)"
@@ -66,10 +67,10 @@ else
 fi
 verfication
 
-echo "Pousser vers github ..."
+echo "${GRAS}Pousser vers github${DEFAUT} ..."
 git push origin $CURRENT_BRANCH 
 verfication
 
-echo "mise à jour"
+echo "${GRAS}mise à jour${DEFAUT}"
 git pull origin $CURRENT_BRANCH
 verfication
