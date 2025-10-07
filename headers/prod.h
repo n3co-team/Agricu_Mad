@@ -14,8 +14,9 @@ typedef struct produit {
 
 typedef struct list_produit {
 	prod* c;
-	prod* s;
+	struct list_produit* s;
 } lprod;
+
 /** @fn cette fonction qui stock le donnée de tubercule
  *  @param void
  *  @return prod*
