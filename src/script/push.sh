@@ -53,7 +53,7 @@ fi
 #git status
 #echo -e "==================================================================================================\n"
 
-echo "${GRAS}Addition des dossier fichier dans dossier courant dans depot git ,branche $CURRENT_BRANCH ${DEFAUT}..."
+echo -e "${GRAS}Addition des dossier fichier dans dossier courant dans depot git ,branche $CURRENT_BRANCH ${DEFAUT}..."
 git add .
 git rm --cached $0
 verfication
@@ -67,10 +67,10 @@ else
 fi
 verfication
 
-echo "${GRAS}Pousser vers github${DEFAUT} ..."
+echo -e "${GRAS}Pousser vers github${DEFAUT} ..."
 git push origin $CURRENT_BRANCH 
 verfication
 
-echo "${GRAS}mise à jour${DEFAUT}"
+echo -e  "${GRAS}mise à jour${DEFAUT}"
 git pull origin $CURRENT_BRANCH
 verfication
