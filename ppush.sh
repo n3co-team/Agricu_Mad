@@ -67,7 +67,7 @@ fi
 verfication
 
 echo "Pousser vers github ..."
-git push 
+git push origin $CURRENT_BRANCH 
 verfication
 
 echo "mise a jour"

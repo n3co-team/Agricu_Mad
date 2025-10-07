@@ -9,7 +9,8 @@
 #include"menu_ui.h"
 // #include"prod.h"
 
-/** @fn choix_car gère le choix
+/** @fn choix_car 
+* @details fonction qui gère le choix
 * @param int, ,int
 * @return int
 */
@@ -29,7 +30,8 @@ int choix_car(int ch_min, int ch_max)
 
 }
 
-/** @fn lcmois menu mois
+/** @fn lcmois 
+* @details menu mois
 * @param prod*
 * @return void
 */
@@ -52,7 +54,8 @@ void lcmois(prod *p)
     p->mois[0] = choix_car(1, 12);
 }
 
-/** @fn lctype menu type de produit
+/** @fn lctype 
+* @details menu type de produit
 * @param prod*
 * @return void
 */
@@ -70,7 +73,8 @@ void lctype(prod *p)
     p->type = choix_car(1, 7);
 }
 
-/** @fn lcsol menu sol
+/** @fn lcsol 
+* @details menu sol
 * @param prod*
 * @return void
 */
@@ -93,7 +97,8 @@ void lcsol(prod *p)
     p->sol[0] = choix_car(1, 12);
 }
 
-/** @fn lcsaison menu mois
+/** @fn lcsaison 
+* @details menu mois
 * @param prod*
 * @return void
 */

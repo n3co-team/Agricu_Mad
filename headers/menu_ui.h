@@ -1,3 +1,7 @@
+/** @file menu_iu.h
+* @brief fichier contient des l'entete de fonction pour les menus
+* @author Windrick
+*/
 #include"prod.h"
 
 /** @fn menu_list
@@ -77,31 +81,36 @@ void me_stysamo (prod* p);
 */
 void me_ssosamo (prod* p);
 
-/** @fn choix_car gère le choix
+/** @fn choix_car 
+* @details fonction qui gère le choix
 * @param int, ,int
 * @return int
 */
 int choix_car(int ch_min, int ch_max);
 
-/** @fn lcmois menu mois
+/** @fn lcmois 
+* @details menu mois
 * @param prod*
 * @return void
 */
 void lcmois(prod *p);
 
-/** @fn lctype menu type de produit
+/** @fn 
+* @details lctype menu type de produit
 * @param prod*
 * @return void
 */
 void lctype(prod *p);
 
-/** @fn lcsol menu sol
+/** @fn lcsol 
+* @details menu sol
 * @param prod*
 * @return void
 */
 void lcsol(prod *p);
 
-/** @fn lcsaison menu mois
+/** @fn lcsaison 
+* @details menu mois
 * @param prod*
 * @return void
 */
