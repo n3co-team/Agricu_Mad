@@ -12,6 +12,10 @@ typedef struct produit {
 	int mois[12];
 } prod;
 
+typedef struct list_produit {
+	prod* c;
+	prod* s;
+} lprod;
 /** @fn cette fonction qui stock le donnée de tubercule
  *  @param void
  *  @return prod*
