@@ -47,10 +47,10 @@ then
 	aide
 fi
 
-echo "=================================================================================================="
-echo -e "\e[1mSTATUS ACTUEL :$DEFAUT"
-git status
-echo -e "==================================================================================================\n"
+#echo "=================================================================================================="
+#echo -e "\e[1mSTATUS ACTUEL :$DEFAUT"
+#git status
+#echo -e "==================================================================================================\n"
 
 echo "Addition des dossier fichier dans dossier courant dans depot git ,branche $CURRENT_BRANCH ..."
 git add .
@@ -70,6 +70,6 @@ echo "Pousser vers github ..."
 git push origin $CURRENT_BRANCH 
 verfication
 
-echo "mise a jour"
+echo "mise à jour"
 git pull origin $CURRENT_BRANCH
 verfication
