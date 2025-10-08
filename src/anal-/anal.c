@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include"prod.h"
 #include<stdlib.h>
+#include"anal.h"
 
 lprod* ana_type(prod* p)
 {	
@@ -67,6 +68,7 @@ lprod* ana_mois(prod* p, lprod* d)
 		
 }
 
+// analyse de donnée saison
 lprod* ana_saison(prod* p, lprod* d) {
 	int saison=p->sais;
 	lprod* tete = d;
@@ -75,9 +77,54 @@ lprod* ana_saison(prod* p, lprod* d) {
 		return d
 	}
 	else {
+		if (d->c->mois)
 		while(d->s != NULL) {
-		if (d->c->sais != saison) {
+			if (saison_d(d->c, saison) != 1) {
+				d=d->s;
+			}
+			else {
+				tmp=d;
+				d=d->s;
+				free(tmp);
 				
+			}
 		}	
 	}
-	
+}
+
+// analyse de saison desiré
+int saison_d(prod* p, int i) {
+	int j;
+	for (j=0; j<3; j++) {
+		if (p->sais[j] == i) {
+			return 1;
+		}
+	}
+	return -1;
+}
+
+int mois_d(prod* p, int i) {
+	int j;
+	for (j=0; j<12; j++) {
+		if (p->mois[j] == i) {
+			return 1;
+		}
+	}
+	return -1;
+}
+
+int type_d(prod* p, int i) {
+	if (p->type == i) {
+		return 1;
+	}
+	return -1;
+}
+
+int sol_d(prod* p,int i) {
+	for (j=0, j<3; j++) {
+		if (p->sol[j] == i) {
+			return 1;
+		}
+	}
+	return -1;
+}
