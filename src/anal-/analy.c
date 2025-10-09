@@ -34,9 +34,10 @@ int type_d(prod* p, int i) {
 }
 
 // verfication de sol favorable sur un produit
-int sol_d(prod* p,int i) {
+int sol_d(prod* p,int i) 
+{
 	int j;
-	for (j=0, j<3, j++) {
+	for (j=0; j<3; j++) {
 		if (p->sol[j] == i) {
 			return 1;
 		}
@@ -107,11 +108,13 @@ void analyse_mois(prod *p, lprod* lp)
 	int mois = p->mois[0];
 	lprod* lpt = lp;
 	lprod* lptt;
-	while (mois_d(lpt->c) != 1) {
+	prod* pt = lpt->c;
+	while (mois_d(pt,mois) != 1) {
 		if (lpt->s != NULL) {
 			lp=lpt->s;
 			free(lpt);
 			lpt=lp;
+			pt = lpt->c;
 		}
 		else {
 			fprintf(stderr,"Analyse de mois echouéé : donc pas de produit correspondant");
@@ -120,7 +123,7 @@ void analyse_mois(prod *p, lprod* lp)
 	}
 	
 	while (lpt != NULL) {
-		if (mois_d(lpt->s) != 1) {
+		if (mois_d(pt,mois) != 1) {
 			if(supp_lprod_cont(lpt) == 2) {
 				break;
 			}
@@ -133,6 +136,7 @@ void analyse_mois(prod *p, lprod* lp)
 		}
 
 		lpt = lpt->s;
+		pt = lpt->c;
 	}
 }
 
@@ -142,11 +146,13 @@ void analyse_saison(prod *p, lprod* lp)
 	int saison = p->sais[0];
 	lprod* lpt = lp;
 	lprod* lptt;
-	while (saison_d(lpt->c) != 1) {
+	prod* pt = lpt->c;
+	while (saison_d(pt,saison) != 1) {
 		if (lpt->s != NULL) {
 			lp=lpt->s;
 			free(lpt);
 			lpt=lp;
+			pt = lpt->c;
 		}
 		else {
 			fprintf(stderr,"Analyse de mois echouéé : donc pas de produit correspondant");
@@ -155,7 +161,7 @@ void analyse_saison(prod *p, lprod* lp)
 	}
 	
 	while (lpt != NULL) {
-		if (saison_d(lpt->s) != 1) {
+		if (saison_d(pt,saison) != 1) {
 			if(supp_lprod_cont(lpt) == 2) {
 				break;
 			}
@@ -168,6 +174,7 @@ void analyse_saison(prod *p, lprod* lp)
 		}
 
 		lpt = lpt->s;
+			pt = lpt->c;
 	}
 }
 
@@ -177,11 +184,13 @@ void analyse_sol(prod *p, lprod* lp)
 	int sol = p->sol[0];
 	lprod* lpt = lp;
 	lprod* lptt;
-	while (sol_d(lpt->c) != 1) {
+	prod* pt = lpt->c;
+	while (sol_d(pt,sol) != 1) {
 		if (lpt->s != NULL) {
 			lp=lpt->s;
 			free(lpt);
 			lpt=lp;
+			pt = lpt->c;
 		}
 		else {
 			fprintf(stderr,"Analyse de mois echouéé : donc pas de produit correspondant");
@@ -190,7 +199,7 @@ void analyse_sol(prod *p, lprod* lp)
 	}
 	
 	while (lpt != NULL) {
-		if (sol_d(lpt->s) != 1) {
+		if (sol_d(pt,sol) != 1) {
 			if(supp_lprod_cont(lpt) == 2) {
 				break;
 			}
@@ -203,6 +212,7 @@ void analyse_sol(prod *p, lprod* lp)
 		}
 
 		lpt = lpt->s;
+			pt = lpt->c;
 	}
 }
 
