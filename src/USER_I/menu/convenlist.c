@@ -11,7 +11,7 @@
 
 /** @fn choix_car 
 * @details fonction qui gère le choix
-* @param int, ,int
+* @param int, ,int nombre minimum et maximum de choix
 * @return int
 */
 int choix_car(int ch_min, int ch_max)
