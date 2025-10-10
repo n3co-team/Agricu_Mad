@@ -216,7 +216,7 @@ void analyse_sol(prod *p, lprod* lp)
 	}
 }
 
-void analyse_dbd(prod* p, lprod* lp)
+void analyse_bd(prod* p, lprod* lp)
 {
 	lp = analyse_type(p);
 	analyse_mois(p,lp);	

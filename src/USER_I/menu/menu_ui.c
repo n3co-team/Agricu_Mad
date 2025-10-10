@@ -7,6 +7,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include"menu_ui.h"
+#include"anal.h"
 
 /** @fn menu_list
 * @details fonction qui contient les appel de fonction des menu
@@ -302,3 +303,21 @@ void me_ssosamo (prod* p)
 	}
 
 }
+
+//Menu de produit obtenu
+void prod_list(prod* p) {
+	lprod* lp;
+	lprod* lpt;
+	int i=0;
+	analyse_bd(p,lp);
+	lpt = lp;
+	printf("Les produits disponible par votre choix :\n");
+	while(lpt != NULL) {
+		i++;
+		printf("%d) %s\n",i,lpt->c->nom);
+		if (lpt->s == NULL) {
+			break;
+		}
+		lpt=lpt->s;
+	}
+}	

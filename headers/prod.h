@@ -2,6 +2,8 @@
 *  @brief fichier qui contient generalement les declarations des fonctions de base de donné des produits
 */
 
+#define PROD_H
+
 /** @struct cette structure qui caracterise le produit et leur environnement favorable
  */
 typedef struct produit {

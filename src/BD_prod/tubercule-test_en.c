@@ -11,13 +11,13 @@
 * @param void
 * @return prod*
 */
-prod* tubercule()
+prod* tubercule_en()
 {
         int NBR;
         NBR=1;
         prod* tub = malloc((NBR+1)*sizeof(prod));
 
-	strcy(tub->nom,POTATO);
+	strcy(tub->nom,"POTATO");
 	tub[0].type=5;
 	tub[0].sol[0]=10;
 	tub[0].sol[1]=7;
@@ -28,7 +28,7 @@ prod* tubercule()
 	tub[0].mois[2]=9;
 	tub[0].mois[3]=10;
 
-	strcy(tub->nom,SWEET);
+	strcy(tub->nom,"SWEET");
 	tub[1].type=5;
 	tub[1].sol[0]=5;
 	tub[1].sais[0]=1;
@@ -36,7 +36,7 @@ prod* tubercule()
 	tub[1].sais[2]=4;
 	tub[1].mois[0]=2;
 
-	strcy(tub->nom,CASSAVA);
+	strcy(tub->nom,"CASSAVA");
 	tub[2].type=5;
 	tub[2].sol[0]=1;
 	tub[2].sol[1]=11;
@@ -47,7 +47,7 @@ prod* tubercule()
 	tub[2].mois[3]=3;
 	tub[2].mois[4]=4;
 
-	strcy(tub->nom,YAM);
+	strcy(tub->"nom,YAM");
 	tub[3].type=5;
 	tub[3].sol[0]=8;
 	tub[3].sol[1]=7;
@@ -56,7 +56,7 @@ prod* tubercule()
 	tub[3].mois[1]=11;
 	tub[3].mois[2]=12;
 
-	strcy(tub->nom,TARO);
+	strcy(tub->"nom,TARO");
 	tub[4].type=5;
 	tub[4].sol[0]=2;
 	tub[4].sol[1]=3;
@@ -65,7 +65,7 @@ prod* tubercule()
 	tub[4].mois[0]=11;
 	tub[4].mois[1]=12;
 
-	strcy(tub->nom,BEETROOT);
+	strcy(tub->nom,"BEETROOT");
 	tub[5].type=5;
 	tub[5].sol[0]=10;
 	tub[5].sol[1]=4;
@@ -78,7 +78,7 @@ prod* tubercule()
 	tub[5].mois[5]=11;
 	tub[5].mois[6]=12;
 
-	strcy(tub->nom,CARROT);
+	strcy(tub->nom,"CARROT");
 	tub[7].type=5;
 	tub[7].sol[0]=10;
 	tub[7].sol[1]=7;

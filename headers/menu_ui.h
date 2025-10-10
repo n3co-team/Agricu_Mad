@@ -2,8 +2,9 @@
 * @brief fichier contient des l'entete de fonction pour les menus
 * @author Windrick
 */
-#include"prod.h"
 
+#define MENU_IU_H
+#include"prod.h"
 /** @fn menu_list
 * @details fonction qui contient les appel de fonction des menu
 * @return void
