@@ -67,10 +67,13 @@ else
 fi
 verfication
 
+#pull
+echo -e  "${GRAS}||| Mise à jour${DEFAUT} |||"
+git pull origin $CURRENT_BRANCH
+verfication
+
 echo -e "${GRAS}||| Pousser vers github${DEFAUT} |||"
 git push origin $CURRENT_BRANCH 
 verfication
 
-echo -e  "${GRAS}||| Mise à jour${DEFAUT} |||"
-git pull origin $CURRENT_BRANCH
-verfication
+
