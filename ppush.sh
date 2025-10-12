@@ -70,10 +70,16 @@ verfication
 #pull
 echo -e  "${GRAS}||| Mise à jour${DEFAUT} |||"
 git pull origin $CURRENT_BRANCH
+if [[ $? -ne 0 ]]
+then
+echo -e "${GRAS}||| Pousser vers github${DEFAUT} |||"
+git push origin $CURRENT_BRANCH 
 verfication
+fi 
 
 echo -e "${GRAS}||| Pousser vers github${DEFAUT} |||"
 git push origin $CURRENT_BRANCH 
 verfication
+
 
 
