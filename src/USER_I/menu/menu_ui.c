@@ -15,6 +15,7 @@
 */
 
 void me_list (int i, prod* p) {
+	init_chix(p);
 	switch (i) {
 		case 0: me_pri(p); break;
 		case 1: me_sty(p); break;
@@ -28,6 +29,26 @@ void me_list (int i, prod* p) {
 	}
 }
 
+void init_choix(prod* p) 
+{
+	//iniitiation type
+	int i;
+	p->type=0
+
+	//initiation de sol
+	for(i = 0; i < 11; i++) {
+		p->sol[i]=0;
+	}
+
+	//initiation de saison	
+	for(i = 0; i < 4; i++) {
+		p->sais[i] = 0;
+	}
+	//initiation de mois
+	for(i = 0; i < 12; i++) {
+		p->mois[i] = 0;
+	}
+}
 /** @fn me_pri
 * @details fonction pour menu principal
 * @param struct produit
@@ -320,4 +341,5 @@ void prod_list(prod* p) {
 		}
 		lpt=lpt->s;
 	}
-}	
+}
+	
