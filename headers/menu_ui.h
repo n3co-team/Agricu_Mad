@@ -1,7 +1,7 @@
 /** @file menu_iu.h
-* @brief fichier contient des l'entete de fonction pour les menus
-* @author Windrick
-*/
+ * @brief fichier contient des l'entete de fonction pour les menus
+ * @author Windrick
+ */
 
 #define MENU_IU_H
 #include"prod.h"
@@ -111,12 +111,22 @@ void lctype(prod *p);
 void lcsol(prod *p);
 
 /** @fn lcsaison 
-* @details menu mois
-* @param prod*
-* @return void
-*/
+ * @details menu mois
+ * @param prod*
+ * @return void
+ */
 void lcsaison(prod* p);
 
-// ce deux fonction est n'est pas permanant
+// ce fonction est n'est pas permanant
 void prod_apropos();
+
+/** @fn afficher la list de produit disponible
+ * @param structure qui va stocker les choix
+ * @return vide
+ */
 void prod_list(prod* p);
+
+/** @fn initialiser le choix
+ * @param structure qui va stocker les choix
+ * @return vide
+ */

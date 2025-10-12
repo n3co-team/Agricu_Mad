@@ -6,7 +6,7 @@
 // analyse de saison desiré
 int saison_d(prod* p, int i) {
 	int j;
-	for (j=0; j<3; j++) {
+	for (j=0; j<5; j++) {
 		if (p->sais[j] == i) {
 			return 1;
 		}
@@ -37,7 +37,7 @@ int type_d(prod* p, int i) {
 int sol_d(prod* p,int i) 
 {
 	int j;
-	for (j=0; j<3; j++) {
+	for (j=0; j<11; j++) {
 		if (p->sol[j] == i) {
 			return 1;
 		}

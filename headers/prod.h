@@ -1,6 +1,6 @@
 /** @file prod.h
-*  @brief fichier qui contient generalement les declarations des fonctions de base de donné des produits
-*/
+ *  @brief fichier qui contient generalement les declarations des fonctions de base de donné des produits
+ */
 
 #define PROD_H
 
@@ -9,8 +9,8 @@
 typedef struct produit {
 	char nom[20];
 	int type;
-	int sol[3];
-	int sais[3];
+	int sol[11];
+	int sais[5];
 	int mois[12];
 } prod;
 
