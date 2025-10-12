@@ -75,6 +75,7 @@ then
 echo -e "${GRAS}||| Pousser vers github${DEFAUT} |||"
 git push origin $CURRENT_BRANCH 
 verfication
+exit 0
 fi 
 
 echo -e "${GRAS}||| Pousser vers github${DEFAUT} |||"
