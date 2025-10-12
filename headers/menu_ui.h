@@ -130,3 +130,6 @@ void prod_list(prod* p);
  * @param structure qui va stocker les choix
  * @return vide
  */
+void init_choix(prod* choix);
+
+void verification_choix(prod* choix);

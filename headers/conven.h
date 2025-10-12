@@ -2,7 +2,7 @@
 *   @brief fichier contiont les declarations des fonctions des convension pour les caracteristiques des produits
 *   @author Windrick
 */
-
+#define CONVEN_H
 /** @fn cette fonction qui convertie la saison int ent char
  *  @param int
  *  @return char*

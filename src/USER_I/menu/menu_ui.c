@@ -8,14 +8,14 @@
 #include<stdlib.h>
 #include"menu_ui.h"
 #include"anal.h"
-
+#include"conven.h"
 /** @fn menu_list
 * @details fonction qui contient les appel de fonction des menu
 * @return void
 */
 
 void me_list (int i, prod* p) {
-	init_chix(p);
+	init_choix(p);
 	switch (i) {
 		case 0: me_pri(p); break;
 		case 1: me_sty(p); break;
@@ -33,7 +33,7 @@ void init_choix(prod* p)
 {
 	//iniitiation type
 	int i;
-	p->type=0
+	p->type=0;
 
 	//initiation de sol
 	for(i = 0; i < 11; i++) {
@@ -325,11 +325,32 @@ void me_ssosamo (prod* p)
 
 }
 
+//verification de choix	
+void verification_choix(prod* p) {
+	char* MOIS=c_mois(p->mois[0]);
+	char* SAISON=c_saison(p->sais[0]);
+	char* TYPE=c_type_prod(p->type);
+	char* SOL=c_sol(p->sol[0]);
+	printf("TYPE=%s",TYPE);
+	printf("SOL=%s",SOL);
+	printf("SAISON=%s",SAISON);
+	printf("MOIS=%s",MOIS);
+	free(MOIS);
+	free(SAISON);
+	free(TYPE);
+	free(SOL);
+}
+
 //Menu de produit obtenu
 void prod_list(prod* p) {
 	lprod* lp;
 	lprod* lpt;
 	int i=0;
+	if ( p == NULL) {
+		printf("choix est null\n");
+		exit (1);
+	}
+	verification_choix(p);
 	analyse_bd(p,lp);
 	lpt = lp;
 	printf("Les produits disponible par votre choix :\n");
@@ -342,4 +363,4 @@ void prod_list(prod* p) {
 		lpt=lpt->s;
 	}
 }
-	
+

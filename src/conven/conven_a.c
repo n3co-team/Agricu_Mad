@@ -20,7 +20,7 @@ char* c_saison(int i)
 		case 3: strcpy(s,"Pluie"); break;
 		case 4: strcpy(s,"tempéré"); break;
 		case 5: strcpy(s,"Non definie"); break;
-		default: strcpy(s,
+		default: strcpy(s,"non definie"); break;
 	}
 
 	char* res = malloc(strlen(s)+1);	//resultat
