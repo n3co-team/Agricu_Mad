@@ -9,12 +9,13 @@
 #include"menu_ui.h"
 #include"anal.h"
 #include"conven.h"
+
 /** @fn menu_list
 * @details fonction qui contient les appel de fonction des menu
 * @return void
 */
 
-void me_list (int i, prod* p) {
+void me_list (int i,prod *p) {
 	init_choix(p);
 	switch (i) {
 		case 0: me_pri(p); break;
@@ -31,6 +32,7 @@ void me_list (int i, prod* p) {
 
 void init_choix(prod* p) 
 {
+	p = malloc(sizeof(prod));
 	//iniitiation type
 	int i;
 	p->type=0;
@@ -226,7 +228,7 @@ void me_ssamo (prod* p)
 	printf("1) List de produit\n");
 	printf("2) Type de produit\n"); 
 	printf("3) Sol\n");
-	printf("4) Je neglise tout les autres choix\n");
+//	printf("4) Je neglise tout les autres choix\n");
 	
 	choix = choix_car(1,3);	
 
@@ -256,7 +258,7 @@ void me_styso (prod* p)
 	printf("1) List de produit\n");
 	printf("2) Saison\n"); 
 	printf("3) Mois\n");
-	printf("4) Je neglise tout les autres choix\n");
+//	printf("4) Je neglise tout les autres choix\n");
 	
 	choix = choix_car(1,3);	
 
@@ -331,14 +333,18 @@ void verification_choix(prod* p) {
 	char* SAISON=c_saison(p->sais[0]);
 	char* TYPE=c_type_prod(p->type);
 	char* SOL=c_sol(p->sol[0]);
-	printf("TYPE=%s",TYPE);
-	printf("SOL=%s",SOL);
-	printf("SAISON=%s",SAISON);
-	printf("MOIS=%s",MOIS);
+	printf("\nVerifier votre choix :\n");
+	printf("TYPE=%s\n",TYPE);
+	printf("SOL=%s\n",SOL);
+	printf("SAISON=%s\n",SAISON);
+	printf("MOIS=%s\n",MOIS);
 	free(MOIS);
 	free(SAISON);
 	free(TYPE);
 	free(SOL);
+	printf("Tout est correct? ('ctrl+c' pour annulé) ");
+	int conf;
+	scanf("%d",conf);
 }
 
 //Menu de produit obtenu

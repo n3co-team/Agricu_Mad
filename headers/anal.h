@@ -27,3 +27,5 @@ int sol_d(prod* p,int sol);
 * @return vide
 */
 void analyse_bd(prod* choix, lprod* result);
+
+void venull(void *pointer, char pointer_name, char fonction_name);
