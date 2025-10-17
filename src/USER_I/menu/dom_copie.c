@@ -1,6 +1,15 @@
+
+/** @file dom.c
+ * @author Dominique
+ * @copyleft Windrick
+ */
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#ifndef MENU_UI_H
+#include"menu_ui.h"
+#endif
 
 #define MAX_CULTURES 10
 #define MAX_REGIONS 8
@@ -266,7 +275,7 @@ void afficher_informations_culture(int culture_choix, int region_choix) {
     printf("\n");
 }
 
-int main() {
+void dom_main() {
     int choix_culture, choix_region, sous_choix;
     int en_cours = 1;
     
@@ -332,5 +341,5 @@ int main() {
         }
     }
     
-    return 0;
+    exit (0);
 }

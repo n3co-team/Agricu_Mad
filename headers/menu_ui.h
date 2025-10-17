@@ -132,4 +132,10 @@ void prod_list(prod* p);
  */
 void init_choix(prod* choix);
 
+/** @fn verification de choix de caracteristique de produit
+ * @param struct prod
+ * @return void
+ */
 void verification_choix(prod* choix);
+
+void dom_main();
