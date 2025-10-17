@@ -227,7 +227,7 @@ void analyse_bd(prod* p, lprod* lp)
 void venull(void* p,char pnom, char fonct)
 {
 	if (p==NULL) {
-		printf("%s est encore NULL dans le fonction %s\n",pnom,fonct);
+		fprintf(stderr,"%s est encore NULL dans le fonction %s\n",pnom,fonct);
 		exit (1);
 	}
 }
