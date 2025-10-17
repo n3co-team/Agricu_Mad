@@ -52,14 +52,14 @@ void tr_lprod(prod* p, lprod* lp)
 	prod* pt = p;
 	lprod* lpt = lp;
 	if (lp == NULL) {
-		lp = malloc(sizeof(lp));
+		lp = malloc(sizeof(lprod));
 		lp->c = p;
 	}
 	while( pt != NULL) {
 		lpt->s = malloc(sizeof(lprod));
 		lpt=lpt->s;
 		lpt->c=pt;
-		pt++;
+		pt = pt + 1;
 	}
 }
 
@@ -82,9 +82,9 @@ lprod* analyse_type(prod* p)
 			exit (0); 
 			break;
                 case 5: pt = tubercule();
-			tr_lprod(pt,lp);
-			free(pt);
-			venull(pt,"pt","analyse_type");
+			    tr_lprod(pt,lp);
+			    free(pt);
+			    venull(lp,"pt","analyse_type");
 			return lp; 
 			break;
                 case 6: printf(":racine : pas disponible"); 
@@ -142,7 +142,7 @@ void analyse_mois(prod *p, lprod* lp)
 			break;
 		}
 
-		lpt = lpt->s;
+		lpt = lpt->s; 	
 		pt = lpt->c;
 	}
 }
