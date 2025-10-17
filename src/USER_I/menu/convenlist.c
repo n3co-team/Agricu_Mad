@@ -71,6 +71,9 @@ void lctype(prod *p)
     printf("7) INDEFINIT\n");
 
     p->type = choix_car(1, 7);
+    if (p->type == 1 || p->type == 2) {
+	dom_main();
+    } 
 }
 
 /** @fn lcsol 

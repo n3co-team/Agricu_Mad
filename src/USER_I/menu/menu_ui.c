@@ -352,11 +352,9 @@ void prod_list(prod* p) {
 	lprod* lp;
 	lprod* lpt;
 	int i=0;
-	if ( p == NULL) {
-		printf("choix est null\n");
-		exit (1);
-	}
+	venull(p,"p","prod_list");
 	verification_choix(p);
+	printf("111");
 	analyse_bd(p,lp);
 	lpt = lp;
 	printf("Les produits disponible par votre choix :\n");

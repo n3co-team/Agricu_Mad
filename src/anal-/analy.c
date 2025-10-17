@@ -69,22 +69,29 @@ lprod* analyse_type(prod* p)
 	lprod* der;	//pointeur pour le dernier liste
 	prod* pt;	// pointeur pour recuperé le donner de produit
 	switch (p->type) {
-                case 1: printf("céréal : pas disponible"); 
+                case 1: printf("céréal : pas disponible");
+			exit (0); 
 			break;
                 case 2: printf("légumineuse : pas disponible"); 
+			exit (0); 
 			break;
                 case 3: printf("fruit"); 
+			exit (0); 
 			break;
                 case 4: printf("legume : pas disponible"); 
+			exit (0); 
 			break;
                 case 5: pt = tubercule();
 			tr_lprod(pt,lp);
 			free(pt);
+			venull(pt,"pt","analyse_type");
 			return lp; 
 			break;
                 case 6: printf(":racine : pas disponible"); 
+			exit (0); 
 			break;
                 default: printf("indefine"); 
+			exit (0); 
 			break;
         }
 }
@@ -218,13 +225,15 @@ void analyse_sol(prod *p, lprod* lp)
 
 void analyse_bd(prod* p, lprod* lp)
 {
+	printf("eto");
 	lp = analyse_type(p);
+	venull(lp,"lp","analyse_bd");
 	analyse_mois(p,lp);	
 	analyse_saison(p,lp);	
 	analyse_sol(p,lp);	
 }
 
-void venull(void* p,char pnom, char fonct)
+void venull(void* p,char pnom[], char fonct[])
 {
 	if (p==NULL) {
 		fprintf(stderr,"%s est encore NULL dans le fonction %s\n",pnom,fonct);
