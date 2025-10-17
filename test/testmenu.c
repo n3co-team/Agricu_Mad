@@ -4,8 +4,7 @@
 #include"anal.h"
 #endif
 int main() {
-	prod p;
-	prod* pp;
-	me_pri(pp);
+	prod* p;
+	me_pri(p);
 	return (0);
 }
