@@ -11,7 +11,7 @@
 * @param void
 * @return prod*
 */
-prod* tubercule()
+prod* tubercule_fr()
 {
         int NBR;
         NBR=6;

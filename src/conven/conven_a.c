@@ -15,10 +15,12 @@ char* c_saison(int i)
 {
 	char s[50];
 	switch (i) {
-		case 1: strcpy(s,"pluie"); break;
-		case 2: strcpy(s,"sans pluie"); break;
-		case 3: strcpy(s,"equilibré (ni trop de pluie ni trop ensoleilé)"); break;
-		default: strcpy(s,"indefinie"); break;
+		case 1: strcpy(s,"Froid"); break;
+		case 2: strcpy(s,"Chaud"); break;
+		case 3: strcpy(s,"Pluie"); break;
+		case 4: strcpy(s,"tempéré"); break;
+		case 5: strcpy(s,"Non definie"); break;
+		default: strcpy(s,
 	}
 
 	char* res = malloc(strlen(s)+1);	//resultat
@@ -88,10 +90,18 @@ char* c_sol(int i)
 {
 	char s[50];
 	switch (i) {
-		case 1: strcpy(s,"gorgé d'eau"); break;
-		case 2: strcpy(s,"assez d'eau"); break;
-		case 3: strcpy(s,"normal(ni assez ni trop d'eau)"); break;
-		default: strcpy(s,"indefine"); break;
+		case 1: strcpy(s,"Sableux"); break;
+		case 2: strcpy(s,"Argileux"); break;
+		case 3: strcpy(s,"Limoneux"); break;
+		case 4: strcpy(s,"Humifere"); break;
+		case 5: strcpy(s,"Humide"); break;
+		case 6: strcpy(s,"Aquatique"); break;
+		case 7: strcpy(s,"Meuble"); break;
+		case 8: strcpy(s,"Riche"); break;
+		case 9: strcpy(s,"Vaseux"); break;
+		case 10: strcpy(s,"Léger"); break;
+		case 11: strcpy(s,"Drainé"); break;
+		default: strcpy(s,"Non definit"); break;
 	}
 	
 	char* res = malloc(strlen(s)+1);	//resultat
