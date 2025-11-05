@@ -16,6 +16,10 @@ prod* tubercule()
         int NBR;
         NBR=6;
         prod* tub = malloc((NBR+1)*sizeof(prod));
+	
+	for (int i=0, i<NBR, i++) {
+		tub[i].ntp=NBR;
+	}
 
 	strcpy(tub->nom,"POMME");
 	tub[0].type=5;
@@ -93,5 +97,8 @@ prod* tubercule()
 	tub[5].sais[0]=3;
 	tub[5].mois[0]=10;
 	tub[5].mois[1]=11;
+	
 
+	printf("o");	
+	return tub;
 }

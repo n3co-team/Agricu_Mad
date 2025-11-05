@@ -6,9 +6,18 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+
+#ifndef MENU_UI_H
 #include"menu_ui.h"
+#endif
+
+#ifndef ANAL_H
 #include"anal.h"
+#endif
+
+#ifndef CONVEN_H
 #include"conven.h"
+#endif
 
 /** @fn menu_list
 * @details fonction qui contient les appel de fonction des menu
@@ -16,40 +25,45 @@
 */
 
 void me_list (int i,prod *p) {
-	init_choix(p);
+	// init_choix(p);
 	switch (i) {
 		case 0: me_pri(p); break;
 		case 1: me_sty(p); break;
 		case 2: me_sso(p); break;
-	//	case 3: me_ssa(p); break;
-	//	case 4: me_smo(p); break;
-		case 3: me_styso(p); break;
-		case 4: me_ssamo(p); break;
-		case 5: me_stysamo(p); break;
-		case 6: me_ssosamo(p); break;
+		case 3: me_styso(p); break;	// sans type de produit et sol
+		case 4: me_ssamo(p); break; // sans saison et mois
+		case 5: me_stysamo(p); break; // sans type de produit, saison et mois
+		case 6: me_ssosamo(p); break; // sans sol, saison et mois
+		default: fprintf (stderr,"Erreur de menu\n");
+			exit (1); break;
 	}
 }
 
-void init_choix(prod* p) 
+void init_choix(prod** p) 
 {
-	p = malloc(sizeof(prod));
+    *p = malloc(sizeof(prod));
+	if (*p == NULL) {
+		fprintf(stderr, "Allocation error\n");
+		exit(1);
+	}
 	//iniitiation type
 	int i;
-	p->type=0;
+	(*p)->type = 0;
 
 	//initiation de sol
 	for(i = 0; i < 11; i++) {
-		p->sol[i]=0;
+		(*p)->sol[i]=0;
 	}
 
 	//initiation de saison	
 	for(i = 0; i < 4; i++) {
-		p->sais[i] = 0;
+		(*p)->sais[i] = 0;
 	}
 	//initiation de mois
 	for(i = 0; i < 12; i++) {
-		p->mois[i] = 0;
+		(*p)->mois[i] = 0;
 	}
+	printf("Initialisation  de choix reussie\n");
 }
 /** @fn me_pri
 * @details fonction pour menu principal
@@ -59,6 +73,7 @@ void init_choix(prod* p)
 void me_pri(prod* p)
 {
 	int choix;
+	init_choix(&p);
 
 	printf("\nCHOISIR UN OPTION :\n");
 	printf("1) Type de produit\n");
@@ -98,9 +113,9 @@ void me_sty (prod* p)
 	printf("2) Caracteristique du sol\n");
 	printf("3) Saison\n");
 	printf("4) Mois\n");
-	printf("5) Je neglise tout les autres choix\n");
+//	printf("5) Je neglige tout les autres choix\n");
 	
-	choix = choix_car(1,5);
+	choix = choix_car(1,4);
 
 	switch (choix) {
 		case 0: prod_apropos(); break;
@@ -320,7 +335,7 @@ void me_ssosamo (prod* p)
 	switch (choix) {
 		case 1: prod_list(p); break;
 		case 2: lctype(p);
-			prod_list; break;
+			prod_list(p); break;
 		default: fprintf(stderr,"Erreur");
 			exit (1); break;
 	}
@@ -338,26 +353,30 @@ void verification_choix(prod* p) {
 	printf("SOL=%s\n",SOL);
 	printf("SAISON=%s\n",SAISON);
 	printf("MOIS=%s\n",MOIS);
+
+	if (MOIS != NULL)
 	free(MOIS);
+	if (SAISON != NULL)
 	free(SAISON);
+	if (TYPE != NULL)
 	free(TYPE);
+	if (SOL != NULL)
 	free(SOL);
 	printf("Tout est correct? ('ctrl+c' pour annulé) ");
-	int conf;
-	scanf("%d",conf);
+//	exit (1);
 }
 
 //Menu de produit obtenu
 void prod_list(prod* p) {
-	lprod* lp;
+	lprod* lp = NULL;
 	lprod* lpt;
 	int i=0;
 	venull(p,"p","prod_list");
-	verification_choix(p);
-	printf("111");
-	analyse_bd(p,lp);
+	 verification_choix(p);
+	analyse_bd(p,&lp);
+//	exit (1);
 	lpt = lp;
-	printf("Les produits disponible par votre choix :\n");
+	printf("\n\n\e[2mLes produits disponible par votre choix :\e[0m\n");
 	while(lpt != NULL) {
 		i++;
 		printf("%d) %s\n",i,lpt->c->nom);
@@ -366,5 +385,7 @@ void prod_list(prod* p) {
 		}
 		lpt=lpt->s;
 	}
+	exit (1);
 }
+
 

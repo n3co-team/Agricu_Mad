@@ -11,22 +11,24 @@
  *  @param int
  *  @return char*
  */
-char* c_saison(int i)
-{
-	char s[50];
-	switch (i) {
-		case 1: strcpy(s,"Froid"); break;
-		case 2: strcpy(s,"Chaud"); break;
-		case 3: strcpy(s,"Pluie"); break;
-		case 4: strcpy(s,"tempéré"); break;
-		case 5: strcpy(s,"Non definie"); break;
-		default: strcpy(s,"non definie"); break;
-	}
+char* c_saison(int i) {
+    char s[50];
+    switch (i) {
+        case 1: strcpy(s,"Froid"); break;
+        case 2: strcpy(s,"Chaud"); break;
+        case 3: strcpy(s,"Pluie"); break;
+        case 4: strcpy(s,"tempéré"); break;
+        case 5: strcpy(s,"Non définie"); break;
+        default: strcpy(s,"non définie"); break;
+    }
 
-	char* res = malloc(strlen(s)+1);	//resultat
-	strcpy(res,s);	
-
-	return res;
+    char* res = malloc(strlen(s) + 1); // result
+    if (res == NULL) {
+        fprintf(stderr, "Memory allocation failed\n");
+        exit(1); // Handle error appropriately
+    }
+    strcpy(res, s);
+    return res;
 }
 
 
