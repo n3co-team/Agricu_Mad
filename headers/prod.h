@@ -12,6 +12,10 @@ typedef struct produit {
 	int sol[11];
 	int sais[5];
 	int mois[12];
+	/** @var cette variable sert à stock le nombre total de produit disponible 
+	 * @brief il situe au premier tableau
+	 **/
+	int ntp;	//nombre de broduit
 } prod;
 
 typedef struct list_produit {

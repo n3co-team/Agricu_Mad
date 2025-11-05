@@ -7,6 +7,9 @@
 #include<stdlib.h>
 #include<string.h>
 #include"menu_ui.h"
+#ifndef ANAL_H
+#include"anal.h"
+#endif
 // #include"prod.h"
 
 /** @fn choix_car 
@@ -21,12 +24,14 @@ int choix_car(int ch_min, int ch_max)
 	printf("Entrer votre choix : ");
 	scanf("%d", &choix);
 	if (choix >= ch_min && choix <= ch_max) {
+        printf("Choix valide: %d\n", choix);
 	    return choix;
 	}
 	fprintf(stderr, "Votre choix doit entre %d et %d\n", ch_min,
 		ch_max);
 	printf("Veuillez reessayer s'il vous plait\n");
     }
+    exit(1);
 
 }
 
@@ -52,6 +57,8 @@ void lcmois(prod *p)
     printf("12) Décembre\n");
 
     p->mois[0] = choix_car(1, 12);
+    printf("Mois choisi : %d\n", p->mois[0]);
+	venull(p,"p","lcmois");
 }
 
 /** @fn lctype 

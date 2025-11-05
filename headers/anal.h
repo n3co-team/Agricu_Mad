@@ -26,6 +26,11 @@ int sol_d(prod* p,int sol);
 * @param le choix de menu et le liste de resultat obtenu
 * @return vide
 */
-void analyse_bd(prod* choix, lprod* result);
+void analyse_bd(prod* choix, lprod** result);
 
+/** @fn venull
+* @details verifie si un pointeur est null
+* @param void*, const char*, const char*
+* @return void
+*/
 void venull(void *pointer, char pointer_nameu[], char fonction_name[]);

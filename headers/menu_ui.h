@@ -130,7 +130,7 @@ void prod_list(prod* p);
  * @param structure qui va stocker les choix
  * @return vide
  */
-void init_choix(prod* choix);
+void init_choix(prod** choix);
 
 /** @fn verification de choix de caracteristique de produit
  * @param struct prod
@@ -139,3 +139,10 @@ void init_choix(prod* choix);
 void verification_choix(prod* choix);
 
 void dom_main();
+
+/** @fn venull
+* @details verifie si un pointeur est null
+* @param void*, const char*, const char*
+* @return void
+ */
+// venull(void* ptr, const char* ptr_name, const char* func_name);
