@@ -55,7 +55,7 @@ void tr_lprod(prod* p, lprod** lp)
     if (*lp == NULL) {
         *lp = malloc(sizeof(lprod));
         if (*lp == NULL) {
-            fprintf(stderr, "Memory allocation failed\n");
+            fprintf(stderr, "Erreur de l'allocation de memoire\n");
             exit(1);
         }
         (*lp)->c = p;
@@ -65,7 +65,7 @@ void tr_lprod(prod* p, lprod** lp)
         while (cur->s != NULL) cur = cur->s;
         cur->s = malloc(sizeof(lprod));
         if (cur->s == NULL) {
-            fprintf(stderr, "Memory allocation failed\n");
+            fprintf(stderr, "Erreur de l'allocation de memoire\n");
             exit(1);
         }
         cur->s->c = p;

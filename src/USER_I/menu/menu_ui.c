@@ -19,6 +19,10 @@
 #include"conven.h"
 #endif
 
+#ifndef NAC_H
+#include"nac.h"
+#endif
+
 /** @fn menu_list
 * @details fonction qui contient les appel de fonction des menu
 * @return void
@@ -368,12 +372,13 @@ void verification_choix(prod* p) {
 
 //Menu de produit obtenu
 void prod_list(prod* p) {
-	lprod* lp = NULL;
+	lprod* lp = malloc(lprod);
 	lprod* lpt;
 	int i=0;
 	venull(p,"p","prod_list");
 	 verification_choix(p);
-	analyse_bd(p,&lp);
+//	analyse_bd(p,&lp);
+	rdata(p,&lp);
 //	exit (1);
 	lpt = lp;
 	printf("\n\n\e[2mLes produits disponible par votre choix :\e[0m\n");
