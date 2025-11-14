@@ -1,8 +1,11 @@
 #include<stdio.h>
 #include<stdlib.h>
+#ifndef PROD_H
 #include"prod.h"
+#endif
+#ifndef ANAL_H
 #include"anal.h"
-
+#endif
 // analyse de saison desiré
 int saison_d(prod* p, int i) {
 	int j;

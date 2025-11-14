@@ -377,12 +377,15 @@ void prod_list(prod* p) {
 //	exit (1);
 	lpt = lp;
 	printf("\n\n\e[2mLes produits disponible par votre choix :\e[0m\n");
-	while(lpt != NULL) {
+	i=0;
+	while(true) {
 		i++;
 		printf("%d) %s\n",i,lpt->c->nom);
+		
 		if (lpt->s == NULL) {
 			break;
 		}
+
 		lpt=lpt->s;
 	}
 	exit (1);
