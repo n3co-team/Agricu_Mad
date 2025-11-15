@@ -2,7 +2,10 @@
 * @brief cette programme qui stock les information basique des tubercules
 * @author Windrick
 */
+#ifndef PROD_H
 #include"prod.h"
+#endif
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -17,7 +20,7 @@ prod* tubercule()
         NBR=8;
         prod* tub = malloc((NBR+1)*sizeof(prod));
 	
-	for (int i=0, i<NBR, i++) {
+	for (int i=0; i<NBR; i++) {
 		tub[i].ntp=NBR;
 	}
 
@@ -100,6 +103,6 @@ prod* tubercule()
 
 	
 
-	printf("o");	
+	printf("o\nnnnnnnnnnnnnnnnn");	
 	return tub;
 }

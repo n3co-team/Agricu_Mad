@@ -367,18 +367,21 @@ void verification_choix(prod* p) {
 	if (SOL != NULL)
 	free(SOL);
 	printf("Tout est correct? ('ctrl+c' pour annulé) ");
+	char a;
+	scanf(" %c",&a);
 //	exit (1);
 }
 
 //Menu de produit obtenu
 void prod_list(prod* p) {
-	lprod* lp = malloc(lprod);
+	lprod* lp = malloc(sizeof(lprod));
+	venull(lp,"lp","prod_list");
 	lprod* lpt;
 	int i=0;
 	venull(p,"p","prod_list");
 	 verification_choix(p);
 //	analyse_bd(p,&lp);
-	rdata(p,&lp);
+	rdata(*p,&lp);
 //	exit (1);
 	lpt = lp;
 	printf("\n\n\e[2mLes produits disponible par votre choix :\e[0m\n");

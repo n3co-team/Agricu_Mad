@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-PREFIX="analy"
-LIB="analyse"
+PREFIX="nac"
+LIB="nac"
 DIR_LIB="../../lib/lib_so/"
 
 #if [[ $? -ne 0 ]]

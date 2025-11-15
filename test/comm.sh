@@ -11,4 +11,5 @@ then
 	fi
 fi
 
-gcc -Wall -g testmenu.c -I../headers -L../lib/lib_so -lmenuui -lanalyse -lconven -lbdproduit
+// gcc -Wall -g testmenu.c -I../headers -L../lib/lib_so -lmenuui -lanalyse -lconven -lbdproduit
+gcc -Wall -g testmenu.c -I../headers -L../lib/lib_so -lmenuui -lnac -lconven -lbdproduit
