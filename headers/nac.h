@@ -9,4 +9,5 @@ int cp_list(prod* p, lprod** lp);
 int analyse_mois(prod* p, lprod** res);
 int analyse_sol(prod* p, lprod** res);
 int analyse_saison(prod* p, lprod** res);
+void venull(void* p,char pnom[], char fonct[]);
 

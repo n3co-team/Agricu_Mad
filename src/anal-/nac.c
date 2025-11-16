@@ -9,39 +9,30 @@
 #include"nac.h"
 #endif
 
-#ifndef ANAL_H
-#include"anal.h"
-#endif
-
 int rdata(prod choix, lprod** res) {
 	prod* data;
 	lprod* head=res[0];
-	lprod** lp=res;
+	lprod* lp=*res;
 	analyse_type(&choix,&data);
 	venull(data,"data","rdata");
 //	cp_list(data,res);
 
 	int n=data->ntp;
-	
-		printf("%s\n",data[0].nom);
 	int i;
 	//lprod *l = lp;
 	for(i=0; i < n; i++) {
-		lp[0][0].c=malloc(sizeof(prod));
-		printf("%s\n",data[i].nom);
-		lp[0][0].c[0]=*(data+i);
-		lp[0][0].s=malloc(sizeof(lprod));
-		lp[0]=lp[0][0].s;
+		lp[0].c=malloc(sizeof(prod));
+		lp[0].c[0]=*(data+i);
+		lp[0].s=malloc(sizeof(lprod));
+		lp=lp[0].s;
 	}
 	venull(res[0][0].s,"res","rdata");
-	printf("%s\n",res[0][0].c[0].nom);
  	head=*res;
 	if (choix.mois[0] != 0) {
 		analyse_mois(&choix,res);
 		head = *res;
 	}
 
-	printf("eto\n");	
 	if (choix.sais[0] != 0) {
 		analyse_saison(&choix,res);
 		head = *res;
@@ -92,19 +83,22 @@ int analyse_mois(prod* p, lprod** res) {
 		for(int i=0; i <= n; i++) {
 			if(l->c->mois[i] == p->mois[0]) {
 				*res=l;
-				break;
-			}
-			if (i+1==n || l->s == NULL) {
-				fprintf(stderr,"Pas de produit chercher\n");
-				exit (0);
+				goto quit;
 			}
 		}
-		l=l->s;
-	}
 
-	prev=l;
+		if (l->s != NULL && l->s->c != NULL)
+			l=l->s;
+		else {
+				fprintf(stderr,"Pas de produit chercher\n");
+				exit (0);
+		}
+quit: break;
+	}
+	
+	prev=*res;
 	while(true) {
-		if (prev->s != NULL)
+		if (prev->s != NULL && prev->s->c!= NULL)
 			cur=prev->s;
 		else
 			return 0;
@@ -122,6 +116,7 @@ int analyse_mois(prod* p, lprod** res) {
 		}
 		else
 			prev->s=cur->s;
+		
 	}
 }
 
@@ -134,22 +129,25 @@ int analyse_sol(prod* p, lprod** res) {
 	//analyse tete
 	while(true) {
 		for(int i=0; i <= n; i++) {
+			printf("sol=%d",l->c->sol[i]);
 			if(l->c->sol[i] == p->sol[0]) {
 				*res=l;
-				break;
-			}
-
-			if (i+1==n || l->s == NULL) {
-				fprintf(stderr,"Pas de produit chercher\n");
-				exit (0);
+				goto quit;
 			}
 		}
-		
-		l=l->s;
+
+		if (l->s != NULL && l->s->c != NULL)
+			l=l->s;
+		else {
+				fprintf(stderr,"Pas de produit chercher\n");
+				exit (0);
+		}
+
+quit: break;
 	}
 	prev=l;
 	while(true) {
-		if (prev->s != NULL)
+		if (prev->s != NULL && prev->s->c!= NULL)
 			cur=prev->s;
 		else
 			return 0;
@@ -181,19 +179,22 @@ int analyse_saison(prod* p, lprod** res) {
 		for(int i=0; i <= n; i++) {
 			if(l->c->sais[i] == p->sais[0]) {
 				*res=l;
-				break;
-			}
-			if (i+1==n || l->s == NULL) {
-				fprintf(stderr,"Pas de produit chercher\n");
-				exit (0);
+				goto quit;
 			}
 		}
-		l=l->s;
+
+		if (l->s != NULL && l->s->c != NULL)
+			l=l->s;
+		else {
+				fprintf(stderr,"Pas de produit chercher\n");
+				exit (0);
+		}
+quit: break;
 	}
 
-	prev=l;
+	prev=*res;
 	while(true) {
-		if (prev->s != NULL)
+		if (prev->s != NULL && prev->s->c!= NULL)
 			cur=prev->s;
 		else
 			return 0;
@@ -214,3 +215,10 @@ int analyse_saison(prod* p, lprod** res) {
 
 }
 
+void venull(void* p,char pnom[], char fonct[])
+{
+	if (p==NULL) {
+		fprintf(stderr,"%s est encore NULL dans le fonction %s\n",pnom,fonct);
+		exit (1);
+	}
+}

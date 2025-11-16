@@ -24,7 +24,7 @@ prod* tubercule()
 		tub[i].ntp=NBR;
 	}
 
-	strcpy(tub->nom,"POMME");
+	strcpy(tub[0].nom,"POMME DE TERRE");
 	tub[0].type=5;
 	tub[0].sol[0]=1;
 	tub[0].sais[0]=5;
@@ -32,7 +32,7 @@ prod* tubercule()
 	tub[0].mois[1]=7;
 	tub[0].mois[2]=11;
 
-	strcpy(tub->nom,"PATATE");
+	strcpy(tub[1].nom,"PATATE");
 	tub[1].type=5;
 	tub[1].sol[0]=5;
 	tub[1].sais[0]=1;
@@ -40,7 +40,7 @@ prod* tubercule()
 	tub[1].sais[2]=4;
 	tub[1].mois[0]=2;
 
-	strcpy(tub->nom,"MANIOC");
+	strcpy(tub[2].nom,"MANIOC");
 	tub[2].type=5;
 	tub[2].sol[0]=1;
 	tub[2].sol[1]=11;
@@ -51,7 +51,7 @@ prod* tubercule()
 	tub[2].mois[3]=3;
 	tub[2].mois[4]=4;
 
-	strcpy(tub->nom,"IGNAME");
+	strcpy(tub[3].nom,"IGNAME");
 	tub[3].type=5;
 	tub[3].sol[0]=8;
 	tub[3].sol[1]=7;
@@ -60,7 +60,7 @@ prod* tubercule()
 	tub[3].mois[1]=11;
 	tub[3].mois[2]=12;
 
-	strcpy(tub->nom,"TARO");
+	strcpy(tub[4].nom,"TARO");
 	tub[4].type=5;
 	tub[4].sol[0]=2;
 	tub[4].sol[1]=3;
@@ -69,7 +69,7 @@ prod* tubercule()
 	tub[4].mois[0]=11;
 	tub[4].mois[1]=12;
 
-	strcpy(tub->nom,"BETTERAVE");
+	strcpy(tub[5].nom,"BETTERAVE");
 	tub[5].type=5;
 	tub[5].sol[0]=10;
 	tub[5].sol[1]=4;
@@ -82,7 +82,7 @@ prod* tubercule()
 	tub[5].mois[5]=11;
 	tub[5].mois[6]=12;
 
-	strcpy(tub->nom,"GINGEMBRE");
+	strcpy(tub[6].nom,"GINGEMBRE");
 	tub[6].type=5;
 	tub[6].sol[0]=8;
 	tub[6].sol[1]=7;
@@ -90,7 +90,7 @@ prod* tubercule()
 	tub[6].mois[0]=10;
 	tub[6].mois[1]=11;
 
-	strcpy(tub->nom,"CARROTTE");
+	strcpy(tub[7].nom,"CARROTTE");
 	tub[7].type=5;
 	tub[7].sol[0]=10;
 	tub[7].sol[1]=7;
@@ -101,8 +101,5 @@ prod* tubercule()
 	tub[7].mois[3]=9;
 	tub[7].mois[4]=10;
 
-	
-
-	printf("o\nnnnnnnnnnnnnnnnn");	
 	return tub;
 }

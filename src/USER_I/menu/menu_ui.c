@@ -11,10 +11,6 @@
 #include"menu_ui.h"
 #endif
 
-#ifndef ANAL_H
-#include"anal.h"
-#endif
-
 #ifndef CONVEN_H
 #include"conven.h"
 #endif
@@ -332,7 +328,6 @@ void me_ssosamo (prod* p)
 	printf("\nCHOISIR UN OPTION :\n");
 	printf("1) List de produit\n");
 	printf("2) Type de produit\n");
-//	printf("3) Je neglise tout les autres choix\n");
 	
 	choix = choix_car(1,2);	
 
@@ -353,10 +348,10 @@ void verification_choix(prod* p) {
 	char* TYPE=c_type_prod(p->type);
 	char* SOL=c_sol(p->sol[0]);
 	printf("\nVerifier votre choix :\n");
-	printf("TYPE=%s\n",TYPE);
-	printf("SOL=%s\n",SOL);
-	printf("SAISON=%s\n",SAISON);
-	printf("MOIS=%s\n",MOIS);
+	printf("TYPE:%s\n",TYPE);
+	printf("SOL:%s\n",SOL);
+	printf("SAISON:%s\n",SAISON);
+	printf("MOIS:%s\n",MOIS);
 
 	if (MOIS != NULL)
 	free(MOIS);
@@ -366,10 +361,17 @@ void verification_choix(prod* p) {
 	free(TYPE);
 	if (SOL != NULL)
 	free(SOL);
-	printf("Tout est correct? ('ctrl+c' pour annulé) ");
-	char a;
-	scanf(" %c",&a);
-//	exit (1);
+	printf("Tout est correct? (y/n) ");
+	char a='a';
+	while (a != 'y') {
+		scanf(" %c",&a);
+		if(a == 'n') {
+			printf("Veuillez reexecuté ce programme s'il vous plaît\n");
+		}
+		else if (a == 'y')
+			break;
+		fprintf(stderr,"Veuillez repondre par 'y' pour oui ou 'n' pour non\n");
+	}
 }
 
 //Menu de produit obtenu
@@ -380,23 +382,22 @@ void prod_list(prod* p) {
 	int i=0;
 	venull(p,"p","prod_list");
 	 verification_choix(p);
-//	analyse_bd(p,&lp);
 	rdata(*p,&lp);
 //	exit (1);
 	lpt = lp;
-	printf("\n\n\e[2mLes produits disponible par votre choix :\e[0m\n");
+	printf("\n\n\e[1mLes produits disponible par votre choix :\e[0m\n");
 	i=0;
 	while(true) {
 		i++;
 		printf("%d) %s\n",i,lpt->c->nom);
 		
-		if (lpt->s == NULL) {
+		if (lpt->s == NULL || lpt->s->c == NULL ) {
 			break;
 		}
 
 		lpt=lpt->s;
 	}
-	exit (1);
+	exit (0);
 }
 
 
