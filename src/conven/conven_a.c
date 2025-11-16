@@ -17,8 +17,8 @@ char* c_saison(int i) {
         case 1: strcpy(s,"Froid"); break;
         case 2: strcpy(s,"Chaud"); break;
         case 3: strcpy(s,"Pluie"); break;
-        case 4: strcpy(s,"tempéré"); break;
-        case 5: strcpy(s,"Non définie"); break;
+        case 4: strcpy(s,"sec"); break;
+        case 5: strcpy(s,"tempéré"); break;
         default: strcpy(s,"non définie"); break;
     }
 
@@ -75,7 +75,7 @@ char* c_mois(int i)
 		case 10: strcpy(m,"Octobre"); break;
 		case 11: strcpy(m,"Novembre"); break;
 		case 12: strcpy(m,"Decembre"); break;
-		default: strcpy(m,"indefine"); break;
+		default: strcpy(m,"pas definie"); break;
 	}
 	
 	char* res = malloc(strlen(m)+1);	//resultat
@@ -103,7 +103,7 @@ char* c_sol(int i)
 		case 9: strcpy(s,"Vaseux"); break;
 		case 10: strcpy(s,"Léger"); break;
 		case 11: strcpy(s,"Drainé"); break;
-		default: strcpy(s,"Non definit"); break;
+		default: strcpy(s,"pas definie"); break;
 	}
 	
 	char* res = malloc(strlen(s)+1);	//resultat

@@ -80,7 +80,7 @@ void me_pri(prod* p)
 	printf("2) Caracteristique du sol\n");
 	printf("3) Saison\n");
 	printf("4) Mois\n");
-	printf("0) à propos\n ");
+	printf("5) à propos\n ");
 	
 	choix = choix_car(1,5);
 
@@ -145,7 +145,6 @@ void me_sso (prod* p)
 	printf("2) Type de produit\n"); 
 	printf("3) Saison\n");
 	printf("4) Mois\n");
-//	printf("5) Je neglise tout les autres choix\n");
 	
 	choix = choix_car(1,4);
 
@@ -177,8 +176,6 @@ void me_ssa (prod* p)
 	printf("1) List de produit\n");
 	printf("2) Type de produit\n"); 
 	printf("3) Sol\n");
-//	printf("4) Mois\n");
-//	printf("5) Je neglise tout les autres choix\n");
 	
 	choix = choix_car(1,3);
 
@@ -189,8 +186,6 @@ void me_ssa (prod* p)
 			me_list(5,p); break;
 		case 3:  lcsol(p);
 			me_list(6,p); break;
-	//	case 4: lcmois(p);
-	//		 me_list(4,p); break;
 		default: fprintf(stderr,"Erreur");
 			exit (1); break;
 	}
@@ -210,8 +205,6 @@ void me_smo (prod* p)
 	printf("1) List de produit");
 	printf("2) Type de produit"); 
 	printf("3) Sol");
-//	printf("4) Mois");
-//	printf("5) Je neglise tout les autres choix");
 	
 	choix = choix_car(1,3);
 
@@ -243,7 +236,6 @@ void me_ssamo (prod* p)
 	printf("1) List de produit\n");
 	printf("2) Type de produit\n"); 
 	printf("3) Sol\n");
-//	printf("4) Je neglise tout les autres choix\n");
 	
 	choix = choix_car(1,3);	
 
@@ -273,7 +265,6 @@ void me_styso (prod* p)
 	printf("1) List de produit\n");
 	printf("2) Saison\n"); 
 	printf("3) Mois\n");
-//	printf("4) Je neglise tout les autres choix\n");
 	
 	choix = choix_car(1,3);	
 
@@ -302,7 +293,6 @@ void me_stysamo (prod* p)
 	printf("\nCHOISIR UN OPTION :\n");
 	printf("1) List de produit\n");
 	printf("2) Sol\n");
-//	printf("3) Je neglise tout les autres choix\n");
 	
 	choix = choix_car(1,2);	
 
