@@ -1,11 +1,10 @@
 #include<stdio.h>
 #include"menu_ui.h"
-#ifndef ANAL_H
-#include"anal.h"
+#ifndef NAC_H
+#include"nac.h"
 #endif
 int main() {
-	prod p;
-	prod* pp;
-	me_pri(pp);
+	prod* p=NULL;
+	me_pri(p);
 	return (0);
 }

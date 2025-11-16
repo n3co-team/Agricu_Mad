@@ -7,16 +7,16 @@
 #include<stdlib.h>
 #include<string.h>
 #include"menu_ui.h"
-#ifndef ANAL_H
-#include"anal.h"
+
+#ifndef NAC_H
+#include"nac.h"
+#endif
+
+#ifndef VOAMAINA_H
+#include"voamaina.h"
 #endif
 // #include"prod.h"
 
-/** @fn choix_car 
-* @details fonction qui gère le choix
-* @param int, ,int nombre minimum et maximum de choix
-* @return int
-*/
 int choix_car(int ch_min, int ch_max)
 {
     int choix;
@@ -24,7 +24,7 @@ int choix_car(int ch_min, int ch_max)
 	printf("Entrer votre choix : ");
 	scanf("%d", &choix);
 	if (choix >= ch_min && choix <= ch_max) {
-        printf("Choix valide: %d\n", choix);
+//        printf("Choix valide: %d\n", choix);
 	    return choix;
 	}
 	fprintf(stderr, "Votre choix doit entre %d et %d\n", ch_min,
@@ -35,11 +35,6 @@ int choix_car(int ch_min, int ch_max)
 
 }
 
-/** @fn lcmois 
-* @details menu mois
-* @param prod*
-* @return void
-*/
 void lcmois(prod *p)
 {
     printf("Choisir le mois:\n");
@@ -61,11 +56,6 @@ void lcmois(prod *p)
 	venull(p,"p","lcmois");
 }
 
-/** @fn lctype 
-* @details menu type de produit
-* @param prod*
-* @return void
-*/
 void lctype(prod *p)
 {
     printf("Choisir le type de produit:\n");
@@ -79,15 +69,11 @@ void lctype(prod *p)
 
     p->type = choix_car(1, 7);
     if (p->type == 1 || p->type == 2) {
-	dom_main();
+	afficher_menu_principal();
+	exit (0);
     } 
 }
 
-/** @fn lcsol 
-* @details menu sol
-* @param prod*
-* @return void
-*/
 void lcsol(prod *p)
 {
     printf("Choisir le type de sol:\n");
@@ -107,11 +93,6 @@ void lcsol(prod *p)
     p->sol[0] = choix_car(1, 12);
 }
 
-/** @fn lcsaison 
-* @details menu mois
-* @param prod*
-* @return void
-*/
 void lcsaison(prod* p)
 {
     printf("Choisir la saison :\n");

@@ -1,0 +1,113 @@
+# Compilateur et options
+CC = gcc
+CFLAGS = -Wall -Wextra -std=c99 -fPIC
+DEBUG_FLAGS = -g -DDEBUG
+RELEASE_FLAGS = -O2
+LDFLAGS = -lm
+
+# Répertoires
+SRC_DIR = src
+HEADERS_DIR = headers
+BIN_DIR = bin
+LIB_DIR = lib
+OBJ_DIR = object
+
+# Sous-répertoires source
+SRC_SUBDIRS = USER_I/menu anal- conven BD_prod
+
+# Fichiers source principaux
+MAIN_SRC = $(SRC_DIR)/main.c
+DOM_SRC = $(SRC_DIR)/dom.c
+
+# Trouver tous les fichiers source C
+SRCS = $(MAIN_SRC) $(DOM_SRC) \
+       $(wildcard $(SRC_DIR)/USER_I/menu/*.c) \
+       $(wildcard $(SRC_DIR)/anal-/*.c) \
+       $(wildcard $(SRC_DIR)/conven/*.c) \
+       $(wildcard $(SRC_DIR)/BD_prod/*.c)
+
+# Fichiers objets correspondants (dans OBJ_DIR)
+OBJS = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRCS))
+
+# Bibliothèques partagées
+LIBS = $(LIB_DIR)/libmenu.so $(LIB_DIR)/libanal.so $(LIB_DIR)/libconven.so $(LIB_DIR)/libbdprod.so
+
+# Exécutable principal
+EXEC = $(BIN_DIR)/agricu
+
+# Cible par défaut
+all: $(OBJ_DIR) $(BIN_DIR) $(LIB_DIR) $(LIBS) $(EXEC)
+
+# Création des répertoires
+$(BIN_DIR):
+	mkdir -p $(BIN_DIR)
+
+$(LIB_DIR):
+	mkdir -p $(LIB_DIR)
+
+$(OBJ_DIR):
+	mkdir -p $(OBJ_DIR)
+	@# Créer la structure des sous-répertoires objets
+	mkdir -p $(OBJ_DIR)/USER_I/menu
+	mkdir -p $(OBJ_DIR)/anal-
+	mkdir -p $(OBJ_DIR)/conven
+	mkdir -p $(OBJ_DIR)/BD_prod
+
+# Règles pour les bibliothèques partagées
+$(LIB_DIR)/libmenu.so: $(OBJ_DIR)/USER_I/menu/menu_ui.o $(OBJ_DIR)/USER_I/menu/aide.o $(OBJ_DIR)/USER_I/menu/convenlist.o
+	$(CC) -shared -o $@ $^ $(LDFLAGS)
+
+$(LIB_DIR)/libanal.so: $(OBJ_DIR)/anal-/nac.o
+	$(CC) -shared -o $@ $^ $(LDFLAGS)
+
+$(LIB_DIR)/libconven.so: $(OBJ_DIR)/conven/conven_a.o
+	$(CC) -shared -o $@ $^ $(LDFLAGS)
+
+$(LIB_DIR)/libbdprod.so: $(OBJ_DIR)/BD_prod/tubercule-test_fr.o
+	$(CC) -shared -o $@ $^ $(LDFLAGS)
+
+# Exécutable principal
+$(EXEC): $(OBJ_DIR)/main.o $(OBJ_DIR)/dom.o $(LIBS)
+	$(CC) -o $@ $(OBJ_DIR)/main.o $(OBJ_DIR)/dom.o -L$(LIB_DIR) -lmenu -lanal -lconven -lbdprod $(LDFLAGS) -Wl,-rpath,$(LIB_DIR)
+
+# Règle générique pour les fichiers objets
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	@mkdir -p $(dir $@)
+	$(CC) $(CFLAGS) -I$(HEADERS_DIR) -c $< -o $@
+
+# Nettoyage
+clean:
+	rm -rf $(OBJ_DIR)
+
+distclean: clean
+	rm -rf $(BIN_DIR) $(LIB_DIR)
+
+# Installation des bibliothèques système (optionnel)
+install: all
+	sudo cp $(LIBS) /usr/local/lib/
+	sudo ldconfig
+
+# Développement avec debug
+debug: CFLAGS += $(DEBUG_FLAGS)
+debug: all
+
+# Release
+release: CFLAGS += $(RELEASE_FLAGS)
+release: all
+
+# Affichage des variables (pour debug)
+print:
+	@echo "Sources: $(SRCS)"
+	@echo "Objects: $(OBJS)"
+	@echo "Libraries: $(LIBS)"
+	@echo "Object dir: $(OBJ_DIR)"
+
+# Dépendances des headers
+$(OBJ_DIR)/main.o: $(HEADERS_DIR)/menu_ui.h $(HEADERS_DIR)/nac.h $(HEADERS_DIR)/conven.h $(HEADERS_DIR)/prod.h
+$(OBJ_DIR)/USER_I/menu/menu_ui.o: $(HEADERS_DIR)/menu_ui.h
+$(OBJ_DIR)/anal-/nac.o: $(HEADERS_DIR)/nac.h
+$(OBJ_DIR)/conven/conven.o: $(HEADERS_DIR)/conven.h
+$(OBJ_DIR)/conven/conven_a.o: $(HEADERS_DIR)/conven.h
+$(OBJ_DIR)/BD_prod/tubercule-test_fr.o: $(HEADERS_DIR)/prod.h
+
+.PHONY: all clean distclean install debug release print
