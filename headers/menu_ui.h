@@ -4,7 +4,9 @@
  */
 
 #define MENU_IU_H
+#ifndef PROD_H
 #include"prod.h"
+#endif
 /** @fn menu_list
 * @details fonction qui contient les appel de fonction des menu
 * @return void
@@ -140,9 +142,7 @@ void verification_choix(prod* choix);
 
 void dom_main();
 
-/** @fn venull
-* @details verifie si un pointeur est null
-* @param void*, const char*, const char*
-* @return void
- */
-// venull(void* ptr, const char* ptr_name, const char* func_name);
+
+void infprod(prod produit);
+void resultf(lprod** data);
+

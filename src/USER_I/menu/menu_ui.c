@@ -338,10 +338,15 @@ void verification_choix(prod* p) {
 	char* TYPE=c_type_prod(p->type);
 	char* SOL=c_sol(p->sol[0]);
 	printf("\nVerifier votre choix :\n");
-	printf("TYPE:%s\n",TYPE);
-	printf("SOL:%s\n",SOL);
-	printf("SAISON:%s\n",SAISON);
-	printf("MOIS:%s\n",MOIS);
+	
+	if(p->type != 0)
+		printf("| TYPE:%s\n",TYPE);
+	if(p->sol[0] != 0)
+		printf("| SOL:%s\n",SOL);
+	if(p->sais[0] != 0)
+		printf("| SAISON:%s\n",SAISON);
+	if(p->mois[0] != 0)
+		printf("| MOIS:%s\n",MOIS);
 
 	if (MOIS != NULL)
 	free(MOIS);
@@ -369,25 +374,21 @@ void prod_list(prod* p) {
 	lprod* lp = malloc(sizeof(lprod));
 	venull(lp,"lp","prod_list");
 	lprod* lpt;
-	int i=0;
 	venull(p,"p","prod_list");
 	 verification_choix(p);
 	rdata(*p,&lp);
-//	exit (1);
-	lpt = lp;
-	printf("\n\n\e[1mLes produits disponible par votre choix :\e[0m\n");
-	i=0;
-	while(1) {
-		i++;
-		printf("%d) %s\n",i,lpt->c->nom);
-		
-		if (lpt->s == NULL || lpt->s->c == NULL ) {
-			break;
-		}
+	resultf(&lp);
 
-		lpt=lpt->s;
+	//Libere les memoire alloué
+	while (lp != NULL) {
+		lpt=lp->s;
+		if(lp->c != NULL)
+			free(lp->c);
+
+		free(lp);
+		if(lpt == NULL)
+			break;
+		lp=lpt;
 	}
 	exit (0);
 }
-
-

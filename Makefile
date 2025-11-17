@@ -22,6 +22,7 @@ DOM_SRC = $(SRC_DIR)/dom.c
 # Trouver tous les fichiers source C
 SRCS = $(MAIN_SRC) $(DOM_SRC) \
        $(wildcard $(SRC_DIR)/USER_I/menu/*.c) \
+       $(wildcard $(SRC_DIR)/USER_I/resultat/*.c) \
        $(wildcard $(SRC_DIR)/anal-/*.c) \
        $(wildcard $(SRC_DIR)/conven/*.c) \
        $(wildcard $(SRC_DIR)/BD_prod/*.c)
@@ -49,18 +50,19 @@ $(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)
 	@# Créer la structure des sous-répertoires objets
 	mkdir -p $(OBJ_DIR)/USER_I/menu
+	mkdir -p $(OBJ_DIR)/USER_I/resultat
 	mkdir -p $(OBJ_DIR)/anal-
 	mkdir -p $(OBJ_DIR)/conven
 	mkdir -p $(OBJ_DIR)/BD_prod
 
 # Règles pour les bibliothèques partagées
-$(LIB_DIR)/libmenu.so: $(OBJ_DIR)/USER_I/menu/menu_ui.o $(OBJ_DIR)/USER_I/menu/aide.o $(OBJ_DIR)/USER_I/menu/convenlist.o
+$(LIB_DIR)/libmenu.so: $(OBJ_DIR)/USER_I/resultat/infoprod.o $(OBJ_DIR)/USER_I/menu/menu_ui.o $(OBJ_DIR)/USER_I/menu/aide.o
 	$(CC) -shared -o $@ $^ $(LDFLAGS)
 
 $(LIB_DIR)/libanal.so: $(OBJ_DIR)/anal-/nac.o
 	$(CC) -shared -o $@ $^ $(LDFLAGS)
 
-$(LIB_DIR)/libconven.so: $(OBJ_DIR)/conven/conven_a.o
+$(LIB_DIR)/libconven.so: $(OBJ_DIR)/conven/conven_a.o  $(OBJ_DIR)/conven/convenlist.o
 	$(CC) -shared -o $@ $^ $(LDFLAGS)
 
 $(LIB_DIR)/libbdprod.so: $(OBJ_DIR)/BD_prod/tubercule-test_fr.o
@@ -105,8 +107,8 @@ print:
 # Dépendances des headers
 $(OBJ_DIR)/main.o: $(HEADERS_DIR)/menu_ui.h $(HEADERS_DIR)/nac.h $(HEADERS_DIR)/conven.h $(HEADERS_DIR)/prod.h
 $(OBJ_DIR)/USER_I/menu/menu_ui.o: $(HEADERS_DIR)/menu_ui.h
+$(OBJ_DIR)/USER_I/resultat/infoprod.o: $(HEADERS_DIR)/menu_ui.h $(HEADERS_DIR)/prod.h $(HEADERS_DIR)/conven.h
 $(OBJ_DIR)/anal-/nac.o: $(HEADERS_DIR)/nac.h
-$(OBJ_DIR)/conven/conven.o: $(HEADERS_DIR)/conven.h
 $(OBJ_DIR)/conven/conven_a.o: $(HEADERS_DIR)/conven.h
 $(OBJ_DIR)/BD_prod/tubercule-test_fr.o: $(HEADERS_DIR)/prod.h
 
