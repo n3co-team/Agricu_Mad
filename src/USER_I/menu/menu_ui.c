@@ -62,6 +62,7 @@ void init_choix(prod** p)
 	}
 	printf("Initialisation  de choix reussie\n");
 }
+
 /** @fn me_pri
 * @details fonction pour menu principal
 * @param struct produit
@@ -83,13 +84,13 @@ void me_pri(prod* p)
 
 	switch (choix) {
 		case 0: prod_apropos(); break;
-		case 1:lctype(p);
+		case 1:lctype(p);	//affiche le menu type
 			 me_list(1,p); break;
-		case 2: lcsol(p);
+		case 2: lcsol(p);	// affiche le menu du sol
 			 me_list(2,p); break;
-		case 3: lcsaison(p);
+		case 3: lcsaison(p);	// affiche le menu du saison
 			me_list(4,p); break;
-		case 4: lcmois(p);
+		case 4: lcmois(p);	// affiche le menu du mois
 			 me_list(4,p); break;
 		default: fprintf(stderr,"Erreur");
 			exit (1); break;
