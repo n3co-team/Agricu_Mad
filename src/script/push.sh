@@ -73,12 +73,7 @@ git pull origin $CURRENT_BRANCH
 
 if [[ $? -ne 0 ]]
 then
-echo -e "${GRAS}||| Pousser vers github${DEFAUT} |||"
-git push origin $CURRENT_BRANCH 
-verfication
-exit 0
-fi 
-
+# pousser
 echo -e "\n${GRAS}||| Pousser vers github${DEFAUT} |||"
 git push origin $CURRENT_BRANCH 
 verfication
