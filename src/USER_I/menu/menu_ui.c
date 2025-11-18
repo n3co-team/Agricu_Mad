@@ -19,13 +19,8 @@
 #include"nac.h"
 #endif
 
-/** @fn menu_list
-* @details fonction qui contient les appel de fonction des menu
-* @return void
-*/
-
+//menu des menu pour faciliter l'appel de fonction
 void me_list (int i,prod *p) {
-	// init_choix(p);
 	switch (i) {
 		case 0: me_pri(p); break;
 		case 1: me_sty(p); break;
@@ -41,11 +36,13 @@ void me_list (int i,prod *p) {
 
 void init_choix(prod** p) 
 {
+	//alloé un espase pour mettre les choix de l'utilisateur
     *p = malloc(sizeof(prod));
 	if (*p == NULL) {
 		fprintf(stderr, "Allocation error\n");
 		exit(1);
 	}
+
 	//iniitiation type
 	int i;
 	(*p)->type = 0;
