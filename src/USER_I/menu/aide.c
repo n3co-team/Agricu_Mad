@@ -6,11 +6,11 @@
 #endif
 
 int aide() {
-	printf("Ne pas disponible");
+	printf("Ne pas disponible\n");
 	exit (0);
 }
 
 void prod_apropos() {
-	printf("Pas disponible");
+	printf("Pas disponible\n");
 	exit (1);
 }
