@@ -6,7 +6,7 @@
 #endif
 
 int aide() {
-	printf("Ne pas disponible");
+	printf("Ne pas disponible\n");
 	exit (0);
 }
 

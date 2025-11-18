@@ -61,7 +61,7 @@ void init_choix(prod** p)
 	for(i = 0; i < 12; i++) {
 		(*p)->mois[i] = 0;
 	}
-	printf("Initialisation  de choix reussie\n");
+	printf("****** BIENVENUE SUR LES INFORMATION AGRICULTURE****** \n");
 }
 
 /** @fn me_pri
