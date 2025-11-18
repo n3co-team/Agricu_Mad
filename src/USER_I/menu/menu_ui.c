@@ -29,7 +29,8 @@ void me_list (int i,prod *p) {
 		case 4: me_ssamo(p); break; // sans saison et mois
 		case 5: me_stysamo(p); break; // sans type de produit, saison et mois
 		case 6: me_ssosamo(p); break; // sans sol, saison et mois
-		default: fprintf (stderr,"Erreur de menu\n");
+		default: //fprintf (stderr,"Erreur de menu\n");
+			 prod_apropos();
 			exit (1); break;
 	}
 }
@@ -92,7 +93,7 @@ void me_pri(prod* p)
 			me_list(4,p); break;
 		case 4: lcmois(p);	// affiche le menu du mois
 			 me_list(4,p); break;
-		default: fprintf(stderr,"Erreur");
+		default: fprintf(stderr,"Erreur\n");
 			exit (1); break;
 	} 	
 }
@@ -369,13 +370,16 @@ void verification_choix(prod* p) {
 
 //Menu de produit obtenu
 void prod_list(prod* p) {
+
+	// allocation de memoire pour les données qu'on va recuperer
 	lprod* lp = malloc(sizeof(lprod));
 	venull(lp,"lp","prod_list");
-	lprod* lpt;
-	venull(p,"p","prod_list");
-	 verification_choix(p);
-	rdata(*p,&lp);
-	resultf(&lp);
+	lprod* lpt;	// pointeur pour permuter les position de list chainé lp
+	 
+	//verification du choix d'utilisateur
+	verification_choix(p);
+	rdata(*p,&lp); //recupere les données convenable au choix de l'utilisateur
+	resultf(&lp);	// affichage des resultat
 
 	//Libere les memoire alloué
 	while (lp != NULL) {
