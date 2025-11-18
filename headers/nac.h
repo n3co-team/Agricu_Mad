@@ -1,5 +1,9 @@
 #define NAC_H
 
+#ifndef PROD_H
+#include"prod.h"
+#endif
+
 /** @fn rdata
  * @return nombre de produit recuperre
  */
