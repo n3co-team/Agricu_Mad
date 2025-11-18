@@ -11,6 +11,6 @@ int aide() {
 }
 
 void prod_apropos() {
-	printf("Pas disponible");
+	printf("Pas disponible\n");
 	exit (1);
 }
