@@ -19,13 +19,8 @@
 #include"nac.h"
 #endif
 
-/** @fn menu_list
-* @details fonction qui contient les appel de fonction des menu
-* @return void
-*/
-
+//menu des menu pour faciliter l'appel de fonction
 void me_list (int i,prod *p) {
-	// init_choix(p);
 	switch (i) {
 		case 0: me_pri(p); break;
 		case 1: me_sty(p); break;
@@ -34,18 +29,21 @@ void me_list (int i,prod *p) {
 		case 4: me_ssamo(p); break; // sans saison et mois
 		case 5: me_stysamo(p); break; // sans type de produit, saison et mois
 		case 6: me_ssosamo(p); break; // sans sol, saison et mois
-		default: fprintf (stderr,"Erreur de menu\n");
+		default: //fprintf (stderr,"Erreur de menu\n");
+			 prod_apropos();
 			exit (1); break;
 	}
 }
 
 void init_choix(prod** p) 
 {
+	//alloé un espase pour mettre les choix de l'utilisateur
     *p = malloc(sizeof(prod));
 	if (*p == NULL) {
 		fprintf(stderr, "Allocation error\n");
 		exit(1);
 	}
+
 	//iniitiation type
 	int i;
 	(*p)->type = 0;
@@ -65,6 +63,7 @@ void init_choix(prod** p)
 	}
 	printf("****** BIENVENUE SUR LES INFORMATION AGRICULTURE****** \n");
 }
+
 /** @fn me_pri
 * @details fonction pour menu principal
 * @param struct produit
@@ -86,15 +85,16 @@ void me_pri(prod* p)
 
 	switch (choix) {
 		case 0: prod_apropos(); break;
-		case 1:lctype(p);
+		case 1:lctype(p);	//affiche le menu type
 			 me_list(1,p); break;
-		case 2: lcsol(p);
+		case 2: lcsol(p);	// affiche le menu du sol
 			 me_list(2,p); break;
-		case 3: lcsaison(p);
+		case 3: lcsaison(p);	// affiche le menu du saison
 			me_list(4,p); break;
-		case 4: lcmois(p);
+		case 4: lcmois(p);	// affiche le menu du mois
 			 me_list(4,p); break;
-		default: fprintf(stderr,"Erreur");
+		default: //fprintf(stderr,"Erreur\n");
+			me_list(7,p);
 			exit (1); break;
 	} 	
 }
@@ -371,13 +371,16 @@ void verification_choix(prod* p) {
 
 //Menu de produit obtenu
 void prod_list(prod* p) {
+
+	// allocation de memoire pour les données qu'on va recuperer
 	lprod* lp = malloc(sizeof(lprod));
 	venull(lp,"lp","prod_list");
-	lprod* lpt;
-	venull(p,"p","prod_list");
-	 verification_choix(p);
-	rdata(*p,&lp);
-	resultf(&lp);
+	lprod* lpt;	// pointeur pour permuter les position de list chainé lp
+	 
+	//verification du choix d'utilisateur
+	verification_choix(p);
+	rdata(*p,&lp); //recupere les données convenable au choix de l'utilisateur
+	resultf(&lp);	// affichage des resultat
 
 	//Libere les memoire alloué
 	while (lp != NULL) {
