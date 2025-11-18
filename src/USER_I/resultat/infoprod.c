@@ -38,7 +38,6 @@ void resultf(lprod** donne) {
 	printf("\nEntrer le numero de resultat: ");
 	choix=choix_car(1,i);
 	choix = choix - 1;
-	printf("choix=%d\n",choix);
 	p=donne[0];
 	i=0;
 	while (1) {
