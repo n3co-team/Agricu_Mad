@@ -22,9 +22,9 @@ char* c_saison(int i) {
         default: strcpy(s,"non définie"); break;
     }
 
-    char* res = malloc(strlen(s) + 1); // result
+    char* res = malloc(strlen(s) + 1); // result en chaine
     if (res == NULL) {
-        fprintf(stderr, "Memory allocation failed\n");
+        fprintf(stderr, "Erreur de l'allocation de memoire\n");
         exit(1); // Handle error appropriately
     }
     strcpy(res, s);
