@@ -5,7 +5,7 @@ Culture cultures[MAX_CULTURES];
 Region regions[MAX_REGIONS];
 int nombre_cultures = 0;
 int nombre_regions = 0;
-
+int choix_cultires;
 void initialiser_regions() {
     // Région 1: Alaotra Mangoro
     regions[0].id = 1;
@@ -165,7 +165,7 @@ void initialiser_cultures() {
 }
 
 void afficher_menu_principal() {
-    printf("\n=== MENU PRINCIPAL - VOAMAINA ===\n\n");
+    printf("\n=== MENU PRINCIPAL - CEREALE ===\n\n");
     printf("Liste des cultures disponibles:\n");
     printf("--------------------------------\n");
 
@@ -173,8 +173,17 @@ void afficher_menu_principal() {
         printf("%2d. %s\n", cultures[i].id, cultures[i].nom);
     }
 
-    printf("\n0. Quitter le programme\n");
+    //printf("\n0. Quitter le programme\n");
     printf("\nChoisissez une culture (1-%d) ou 0 pour quitter: ", nombre_cultures);
+    if (scanf("%d", &choix_cultures) == 1) {
+	if(choix_cultures > 0 && choix_cultures <= nombres_cultures){
+	   afficher_menu_regions();
+        } 
+    else if(choix_cultures == 0){
+      break;
+    }
+
+    }
 }
 
 void afficher_menu_regions() {
