@@ -7,11 +7,11 @@
 #ifndef PROD_H
 #include"prod.h"
 #endif
-/** @fn menu_list
+
+/** @fn menu_list menu des menus
 * @details fonction qui contient les appel de fonction des menu
 * @return void
 */
-
 void me_list (int i, prod* p);
 
 /** @fn me_pri
@@ -120,7 +120,7 @@ void lcsol(prod *p);
 void lcsaison(prod* p);
 
 // ce fonction est n'est pas permanant
-void prod_apropos();
+void prod_apropos();	// def : aide.c
 
 /** @fn afficher la list de produit disponible
  * @param structure qui va stocker les choix
@@ -142,7 +142,13 @@ void verification_choix(prod* choix);
 
 void dom_main();
 
+/** @fn resultf afficher le donnée convenable au choix de l'utilisateur
+ * @param liste chainée de donnée
+ */
+void resultf(lprod** data);	// def : infoprod.c
 
-void infprod(prod produit);
-void resultf(lprod** data);
+/** @fn genere un text bref de l'information de produit choisi
+ * @param le struct produit choisi
+ */
+void infprod(prod produit); 	// def : infoprod.c
 
