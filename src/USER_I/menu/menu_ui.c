@@ -93,7 +93,8 @@ void me_pri(prod* p)
 			me_list(4,p); break;
 		case 4: lcmois(p);	// affiche le menu du mois
 			 me_list(4,p); break;
-		default: fprintf(stderr,"Erreur\n");
+		default: //fprintf(stderr,"Erreur\n");
+			me_list(7,p);
 			exit (1); break;
 	} 	
 }
