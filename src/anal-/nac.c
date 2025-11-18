@@ -74,6 +74,7 @@ int cp_list(prod *p, lprod **lp)
 	lp[0][0].s = malloc(sizeof(lprod));
 	lp[0] = lp[0][0].s;
     }
+    return 0;
 }
 
 int analyse_mois(prod *p, lprod **res)

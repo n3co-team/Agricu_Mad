@@ -13,11 +13,11 @@ LIB_DIR = lib
 OBJ_DIR = object
 
 # Sous-répertoires source
-SRC_SUBDIRS = USER_I/menu anal- conven BD_prod
+SRC_SUBDIRS = USER_I/menu USER_I/resultat anal- conven BD_prod
 
 # Fichiers source principaux
 MAIN_SRC = $(SRC_DIR)/main.c
-DOM_SRC = $(SRC_DIR)/dom.c
+# DOM_SRC = $(SRC_DIR)/dom.c
 
 # Trouver tous les fichiers source C
 SRCS = $(MAIN_SRC) $(DOM_SRC) \
@@ -25,7 +25,8 @@ SRCS = $(MAIN_SRC) $(DOM_SRC) \
        $(wildcard $(SRC_DIR)/USER_I/resultat/*.c) \
        $(wildcard $(SRC_DIR)/anal-/*.c) \
        $(wildcard $(SRC_DIR)/conven/*.c) \
-       $(wildcard $(SRC_DIR)/BD_prod/*.c)
+       $(wildcard $(SRC_DIR)/BD_prod/*.c) \
+	$(wildcard  $(SRC_DIR)/dom.c)
 
 # Fichiers objets correspondants (dans OBJ_DIR)
 OBJS = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRCS))
@@ -59,7 +60,7 @@ $(OBJ_DIR):
 $(LIB_DIR)/libmenu.so: $(OBJ_DIR)/USER_I/resultat/infoprod.o $(OBJ_DIR)/USER_I/menu/menu_ui.o $(OBJ_DIR)/USER_I/menu/aide.o
 	$(CC) -shared -o $@ $^ $(LDFLAGS)
 
-$(LIB_DIR)/libanal.so: $(OBJ_DIR)/anal-/nac.o
+$(LIB_DIR)/libanal.so: $(OBJ_DIR)/anal-/nac.o  $(SRC_DIR)/dom.o
 	$(CC) -shared -o $@ $^ $(LDFLAGS)
 
 $(LIB_DIR)/libconven.so: $(OBJ_DIR)/conven/conven_a.o  $(OBJ_DIR)/conven/convenlist.o
@@ -69,8 +70,8 @@ $(LIB_DIR)/libbdprod.so: $(OBJ_DIR)/BD_prod/tubercule-test_fr.o
 	$(CC) -shared -o $@ $^ $(LDFLAGS)
 
 # Exécutable principal
-$(EXEC): $(OBJ_DIR)/main.o $(OBJ_DIR)/dom.o $(LIBS)
-	$(CC) -o $@ $(OBJ_DIR)/main.o $(OBJ_DIR)/dom.o -L$(LIB_DIR) -lmenu -lanal -lconven -lbdprod $(LDFLAGS) -Wl,-rpath,$(LIB_DIR)
+$(EXEC): $(OBJ_DIR)/main.o $(LIBS)
+	$(CC) -o $@ $(OBJ_DIR)/main.o -L$(LIB_DIR) -lmenu -lanal -lconven -lbdprod $(LDFLAGS) -Wl,-rpath,$(LIB_DIR)
 
 # Règle générique pour les fichiers objets
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
