@@ -72,7 +72,7 @@ void infprod(prod p)
 		printf(",");
 	}
 
-	printf(" pendant saison ");
+	printf(" pendant saison de ");
 	for (i = 0; i < 5; i++) {
 		ref=p.sais[i];
 		if(ref < 0 || ref > 5 || ref == 0) {
@@ -82,7 +82,7 @@ void infprod(prod p)
 				printf(",");
 	}
 
-	printf(".\nPlus souvent on le cultive au mois ");
+	printf(".\nPlus souvent on le cultive au mois du ");
 	for (i = 0; i < 12; i++) {
 		ref=p.mois[i];
 		if(ref < 0 || ref > 12 || ref == 0) {
