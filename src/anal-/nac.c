@@ -53,10 +53,11 @@ int analyse_type(prod *p, prod **r)
 	return 4;
     case 5:
 	*r = tubercule();
-	venull(r, "r tubrercul", "analyse_type");
+	venull(*r, "r tubrercul", "analyse_type");
 	return 5;
     case 6:
-	printf("racine : pas disponible\n");
+	*r = racine();
+	venull(*r, "r racine", "analyse_type");
 	return 6;
     default:
 	printf("indefine\n");

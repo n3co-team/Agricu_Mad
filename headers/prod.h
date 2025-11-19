@@ -28,4 +28,9 @@ typedef struct list_produit {
  *  @return prod*
  */
 prod* tubercule();
- 
+
+/** @fn cette fonction qui stock le donnée de racine
+ *  @param void
+ *  @return prod*
+ */
+prod* racine(); 
