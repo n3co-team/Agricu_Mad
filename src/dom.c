@@ -176,11 +176,11 @@ void afficher_menu_principal() {
     //printf("\n0. Quitter le programme\n");
     printf("\nChoisissez une culture (1-%d) ou 0 pour quitter: ", nombre_cultures);
     if (scanf("%d", &choix_cultures) == 1) {
-	if(choix_cultures > 0 && choix_cultures <= nombres_cultures){
+	if(choix_cultures > 0 && choix_cultures <= nombre_cultures){
 	   afficher_menu_regions();
         } 
     else if(choix_cultures == 0){
-      break;
+      return;
     }
 
     }
