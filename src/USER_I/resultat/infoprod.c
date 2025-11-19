@@ -72,7 +72,7 @@ void infprod(prod p)
 		printf(",");
 	}
 
-	printf(" pendant saison de ");
+	printf(" pendant saison ");
 	for (i = 0; i < 5; i++) {
 		ref=p.sais[i];
 		if(ref < 0 || ref > 5 || ref == 0) {
