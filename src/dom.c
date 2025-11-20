@@ -6,6 +6,7 @@ Region regions[MAX_REGIONS];
 int nombre_cultures = 0;
 int nombre_regions = 0;
 int choix_cultures;
+
 void initialiser_regions() {
     // Région 1: Alaotra Mangoro
     regions[0].id = 1;

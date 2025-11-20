@@ -27,7 +27,7 @@ typedef struct {
     char caracteristiques[MAX_DESC_LEN];
 } Region;
 
-// Déclaration des variables globales
+//Déclaration des variables globales
 extern Culture cultures[MAX_CULTURES];
 extern Region regions[MAX_REGIONS];
 extern int nombre_cultures;
