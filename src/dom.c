@@ -171,7 +171,7 @@ void initialiser_cultures() {
 }
 
 void afficher_menu_principal() {
-/*    printf("\n=== MENU PRINCIPAL - CEREALE ===\n\n");
+    printf("\n=== MENU PRINCIPAL - %d ===\n\n",nombre_cultures);
     printf("Liste des cultures disponibles:\n");
     printf("--------------------------------\n");
   
@@ -192,8 +192,8 @@ void afficher_menu_principal() {
     }
 }
 
-*/
-//void afficher_menu_cultures(){
+
+void afficher_menu_cultures(){
    printf("\n=== CHOIX DE LA CULTURE ===\n\n");
    printf("Listes des cultures disponibles: \n");
    printf("-----------------------------\n");

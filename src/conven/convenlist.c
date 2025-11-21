@@ -69,7 +69,7 @@ void lctype(prod *p)
     p->type = choix_car(1, 7);
     if (p->type == 1 || p->type == 2) {
 	afficher_menu_principal();
-//	cereale();
+	cereale();
 	exit (0);
     } 
 }
