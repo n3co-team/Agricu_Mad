@@ -169,7 +169,7 @@ void afficher_menu_principal() {
     printf("\n=== MENU PRINCIPAL - CEREALE ===\n\n");
     printf("Liste des cultures disponibles:\n");
     printf("--------------------------------\n");
-
+    
     for(int i = 0; i < nombre_cultures; i++) {
         printf("%2d. %s\n", cultures[i].id, cultures[i].nom);
     }
@@ -186,6 +186,20 @@ void afficher_menu_principal() {
 
     }
 }
+
+
+void afficher_menu_cultures(){
+   printf("\n=== CHOIX DE LA CULTURE ===\n\n");
+   printf("Listes des cultures disponibles: \n");
+   printf("-----------------------------\n");
+   
+   for (int i = 0; i <= nombres_cultures; i++){
+     printf("%d. %s\n", cultures[i].id, cultures[i].nom);
+     
+   }
+    printf("\n Choisisez votre cultures (1-%d): ", nombre_cultures);
+}
+
 
 void afficher_menu_regions() {
     printf("\n=== CHOIX DE LA REGION ===\n\n");
