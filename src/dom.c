@@ -170,11 +170,11 @@ void initialiser_cultures() {
     nombre_cultures = 10;
 }
 
-void afficher_menu_principal() {
-/*    printf("\n=== MENU PRINCIPAL - CEREALE ===\n\n");
+/*void afficher_menu_principal() {
+    printf("\n=== MENU PRINCIPAL - CEREALE ===\n\n");
     printf("Liste des cultures disponibles:\n");
     printf("--------------------------------\n");
-    */
+  
     for(int i = 0; i < nombre_cultures; i++) {
         printf("%2d. %s\n", cultures[i].id, cultures[i].nom);
     }
@@ -192,7 +192,7 @@ void afficher_menu_principal() {
     }
 }
 
-
+*/
 void afficher_menu_cultures(){
    printf("\n=== CHOIX DE LA CULTURE ===\n\n");
    printf("Listes des cultures disponibles: \n");
