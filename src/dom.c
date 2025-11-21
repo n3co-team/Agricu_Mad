@@ -193,7 +193,7 @@ void afficher_menu_cultures(){
    printf("Listes des cultures disponibles: \n");
    printf("-----------------------------\n");
    
-   for (int i = 0; i <= nombres_cultures; i++){
+   for (int i = 0; i <= nombre_cultures; i++){
      printf("%d. %s\n", cultures[i].id, cultures[i].nom);
      
    }
