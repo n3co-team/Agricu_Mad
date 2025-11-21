@@ -26,8 +26,7 @@ int choix_car(int ch_min, int ch_max)
 	if (choix >= ch_min && choix <= ch_max) {
 	    return choix;
 	}
-	fprintf(stderr, "Votre choix doit entre %d et %d\n", ch_min,
-		ch_max);
+	fprintf(stderr, "Votre choix doit entre %d et %d\n", ch_min,ch_max);
 	printf("Veuillez reessayer s'il vous plait\n");
     }
     exit(1);
@@ -70,7 +69,7 @@ void lctype(prod *p)
     if (p->type == 1 || p->type == 2) {
 	afficher_menu_principal();
 	cereale();
-	exit (0);
+	exit (0); 
     } 
 }
 
