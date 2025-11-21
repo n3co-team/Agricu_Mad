@@ -17,6 +17,8 @@ then
 	message=$(date +%D)
 fi
 	git add .
+	find . -type f -name "agricu" -exec rm {} \;
+	find . -type f -name "a.out" -exec rm {} \;
 	git rm --cached $0
 	git commit -m "${message}"
 	git push
