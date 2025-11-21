@@ -1,3 +1,8 @@
+/**  @file dom.c
+  *  @bref fichier qui contient les listes pour les cereales
+  *  @author Dominique
+*/
+
 #include "voamaina.h"
 
 // Définition des variables globales
@@ -166,10 +171,10 @@ void initialiser_cultures() {
 }
 
 void afficher_menu_principal() {
-    printf("\n=== MENU PRINCIPAL - CEREALE ===\n\n");
+/*    printf("\n=== MENU PRINCIPAL - CEREALE ===\n\n");
     printf("Liste des cultures disponibles:\n");
     printf("--------------------------------\n");
-    
+    */
     for(int i = 0; i < nombre_cultures; i++) {
         printf("%2d. %s\n", cultures[i].id, cultures[i].nom);
     }
@@ -266,4 +271,77 @@ void afficher_informations_culture(int culture_choix, int region_choix) {
         }
     }
     printf("\n");
+}
+
+
+
+
+
+void cereale() {
+    int choix_culture, choix_region, sous_choix;
+    int en_cours = 1;
+
+    initialiser_regions();
+    initialiser_cultures();
+
+    printf("========================================\n");
+    printf("    SYSTEME D'INFORMATION AGRICOLE\n");
+    printf("========================================\n");
+
+    while(en_cours) {
+        afficher_menu_principal();
+        scanf("%d", &choix_culture);
+
+        if(choix_culture == 0) {
+            printf("Veloma! Au revoir!\n");
+            break;
+        }
+	
+
+        if(choix_culture >= 1 && choix_culture <= nombre_cultures) {
+            // Afficher le menu des régions
+            afficher_menu_regions();
+            scanf("%d", &choix_region);
+
+            if(choix_region >= 1 && choix_region <= nombre_regions) {
+                // Afficher les informations avec la région sélectionnée
+                afficher_informations_culture(choix_culture, choix_region);
+
+                // Menu secondaire
+                printf("\n--- MENU SECONDARIE ---\n");
+                printf("1. Voir une autre culture\n");
+                printf("2. Changer de region pour cette culture\n");
+                printf("3. Retour au menu principal\n");
+                printf("4. Quitter\n");
+                printf("\nVotre choix: ");
+                scanf("%d", &sous_choix);
+
+                switch(sous_choix) {
+                    case 1:
+                        // Voir une autre culture
+                        break;
+                    case 2:
+                        // Changer de région pour la même culture
+                        afficher_menu_regions();
+                        scanf("%d", &choix_region);
+                        afficher_informations_culture(choix_culture, choix_region);
+                        break;
+                    case 3:
+                        // Retour au menu principal
+                        continue;
+                    case 4:
+                        en_cours = 0;
+                        printf("Veloma! Au revoir!\n");
+                        break;
+                    default:
+                        printf("Choix invalide, retour au menu principal.\n");
+                }
+            } else {
+                printf("Region invalide! Retour au menu principal.\n");
+            }
+        } else {
+            printf("Choix invalide! Veuillez choisir entre 0 et %d.\n", nombre_cultures);
+        }
+    }
+
 }
