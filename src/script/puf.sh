@@ -1,5 +1,6 @@
 set -e
 
+
 CURRENT_BRANCH=$(git branch | grep "^\*" | cut -d" " -f2)
 
 if [[ $1 == "lo" ]]
@@ -21,4 +22,4 @@ fi
 	find . -type f -name "a.out" -exec rm {} \;
 	git rm --cached $0
 	git commit -m "${message}"
-	git push
+	git push origin ${CURRENT_BRANCH}
