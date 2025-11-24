@@ -151,4 +151,6 @@ void resultf(lprod** data);	// def : infoprod.c
  * @param le struct produit choisi
  */
 void infprod(prod produit); 	// def : infoprod.c
+int cchange(prod *p); 
+
 
