@@ -36,6 +36,7 @@ int rdata(prod choix, lprod **res)
     return 1;
 }
 
+/** @fn analyse type */
 int analyse_type(prod *p, prod **r)
 {
     switch (p->type) {
@@ -65,7 +66,7 @@ int analyse_type(prod *p, prod **r)
     }
 }
 
-
+/** @fn copier prod* en lprod* */
 int cp_list(prod *p, lprod **lp)
 {
     int n = p->ntp;
@@ -78,6 +79,7 @@ int cp_list(prod *p, lprod **lp)
     return 0;
 }
 
+/** @fn analyse mois */
 int analyse_mois(prod *p, lprod **res)
 {
     int n = 12;
@@ -100,9 +102,9 @@ int analyse_mois(prod *p, lprod **res)
 	    fprintf(stderr, "Pas de produit chercher\n");
 	    exit(0);
 	}
-      quit:break;
     }
 
+      quit:
     prev = *res;
     while (1) {
 	if (prev->s != NULL && prev->s->c != NULL)
@@ -126,6 +128,7 @@ int analyse_mois(prod *p, lprod **res)
     }
 }
 
+/** @fn analyse sol */
 int analyse_sol(prod *p, lprod **res)
 {
     int n = 11;
@@ -150,8 +153,9 @@ int analyse_sol(prod *p, lprod **res)
 	    exit(0);
 	}
 
-      quit:break;
     }
+      quit:
+
     prev = l;
     while (1) {
 	if (prev->s != NULL && prev->s->c != NULL)
@@ -174,6 +178,7 @@ int analyse_sol(prod *p, lprod **res)
 
 }
 
+/** @fn analyse saison */
 int analyse_saison(prod *p, lprod **res)
 {
     int n = 5;
@@ -196,8 +201,8 @@ int analyse_saison(prod *p, lprod **res)
 	    fprintf(stderr, "Pas de produit chercher\n");
 	    exit(0);
 	}
-      quit:break;
     }
+      quit:
 
     prev = *res;
     while (1) {
