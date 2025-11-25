@@ -9,29 +9,48 @@
 #include"nac.h"
 #endif
 
-int rdata(prod choix, lprod **res)
+#ifndef MENU_UI_H
+#include"menu_ui.h"
+#endif
+
+void retnac(prod* p, lprod** lp) {
+printf("\n0 : changer le parametre de produit\n");
+	    printf("1 : menu principal\n");
+	    printf("2 : quitter\n");
+
+	    switch (choix_car(0,2)) {
+		    case 0: cchange(p);
+			    rdata(p,lp); break;
+		    case 1: me_pri(p); break;
+		    case 2: exit(0);
+		    default: exit(1);
+	    }
+}
+
+/** @fn analyse des donnes de produit choisi */
+int rdata(prod* choix, lprod **res)
 {
     prod *data;
     lprod *head = res[0];
     lprod *lp = *res;
-    analyse_type(&choix, &data);
+    analyse_type(choix, &data);
     venull(data, "data", "rdata");
     cp_list(data, &lp);
 
     venull(res[0][0].s, "res", "rdata");
     head = *res;
-    if (choix.mois[0] != 0) {
-	analyse_mois(&choix, res);
+    if (choix->mois[0] != 0) {
+	analyse_mois(choix, res);
 	head = *res;
     }
 
-    if (choix.sais[0] != 0) {
-	analyse_saison(&choix, res);
+    if (choix->sais[0] != 0) {
+	analyse_saison(choix, res);
 	head = *res;
     }
 
-    if (choix.sol[0] != 0) {
-	analyse_sol(&choix, res);
+    if (choix->sol[0] != 0) {
+	analyse_sol(choix, res);
     }
     return 1;
 }
@@ -100,6 +119,8 @@ int analyse_mois(prod *p, lprod **res)
 	    l = l->s;
 	else {
 	    fprintf(stderr, "Pas de produit chercher\n");
+	    
+	    retnac(p,res);
 	    exit(0);
 	}
     }
@@ -150,6 +171,7 @@ int analyse_sol(prod *p, lprod **res)
 	    l = l->s;
 	else {
 	    fprintf(stderr, "Pas de produit chercher\n");
+	    retnac(p,res);
 	    exit(0);
 	}
 
@@ -199,6 +221,7 @@ int analyse_saison(prod *p, lprod **res)
 	    l = l->s;
 	else {
 	    fprintf(stderr, "Pas de produit chercher\n");
+	    retnac(p,res);
 	    exit(0);
 	}
     }

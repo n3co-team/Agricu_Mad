@@ -10,7 +10,7 @@
 /** @fn rdata recupere le base de donnee convenable au choix de l'utilisateur
  * @return positive si reussit
  */
-int rdata(prod choix, lprod** resultat);
+int rdata(prod* choix, lprod** resultat);
 
 /** @fn analyse_type fonction d'analyse le type de produit
  * @brief analyse le type et recupère le base de donne convenable à ce type

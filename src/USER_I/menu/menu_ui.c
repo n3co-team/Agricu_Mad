@@ -53,7 +53,7 @@ int me_auto(prod* choix)
 		me_stysamo(choix);
 		return 1;
 	}
-	else if (so != 0 && sa + m!= 0) {
+	else if (so != 0 && sa + m != 0 && t==0 ) {
 			me_ssosamo(choix);
 		return 1;
 	}
@@ -454,7 +454,7 @@ void prod_list(prod* p) {
 	//verification du choix d'utilisateur
 	verification_choix(p);
 
-	rdata(*p,&lp); //recupere les données convenable au choix de l'utilisateur
+	rdata(p,&lp); //recupere les données convenable au choix de l'utilisateur
 	resultf(&lp);	// affichage des resultat
 
 	//Libere les memoire alloué
