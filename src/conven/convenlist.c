@@ -6,7 +6,10 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+
+#ifndef MENU_UI_H
 #include"menu_ui.h"
+#endif
 
 #ifndef NAC_H
 #include"nac.h"
@@ -48,10 +51,14 @@ void lcmois(prod *p)
     printf("	10) Octobre\n");
     printf("	11) Novembre\n");
     printf("	12) Décembre\n");
-
-    p->mois[0] = choix_car(1, 12);
-    printf("Mois choisi : %d\n", p->mois[0]);
-	venull(p,"p","lcmois");
+    printf("	13) ne pas definie\n");
+	
+    
+    p->mois[0] = choix_car(1, 13);
+    if(p->mois[0] == 13)
+    	p->mois[0] = 0;
+    nett();
+    me_auto(p); 
 }
 
 void lctype(prod *p)
@@ -63,7 +70,7 @@ void lctype(prod *p)
     printf("	4) Legume\n");
     printf("	5) Tubercule\n");
     printf("	6) Racine\n");
-    printf("	7) INDEFINIT\n");
+    printf("	7) ne pas definie\n");
 
     p->type = choix_car(1, 7);
     if (p->type == 1 || p->type == 2) {
@@ -71,6 +78,10 @@ void lctype(prod *p)
 	cereale();
 	exit (0); 
     } 
+    if(p->type == 7)
+    	p->type = 0;
+    nett();
+    me_auto(p); 
 }
 
 void lcsol(prod *p)
@@ -87,21 +98,29 @@ void lcsol(prod *p)
     printf("	9) Vaseux\n");
     printf("	10) Léger\n");
     printf("	11) Drainé\n");
-    printf("	12) INDEFINIT,\n");
+    printf("	12) ne pas definie,\n");
 
     p->sol[0] = choix_car(1, 12);
+    if(p->sol[0] == 7)
+    	p->sol[0] = 0;
+    nett();
+    me_auto(p); 
 }
 
 void lcsaison(prod* p)
 {
     printf("  > Choisir la saison :\n");
-    printf("	1) froid,\n");
-    printf("	2) chaud,\n");
-    printf("	3) pluie,\n");
-    printf("	4) sec,\n");
-    printf("	5) tempéré,\n");
-    printf("	6) INDEFINIT,\n");
+    printf("	1) froid\n");
+    printf("	2) chaud\n");
+    printf("	3) pluie\n");
+    printf("	4) sec\n");
+    printf("	5) tempéré\n");
+    printf("	6) ne pas definie\n");
 
     p->sais[0] = choix_car(1, 6);
+    if(p->sais[0] == 6)
+    	p->sais[0] = 0;
+    nett();
+    me_auto(p); 
 }
 

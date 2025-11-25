@@ -153,4 +153,7 @@ void resultf(lprod** data);	// def : infoprod.c
 void infprod(prod produit); 	// def : infoprod.c
 int cchange(prod *p); 
 
-
+void afchoix(prod *p);
+void nett();
+void info_cchange();
+int me_auto(prod *choix); 
