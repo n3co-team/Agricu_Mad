@@ -27,7 +27,7 @@ void resultf(lprod** donne) {
 	lprod* temp = p;
 	while(temp != NULL  && temp ->c != NULL) {
 		i++;
-		printf("%d) %s\n",i,/*p*/current ->c->nom);
+		printf("%d) %s\n",i,temp ->c->nom);
       		/*
 		if (p->s == NULL || p->s->c == NULL ) {
 			break;
@@ -55,7 +55,7 @@ void resultf(lprod** donne) {
 		i++;
 	}*/
 	for (int j = 1; j < choix; j++){
-	  if(temp != NULL ) yzmp = temp ->s;
+	  if(temp != NULL ) temp = temp ->s;
         }
 	if (temp != NULL && temp ->c != NULL){
 	   infprod(*(temp->c));
