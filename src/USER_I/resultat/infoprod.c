@@ -33,13 +33,13 @@ void resultf(lprod** donne) {
 			break;
 		}*/
 
-		current = current->s;
+		temp = temp->s;
 	}
 	
 	printf("\nEntrer le numero de resultat: ");
 	choix=choix_car(1,i);
 	//choix = choix - 1;
-	current = *donne;
+	temp = *donne;
 	/*i=0;
 	while (1) {
 		if(choix==i) {
@@ -55,10 +55,10 @@ void resultf(lprod** donne) {
 		i++;
 	}*/
 	for (int j = 1; j < choix; j++){
-	  if(current != NULL ) curret = current ->s;
+	  if(temp != NULL ) yzmp = temp ->s;
         }
-	if (current != NULL && current ->c != NULL){
-	   infprod(*(current->c));
+	if (temp != NULL && temp ->c != NULL){
+	   infprod(*(temp->c));
 	}
 }
 			
