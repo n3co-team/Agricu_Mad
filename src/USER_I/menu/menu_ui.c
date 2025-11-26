@@ -6,7 +6,7 @@
 
 #include<stdio.h>
 #include<stdlib.h>
-
+#include "voamaina.h"
 #ifndef MENU_UI_H
 #include"menu_ui.h"
 #endif
