@@ -76,8 +76,8 @@ void lctype(prod *p)
     if (p->type == 1 || p->type == 2) {
 	afficher_menu_principal();
 	cereale();
-//	exit (0); 
-	return;
+	exit (0); //
+	//return;
     } 
     if(p->type == 7)
     	p->type = 0;

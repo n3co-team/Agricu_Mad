@@ -90,7 +90,7 @@ void init_choix(prod** p)
 	for(i = 0; i < 12; i++) {
 		(*p)->mois[i] = 0;
 	}
-//	printf("****** BIENVENUE SUR LES INFORMATION AGRICULTURE****** \n");
+	printf("****** BIENVENUE SUR LES INFORMATION AGRICULTURE****** \n");
 }
 
 /** @fn me_pri
@@ -114,7 +114,8 @@ void me_pri(prod* p)
 	choix = choix_car(1,5);
 
 	switch (choix) {
-		case 0: prod_apropos(); break;
+		case 0: prod_apropos(); 
+			break;
 		case 1:lctype(p);	//affiche le menu type
 			 break;
 		case 2: lcsol(p);	// affiche le menu du sol
@@ -145,8 +146,10 @@ void me_sty (prod* p)
 	choix = choix_car(1,5);
 
 	switch (choix) {
-		case 0: prod_apropos(); break;
-		case 1: prod_list(p); break;
+		case 0: prod_apropos(); 
+			break;
+		case 1: prod_list(p); 
+			break;
 		case 2: lcsol(p);
 			break;
 		case 3:lcsaison(p);
@@ -156,7 +159,8 @@ void me_sty (prod* p)
 		case 5: cchange(p);
 			break;
 		default: fprintf(stderr,"Erreur");
-			exit (1); break;
+			exit (1); 
+			break;
 	}
 }
 
