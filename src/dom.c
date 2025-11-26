@@ -280,14 +280,14 @@ void afficher_informations_culture(int culture_choix, int region_choix) {
 void cereale() {
     int choix_culture, choix_region, sous_choix;
     int en_cours = 1;
-
+/*
     initialiser_regions();
     initialiser_cultures();
 
     printf("========================================\n");
     printf("    SYSTEME D'INFORMATION AGRICOLE\n");
     printf("========================================\n");
-
+*/
     while(en_cours) {
         afficher_menu_principal();
         scanf("%d", &choix_culture);
@@ -300,7 +300,7 @@ void cereale() {
 
         if(choix_culture >= 1 && choix_culture <= nombre_cultures) {
             // Afficher le menu des régions
-            afficher_menu_regions();
+//            afficher_menu_regions();
             scanf("%d", &choix_region);
 
             if(choix_region >= 1 && choix_region <= nombre_regions) {

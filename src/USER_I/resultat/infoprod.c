@@ -18,28 +18,29 @@
 #endif
 
 void resultf(lprod** donne) {
-	int i=1;
+	int i=0; //p miova current
 	int choix;
-	lprod* p=donne[0];
+	lprod* p = *donne;  //donne[0]
 	
 	printf("\n\n\e[1mLes produits disponible par votre choix :\e[0m\n");
-	i=0;
-	while(1) {
+	//i=0;
+	lprod* temp = p;
+	while(temp != NULL  && temp ->c != NULL) {
 		i++;
-		printf("%d) %s\n",i,p->c->nom);
-		
+		printf("%d) %s\n",i,/*p*/current ->c->nom);
+      		/*
 		if (p->s == NULL || p->s->c == NULL ) {
 			break;
-		}
+		}*/
 
-		p=p->s;
+		current = current->s;
 	}
 	
 	printf("\nEntrer le numero de resultat: ");
 	choix=choix_car(1,i);
-	choix = choix - 1;
-	p=donne[0];
-	i=0;
+	//choix = choix - 1;
+	current = *donne;
+	/*i=0;
 	while (1) {
 		if(choix==i) {
 			venull(p->s[0].c,"p->s[0].c","resultf");
@@ -52,6 +53,12 @@ void resultf(lprod** donne) {
 		}
 		p=p->s;
 		i++;
+	}*/
+	for (int j = 1; j < choix; j++){
+	  if(current != NULL ) curret = current ->s;
+        }
+	if (current != NULL && current ->c != NULL){
+	   infprod(*(current->c));
 	}
 }
 			
