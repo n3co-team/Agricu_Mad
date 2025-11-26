@@ -184,12 +184,13 @@ void afficher_menu_principal() {
     if (scanf("%d", &choix_cultures) == 1) {
 	if(choix_cultures > 0 && choix_cultures <= nombre_cultures){
 	   afficher_menu_regions();
+	   initialiser_cultures();
         } 
     else if(choix_cultures == 0){
       return;
     }
 
-    }
+//    }
 }
 
 
