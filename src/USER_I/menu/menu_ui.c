@@ -61,7 +61,7 @@ int me_auto(prod* choix)
 		verification_choix(choix);
 		return 2;
 	}
-
+	return (0);
 }
 
 void init_choix(prod** p) 
