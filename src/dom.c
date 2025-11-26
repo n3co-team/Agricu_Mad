@@ -190,7 +190,7 @@ void afficher_menu_principal() {
       return;
     }
 
-//    }
+    }
 }
 
 
