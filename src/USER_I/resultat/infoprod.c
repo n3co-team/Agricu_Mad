@@ -38,9 +38,9 @@ void resultf(lprod** donne) {
 	
 	printf("\nEntrer le numero de resultat: ");
 	choix=choix_car(1,i);
-	//choix = choix - 1;
+	choix = choix - 1;
 	temp = *donne;
-	/*i=0;
+	i=0;
 	while (1) {
 		if(choix==i) {
 			venull(p->s[0].c,"p->s[0].c","resultf");
@@ -53,13 +53,15 @@ void resultf(lprod** donne) {
 		}
 		p=p->s;
 		i++;
-	}*/
+	}
+     /*
 	for (int j = 1; j < choix; j++){
 	  if(temp != NULL ) temp = temp ->s;
         }
 	if (temp != NULL && temp ->c != NULL){
 	   infprod(*(temp->c));
 	}
+	*/
 }
 			
 void infprod(prod p)
