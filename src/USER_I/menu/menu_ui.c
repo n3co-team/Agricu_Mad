@@ -90,7 +90,7 @@ void init_choix(prod** p)
 	for(i = 0; i < 12; i++) {
 		(*p)->mois[i] = 0;
 	}
-	printf("****** BIENVENUE SUR LES INFORMATION AGRICULTURE****** \n");
+	printf("****** BIENVENUE SUR LES INFORMATIONS AGRICULTURES  ****** \n");
 }
 
 /** @fn me_pri
@@ -110,7 +110,7 @@ void me_pri(prod* p)
 	printf("3) Saison\n");
 	printf("4) Mois\n");
 	printf("5) à propos\n ");
-	
+	initialiser_cultures();
 	choix = choix_car(1,5);
 
 	switch (choix) {
@@ -142,7 +142,7 @@ void me_sty (prod* p)
 	printf("3) Saison\n");
 	printf("4) Mois\n");
 	printf("5) Change choix déja mis\n");
-	
+	initialiser_cultures();
 	choix = choix_car(1,5);
 
 	switch (choix) {
@@ -176,7 +176,7 @@ void me_sso (prod* p)
 	printf("3) Saison\n");
 	printf("4) Mois\n");
 	printf("5) Change choix déja mis\n");
-	
+	initialiser_cultures();
 	choix = choix_car(1,5);
 
 	switch (choix) {
@@ -207,7 +207,7 @@ void me_ssa(prod* p)
 	printf("2) Type de produit\n"); 
 	printf("3) Sol\n");
 	printf("4) Change choix déja mis\n");
-	
+	initialiser_cultures();
 	choix = choix_car(1,4);
 
 	switch (choix) {
@@ -236,7 +236,7 @@ void me_smo (prod* p)
 	printf("2) Type de produit"); 
 	printf("3) Sol");
 	printf("4) Change choix déja mis\n");
-	
+	initialiser_cultures();
 	choix = choix_car(1,3);
 
 	switch (choix) {
