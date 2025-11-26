@@ -12,7 +12,7 @@ int aide() {
 
 void prod_apropos() {
 	printf("Pas disponible\n");
-	exit (1);
+//	exit (1);
 }
 
 void info_cchange()

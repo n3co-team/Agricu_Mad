@@ -76,7 +76,8 @@ void lctype(prod *p)
     if (p->type == 1 || p->type == 2) {
 	afficher_menu_principal();
 	cereale();
-	exit (0); 
+//	exit (0); 
+	return;
     } 
     if(p->type == 7)
     	p->type = 0;
@@ -101,7 +102,7 @@ void lcsol(prod *p)
     printf("	12) ne pas definie,\n");
 
     p->sol[0] = choix_car(1, 12);
-    if(p->sol[0] == 7)
+    if(p->sol[0] == 12)
     	p->sol[0] = 0;
     nett();
     me_auto(p); 
