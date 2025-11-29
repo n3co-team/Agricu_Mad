@@ -346,3 +346,59 @@ void cereale() {
     }
 
 }
+
+
+
+void fruit (){
+    int choix_culture, choix_region, sous_choix;
+    int en_cours = 1;
+
+    while (en_cours){
+        afficher_menu_principal ();
+        scanf("%d", &choix_culture);
+        
+        if (choix_culture == 0){
+            printf("Au revoir !\n");
+            break;
+        }
+        if (choix_culture >= 1 && choix_culture <= nombre_cultures){
+            scanf("%d", &choix_region);
+            if (choix_region >= 1 && choix_region <= nombre_regions){
+                afficher_informations_culture(choix_culture,choix_region);
+
+                //menu secondaire----
+                printf("\n--- MENU SECONDAIRE ---\n");
+                printf("1. Voir une autre culture\n");
+                printf("2. Changer de region pour cette culture \n");
+                printf("3. Retour au menu principale \n");
+                printf("4. Quitter\n");
+                printf("\n Entrer votre choix: ");
+                scanf("%d", &sous_choix);
+
+                switch (sous_choix) {
+                    case 1: 
+                        break;
+                    case 2: 
+                        afficher_menu_regions();
+                        scanf("%d", &choix_region);
+                        afficher_informations_culture(choix_culture, choix_region);
+                        break;
+                    case 3: 
+                        continue;
+                    case 4: 
+                        en_cours = 0;
+                        printf("Au revoir! \n");
+                        break;
+                    default:
+                        printf("Choix invalide, retour au menu principale. \n");
+                }
+            } 
+            else {
+                prntf("Region invalide! Retour au menu principal. \n");
+            } 
+        } 
+        else {
+            printf("Choix invalide! Veuillez choisir entre 0 et %d. \n ",nombre_cultures);
+        }
+    }
+}
