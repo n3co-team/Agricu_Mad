@@ -394,7 +394,7 @@ void fruit (){
                 }
             } 
             else {
-                prntf("Region invalide! Retour au menu principal. \n");
+                printf("Region invalide! Retour au menu principal. \n");
             } 
         } 
         else {
