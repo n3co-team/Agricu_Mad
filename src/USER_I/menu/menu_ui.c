@@ -111,6 +111,7 @@ void me_pri(prod* p)
 	printf("4) Mois\n");
 	printf("5) à propos\n ");
 	initialiser_cultures();
+	
 	choix = choix_car(1,5);
 
 	switch (choix) {
@@ -264,7 +265,7 @@ void me_ssamo (prod* p)
 	printf("2) Type de produit\n"); 
 	printf("3) Sol\n");
 	printf("4) Change choix déja mis\n");
-	
+	initialiser_cultures();
 	choix = choix_car(1,4);	
 
 	switch (choix) {
@@ -293,7 +294,7 @@ void me_styso (prod* p)
 	printf("2) Saison\n"); 
 	printf("3) Mois\n");
 	printf("4) Change choix déja mis\n");
-	
+	initialiser_cultures();
 	choix = choix_car(1,4);	
 
 	switch (choix) {
@@ -321,7 +322,7 @@ void me_stysamo (prod* p)
 	printf("1) List de produit\n");
 	printf("2) Sol\n");
 	printf("3) Change choix déja mis\n");
-	
+	initialiser_cultures();
 	choix = choix_car(1,3);	
 
 	switch (choix) {
@@ -346,7 +347,7 @@ void me_ssosamo (prod* p)
 	printf("1) List de produit\n");
 	printf("2) Type de produit\n");
 	printf("3) Change choix déja mis\n");
-	
+	initialiser_cultures();
 	choix = choix_car(1,3);	
 
 	switch (choix) {
