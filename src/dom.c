@@ -292,18 +292,27 @@ void cereale() {
 */
     while(en_cours) {
         afficher_menu_principal();
-        scanf("%d", &choix_culture);
+	// nampiana if dia alana aveo
+        if(scanf("%d", &choix_culture)){
+	   printf("Saisie invalide. Veuillez entrer un nombre.\n");
+	   while (getchar () != '\n'); // vider le buffer
+	   continue;
+	}
 
         if(choix_culture == 0) {
-            printf("Veloma! Au revoir!\n");
+            printf("Au revoir!\n");
             break;
         }
 	
 
         if(choix_culture >= 1 && choix_culture <= nombre_cultures) {
             // Afficher le menu des régions
-//            afficher_menu_regions();
-            scanf("%d", &choix_region);
+            afficher_menu_regions();
+            if (scanf("%d", &choix_region) != 1 ){
+	        printf("Saisie invalide. Veuillez entrer un nombre.\n");
+		while (getchar () != '\n' );
+	        continue;
+	    }
 
             if(choix_region >= 1 && choix_region <= nombre_regions) {
                 // Afficher les informations avec la région sélectionnée
@@ -316,7 +325,11 @@ void cereale() {
                 printf("3. Retour au menu principal\n");
                 printf("4. Quitter\n");
                 printf("\nVotre choix: ");
-                scanf("%d", &sous_choix);
+                if (scanf("%d", &sous_choix) != 1){
+			printf("Saisie invalide. Retour au menu principale.\n");
+			while (getchar () != '\n');
+			continue;
+		}
 
                 switch(sous_choix) {
                     case 1:
@@ -325,15 +338,25 @@ void cereale() {
                     case 2:
                         // Changer de région pour la même culture
                         afficher_menu_regions();
-                        scanf("%d", &choix_region);
-                        afficher_informations_culture(choix_culture, choix_region);
-                        break;
+                        if (scanf("%d", &choix_region) != 1){
+				printf("Saisie invalide. Retour au menu principale.\n");
+				while (getchar () != '\n');
+				break;
+			}
+			if (choix_region >= 1 && choix_region <= nombre_regions){
+				 afficher_informations_culture(choix_culture, choix_region);
+			}
+                       // afficher_informations_culture(choix_culture, choix_region);
+                        else {
+				printf("Choix de region invalide.\n");
+			}
+			break;
                     case 3:
                         // Retour au menu principal
                         continue;
                     case 4:
                         en_cours = 0;
-                        printf("Veloma! Au revoir!\n");
+                        printf("Au revoir!\n");
                         break;
                     default:
                         printf("Choix invalide, retour au menu principal.\n");
@@ -346,7 +369,7 @@ void cereale() {
         }
     }
 // teste pour les iformations de la cultures 
-	void afficher_informations_cultures();
+//	void afficher_informations_cultures();
 }
 
 
