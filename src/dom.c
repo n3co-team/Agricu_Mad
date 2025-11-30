@@ -310,7 +310,7 @@ void cereale() {
             afficher_menu_regions();
             if (scanf("%d", &choix_region) != 1 ){
 	        printf("Saisie invalide. Veuillez entrer un nombre.\n");
-		while (getchar() != '\n' );
+		while (getchar() != '\n' )
 	        continue;
 	    }
 
