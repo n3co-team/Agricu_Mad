@@ -90,6 +90,8 @@ void init_choix(prod** p)
 	for(i = 0; i < 12; i++) {
 		(*p)->mois[i] = 0;
 	}
+	//initialiser de  produi
+//	for (i = 0; i)
 	printf("****** BIENVENUE SUR LES INFORMATIONS AGRICULTURES  ****** \n");
 }
 
