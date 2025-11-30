@@ -40,6 +40,7 @@ void afficher_menu_principal();
 void afficher_menu_regions();
 int est_region_compatible(int culture_id, int region_id);
 void afficher_informations_culture(int culture_choix, int region_choix);
+void afficher_menu_cultures();
 void cereale();
 void fruit();
 #endif
