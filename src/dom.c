@@ -175,15 +175,16 @@ void afficher_menu_principal() {
     printf("Liste des cultures disponibles:\n");
     printf("--------------------------------\n");
   
-/*    for(int i = 0; i < nombre_cultures; i++) {
+    for(int i = 0; i < nombre_cultures; i++) {
         printf("%2d. %s\n", cultures[i].id, cultures[i].nom);
     }
-*/
+
     //printf("\n0. Quitter le programme\n");
     printf("\nChoisissez une culture (1-%d) ou 0 pour quitter: ", nombre_cultures);
     if (scanf("%d", &choix_cultures) == 1) {
 	if(choix_cultures > 0 && choix_cultures <= nombre_cultures){
 	   afficher_menu_regions();
+	   afficher_menu_cultures();
 //	   initialiser_cultures();
         } 
     else if(choix_cultures == 0){
