@@ -295,7 +295,7 @@ void cereale() {
 	// nampiana if dia alana aveo
         if(scanf("%d", &choix_culture)){
 	   printf("Saisie invalide. Veuillez entrer un nombre.\n");
-	   while (getchar () != '\n'); // vider le buffer
+	   while (getchar() != '\n'); // vider le buffer
 	   continue;
 	}
 
@@ -310,7 +310,7 @@ void cereale() {
             afficher_menu_regions();
             if (scanf("%d", &choix_region) != 1 ){
 	        printf("Saisie invalide. Veuillez entrer un nombre.\n");
-		while (getchar () != '\n' );
+		while (getchar() != '\n' );
 	        continue;
 	    }
 
@@ -327,7 +327,7 @@ void cereale() {
                 printf("\nVotre choix: ");
                 if (scanf("%d", &sous_choix) != 1){
 			printf("Saisie invalide. Retour au menu principale.\n");
-			while (getchar () != '\n');
+			while (getchar() != '\n');
 			continue;
 		}
 
