@@ -344,9 +344,9 @@ void cereale() {
             printf("Choix invalide! Veuillez choisir entre 0 et %d.\n", nombre_cultures);
         }
     }
-
+// teste pour les iformations de la cultures 
+	void afficher_informations_cultures();
 }
-
 
 
 void fruit (){
@@ -401,4 +401,6 @@ void fruit (){
             printf("Choix invalide! Veuillez choisir entre 0 et %d. \n ",nombre_cultures);
         }
     }
+// Teste pour les informations des cultures
+	void afficher_informations_cultures();
 }
