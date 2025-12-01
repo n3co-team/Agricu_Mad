@@ -357,7 +357,7 @@ void cereale() {
                     case 4:
                         en_cours = 0;
                         printf("Au revoir!\n");
-                        break;
+                         break;
                     default:
                         printf("Choix invalide, retour au menu principal.\n");
                 }
