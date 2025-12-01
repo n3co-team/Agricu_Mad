@@ -283,7 +283,7 @@ void afficher_informations_culture(int culture_choix, int region_choix) {
     int choix_culture, choix_region, sous_choix;
     int en_cours = 1;
 
-/*    initialiser_regions();
+//    initialiser_regions();
     initialiser_cultures();
 
     printf("========================================\n");
