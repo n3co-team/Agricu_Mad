@@ -279,17 +279,17 @@ void afficher_informations_culture(int culture_choix, int region_choix) {
 
 
 
-/*void cereale() {
+void cereale() {
     int choix_culture, choix_region, sous_choix;
     int en_cours = 1;
 
-//    initialiser_regions();
+/*    initialiser_regions();
     initialiser_cultures();
 
     printf("========================================\n");
     printf("    SYSTEME D'INFORMATION AGRICOLE\n");
     printf("========================================\n");
-//
+*/
     while(en_cours) {
         afficher_menu_principal();
 	// nampiana if dia alana aveo
@@ -372,7 +372,7 @@ void afficher_informations_culture(int culture_choix, int region_choix) {
 //	void afficher_informations_cultures();
 }
 
-
+/*
 void fruit (){
     int choix_culture, choix_region, sous_choix;
     int en_cours = 1;
