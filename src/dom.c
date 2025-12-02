@@ -11,7 +11,8 @@ Region regions[MAX_REGIONS];
 int nombre_cultures = 0;
 int nombre_regions = 0;
 int choix_cultures;
-
+// apina
+extern int choix_cultures;
 void initialiser_regions() {
     // Région 1: Alaotra Mangoro
     regions[0].id = 1;
@@ -181,13 +182,20 @@ void afficher_menu_principal() {
 
     //printf("\n0. Quitter le programme\n");
     printf("\nChoisissez une culture (1-%d) ou 0 pour quitter: ", nombre_cultures);
-    if (scanf("%d", &choix_cultures) == 1) {
-	if(choix_cultures > 0 && choix_cultures <= nombre_cultures){
-	   afficher_menu_regions();
-	   afficher_menu_cultures();
+    //
+	int choix_locale;
+    if (scanf("%d", &choix_locale) == 1) {
+	if(choix_locale > 0 && choix_locale <= nombre_cultures){
+	   /*afficher_menu_regions();
+	   afficher_menu_cultures();*/
+	choix_cultures = choix_locale;
+	int choix_region;
+	afficher_menu_regions();
+	scanf("%d",&choix_region);
+	afficher_informations_cultures(choix_cultures, choix_region);
 //	   initialiser_cultures();
         } 
-    else if(choix_cultures == 0){
+    else if(choix_locale == 0){
       return;
     }
 
@@ -276,24 +284,27 @@ void afficher_informations_culture(int culture_choix, int region_choix) {
 }
 
 
-
-
+// Fonction vao hahazoana ny valeur an'ilay choix globale
+int get_choix_cultures() {
+    return choix_cultures;
+}
+/*
 
 void cereale() {
     int choix_culture, choix_region, sous_choix;
     int en_cours = 1;
 
-/*    initialiser_regions();
+    initialiser_regions();
     initialiser_cultures();
 
     printf("========================================\n");
     printf("    SYSTEME D'INFORMATION AGRICOLE\n");
     printf("========================================\n");
-*/
+
     while(en_cours) {
         afficher_menu_principal();
 	// nampiana if dia alana aveo
-        if(scanf("%d", &choix_culture)){
+/*        if(scanf("%d", &choix_culture)){
 	   printf("Saisie invalide. Veuillez entrer un nombre.\n");
 	   while (getchar() != '\n'); // vider le buffer
 	   continue;
@@ -317,7 +328,8 @@ void cereale() {
             if(choix_region >= 1 && choix_region <= nombre_regions) {
                 // Afficher les informations avec la région sélectionnée
                 afficher_informations_culture(choix_culture, choix_region);
-
+//
+	if (choix_cultures > 0 ){
                 // Menu secondaire
                 printf("\n--- MENU SECONDARIE ---\n");
                 printf("1. Voir une autre culture\n");
@@ -344,7 +356,7 @@ void cereale() {
 				break;
 			}
 			if (choix_region >= 1 && choix_region <= nombre_regions){
-				 afficher_informations_culture(choix_culture, choix_region);
+				 afficher_informations_culture(choix_cultures, choix_region);
 			}
                        // afficher_informations_culture(choix_culture, choix_region);
                         else {
@@ -367,6 +379,7 @@ void cereale() {
         } else {
             printf("Choix invalide! Veuillez choisir entre 0 et %d.\n", nombre_cultures);
         }
+      }
     }
 // teste pour les iformations de la cultures 
 //	void afficher_informations_cultures();
@@ -429,3 +442,82 @@ void fruit (){
 	void afficher_informations_cultures();
 }
 */
+
+
+void cereale() {
+    int choix_culture, choix_region, sous_choix;
+    int en_cours = 1;
+
+    initialiser_regions();
+    initialiser_cultures();
+
+    printf("========================================\n");
+    printf("    SYSTEME D'INFORMATION AGRICOLE\n");
+    printf("========================================\n");
+
+    while(en_cours) {
+        // Menu voalohany
+        afficher_menu_principal();
+        
+        // Takiana manao scanf miverina
+        printf("\nChoisissez une culture (1-%d) ou 0 pour quitter: ", nombre_cultures);
+        if(scanf("%d", &choix_culture) != 1) {
+            printf("Saisie invalide!\n");
+            while(getchar() != '\n');
+            continue;
+        }
+
+        if(choix_culture == 0) {
+            printf("Au revoir!\n");
+            break;
+        }
+
+        if(choix_culture >= 1 && choix_culture <= nombre_cultures) {
+            // Menu region
+            afficher_menu_regions();
+            printf("\nChoisissez votre region (1-%d): ", nombre_regions);
+            
+            if(scanf("%d", &choix_region) != 1) {
+                printf("Saisie invalide!\n");
+                while(getchar() != '\n');
+                continue;
+            }
+
+            if(choix_region >= 1 && choix_region <= nombre_regions) {
+                afficher_informations_culture(choix_culture, choix_region);
+                
+                // Menu faharoa
+                printf("\n--- MENU SECONDARIE ---\n");
+                printf("1. Voir une autre culture\n");
+                printf("2. Changer de region pour cette culture\n");
+                printf("3. Quitter\n");
+                printf("\nVotre choix: ");
+                
+                if(scanf("%d", &sous_choix) != 1) {
+                    printf("Saisie invalide!\n");
+                    while(getchar() != '\n');
+                    continue;
+                }
+
+                switch(sous_choix) {
+                    case 1:
+                        // Hijerena culture hafa
+                        break;
+                    case 2:
+                        // Hijerena region hafa amin'io culture io
+                        break;
+                    case 3:
+                        en_cours = 0;
+                        printf("Au revoir!\n");
+                        break;
+                    default:
+                        printf("Choix invalide!\n");
+                }
+            } else {
+                printf("Region invalide!\n");
+            }
+        } else {
+            printf("Culture invalide!\n");
+        }
+    }
+}
