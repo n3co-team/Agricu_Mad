@@ -64,12 +64,12 @@ void lcmois(prod *p)
 void lctype(prod *p)
 {
     printf("  > Choisir le type de produit:\n");
-    printf("	1) Cereale\n");
-    printf("	2) Legumineux\n");
-    printf("	3) Fruit\n");
-    printf("	4) Legume\n");
-    printf("	5) Tubercule\n");
-    printf("	6) Racine\n");
+    printf("	1) Vary\n");
+    printf("	2) Voamaina\n");
+    printf("	3) Voankazo\n");
+    printf("	4) Legioma\n");
+    printf("	5) Vokatr'antany\n");
+    printf("	6) Vahitra\n");
     printf("	7) ne pas definie\n");
 
     p->type = choix_car(1, 7);
@@ -89,11 +89,11 @@ void lctype(prod *p)
 void lcsol(prod *p)
 {
     printf("  > Choisir le type de sol:\n");
-    printf("	1) Sol sableux,\n");
-    printf("	2) Sol argileux,\n");
+    printf("	1) Tora-pasika,\n");
+    printf("	2) Fotaka,\n");
     printf("	3) Sol limoneux,\n");
-    printf("	4) Sol humifère (ou organique),\n");
-    printf("	5) humide\n");
+    printf("	4) tany Mainty (ou organique),\n");
+    printf("	5) Mando\n");
     printf("	6) Aquatique\n");
     printf("	7) Meuble\n");
     printf("	8) Riche\n");
@@ -111,11 +111,11 @@ void lcsol(prod *p)
 
 void lcsaison(prod* p)
 {
-    printf("  > Choisir la saison :\n");
-    printf("	1) froid\n");
-    printf("	2) chaud\n");
-    printf("	3) pluie\n");
-    printf("	4) sec\n");
+    printf("  > Safidio ny toetr'andro :\n");
+    printf("	1) Mangatsika\n");
+    printf("	2) Mafana\n");
+    printf("	3) Be orana\n");
+    printf("	4) Maina\n");
     printf("	5) tempéré\n");
     printf("	6) ne pas definie\n");
 
