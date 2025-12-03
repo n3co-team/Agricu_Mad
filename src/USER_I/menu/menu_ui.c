@@ -373,13 +373,13 @@ void afchoix(prod *p) {
 	printf("\n| Choix dejà mis :\n");
 	
 	if(p->type != 0)
-		printf("| TYPE:%s\n",TYPE);
+		printf("| KARAZANY:%s\n",TYPE);
 	if(p->sol[0] != 0)
-		printf("| SOL:%s\n",SOL);
+		printf("| TANY:%s\n",SOL);
 	if(p->sais[0] != 0)
-		printf("| SAISON:%s\n",SAISON);
+		printf("| TOETR'ANDRO:%s\n",SAISON);
 	if(p->mois[0] != 0)
-		printf("| MOIS:%s\n",MOIS);
+		printf("| VOLANA:%s\n",MOIS);
 	printf("|__________________________");
 
 	if (MOIS != NULL)
