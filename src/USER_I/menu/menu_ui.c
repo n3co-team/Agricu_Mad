@@ -106,7 +106,7 @@ void me_pri(prod* p)
 	int choix;
 	init_choix(&p);
 
-	printf("\nCHOISIR UN OPTION :\n");
+	printf("\nAtaovy ny safidy :\n");
 	printf("1) Karan'ny vokatra\n");
 	printf("2) Toe-tany\n");
 	printf("3) Toetr'andro\n");
@@ -139,7 +139,7 @@ void me_sty (prod* p)
 	int choix;
 	afchoix(p);
 
-	printf("\nCHOISIR UN OPTION :\n");
+	printf("\nAtaovy ny safidy :\n");
 	printf("1) List de produit\n");
 	printf("2) Toe-tany\n");
 	printf("3) Toetr'andro\n");
@@ -173,7 +173,7 @@ void me_sso (prod* p)
 	int choix;
 	afchoix(p);
 
-	printf("\nCHOISIR UN OPTION :\n");
+	printf("\nAtaovy ny safidy :\n");
 	printf("1) List de produit\n");
 	printf("2) Karan'ny vokatra\n"); 
 	printf("3) Toetr'andro\n");
@@ -205,7 +205,7 @@ void me_ssa(prod* p)
 	int choix;
 	afchoix(p);
 
-	printf("\nCHOISIR UN OPTION :\n");
+	printf("\nAtaovy ny safidy :\n");
 	printf("1) List de produit\n");
 	printf("2) Karan'ny vokatra\n"); 
 	printf("3) Toe-tany\n");
@@ -234,7 +234,7 @@ void me_smo (prod* p)
 	int choix;
 	afchoix(p);
 
-	printf("\nCHOISIR UN OPTION :\n");
+	printf("\nAtaovy ny safidy :\n");
 	printf("1) List de produit");
 	printf("2) Karan'ny vokatra"); 
 	printf("3) Toe-tany");
@@ -262,7 +262,7 @@ void me_ssamo (prod* p)
 {
 	int choix;
 	afchoix(p);
-	printf("\nCHOISIR UN OPTION :\n");
+	printf("\nAtaovy ny safidy :\n");
 	printf("1) List de produit\n");
 	printf("2) Karan'ny vokatra\n"); 
 	printf("3) Toe-tany\n");
@@ -291,7 +291,7 @@ void me_styso (prod* p)
 	int choix;
 	afchoix(p);
 
-	printf("\nCHOISIR UN OPTION :\n");
+	printf("\nAtaovy ny safidy :\n");
 	printf("1) List de produit\n");
 	printf("2) Toetr'andro\n"); 
 	printf("3) Volana\n");
@@ -320,7 +320,7 @@ void me_stysamo (prod* p)
 	int choix;
 	afchoix(p);
 
-	printf("\nCHOISIR UN OPTION :\n");
+	printf("\nAtaovy ny safidy :\n");
 	printf("1) List de produit\n");
 	printf("2) Toe-tany\n");
 	printf("3) Hanova safidy\n");
@@ -345,7 +345,7 @@ void me_ssosamo (prod* p)
 	int choix;
 	afchoix(p);
 
-	printf("\nCHOISIR UN OPTION :\n");
+	printf("\nAtaovy ny safidy :\n");
 	printf("1) List de produit\n");
 	printf("2) Karan'ny vokatra\n");
 	printf("3) Hanova safidy\n");
