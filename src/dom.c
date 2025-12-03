@@ -192,7 +192,7 @@ void afficher_menu_principal() {
 	int choix_region;
 	afficher_menu_regions();
 	scanf("%d",&choix_region);
-	afficher_informations_cultures(choix_cultures, choix_region);
+	afficher_informations_cultures(choix_cultures,choix_region);
 //	   initialiser_cultures();
         } 
     else if(choix_locale == 0){
