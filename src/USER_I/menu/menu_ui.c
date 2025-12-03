@@ -459,7 +459,7 @@ void prod_list(prod* p) {
 	lprod* lpt;	// pointeur pour permuter les position de list chainé lp
 	 
 	//verification du choix d'utilisateur
-	verification_choix(p);
+//	verification_choix(p);
 
 	rdata(p,&lp); //recupere les données convenable au choix de l'utilisateur
 	resultf(&lp);	// affichage des resultat

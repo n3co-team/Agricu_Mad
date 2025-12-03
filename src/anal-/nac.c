@@ -160,7 +160,6 @@ int analyse_sol(prod *p, lprod **res)
     //analyse tete
     while (1) {
 	for (int i = 0; i <= n; i++) {
-	    printf("sol=%d", l->c->sol[i]);
 	    if (l->c->sol[i] == p->sol[0]) {
 		*res = l;
 		goto quit;
