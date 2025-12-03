@@ -29,8 +29,8 @@ int choix_car(int ch_min, int ch_max)
 	if (choix >= ch_min && choix <= ch_max) {
 	    return choix;
 	}
-	fprintf(stderr, "Votre choix doit entre %d et %d\n", ch_min,ch_max);
-	printf("Veuillez reessayer s'il vous plait\n");
+	fprintf(stderr, "Safidinao dia tsy maintsy  anelanelan'ny %d sy %d\n", ch_min,ch_max);
+	printf("Avereno azafady\n");
     }
     exit(1);
 
@@ -38,7 +38,7 @@ int choix_car(int ch_min, int ch_max)
 
 void lcmois(prod *p)
 {
-    printf("  > Choisir le mois:\n");
+    printf("  > Safidio ny volana:\n");
     printf("	1) Janvier\n");
     printf("	2) Fevrier\n");
     printf("	3) Mars\n");
@@ -51,7 +51,7 @@ void lcmois(prod *p)
     printf("	10) Octobre\n");
     printf("	11) Novembre\n");
     printf("	12) Décembre\n");
-    printf("	13) ne pas definie\n");
+    printf("	13) Tsy asiana\n");
 	
     
     p->mois[0] = choix_car(1, 13);
@@ -63,14 +63,14 @@ void lcmois(prod *p)
 
 void lctype(prod *p)
 {
-    printf("  > Choisir le type de produit:\n");
+    printf("  > Safidio ny karazan'ny vokatra:\n");
     printf("	1) Vary\n");
     printf("	2) Voamaina\n");
     printf("	3) Voankazo\n");
     printf("	4) Legioma\n");
     printf("	5) Vokatr'antany\n");
     printf("	6) Vahitra\n");
-    printf("	7) ne pas definie\n");
+    printf("	7) Tsy asiana\n");
 
     p->type = choix_car(1, 7);
     if (p->type == 1 || p->type == 2) {
@@ -88,7 +88,7 @@ void lctype(prod *p)
 
 void lcsol(prod *p)
 {
-    printf("  > Choisir le type de sol:\n");
+    printf("  > Safidio ny toetany:\n");
     printf("	1) Tora-pasika,\n");
     printf("	2) Fotaka,\n");
     printf("	3) Sol limoneux,\n");
@@ -100,7 +100,7 @@ void lcsol(prod *p)
     printf("	9) Vaseux\n");
     printf("	10) Léger\n");
     printf("	11) Drainé\n");
-    printf("	12) ne pas definie,\n");
+    printf("	12) Tsy asiana,\n");
 
     p->sol[0] = choix_car(1, 12);
     if(p->sol[0] == 12)
@@ -117,7 +117,7 @@ void lcsaison(prod* p)
     printf("	3) Be orana\n");
     printf("	4) Maina\n");
     printf("	5) tempéré\n");
-    printf("	6) ne pas definie\n");
+    printf("	6) Tsy asiana\n");
 
     p->sais[0] = choix_car(1, 6);
     if(p->sais[0] == 6)

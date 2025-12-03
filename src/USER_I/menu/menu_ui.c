@@ -92,7 +92,7 @@ void init_choix(prod** p)
 	}
 	//initialiser de  produi
 //	for (i = 0; i)
-	printf("****** BIENVENUE SUR LES INFORMATIONS AGRICULTURES  ****** \n");
+	printf("****** TONGASOA ETO SEHA-PAMOKARANA  ****** \n");
 }
 
 /** @fn me_pri
@@ -111,7 +111,7 @@ void me_pri(prod* p)
 	printf("2) Toe-tany\n");
 	printf("3) Toetr'andro\n");
 	printf("4) Volana\n");
-	printf("5) à propos\n ");
+	printf("5) Mombamoba\n ");
 	initialiser_cultures();
 	
 	choix = choix_car(1,5);
