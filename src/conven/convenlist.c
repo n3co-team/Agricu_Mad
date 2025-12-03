@@ -24,7 +24,7 @@ int choix_car(int ch_min, int ch_max)
 {
     int choix;
     while (1) {
-	printf("Entrer votre choix : ");
+	printf("Ampidiro ny safidinao : ");
 	scanf("%d", &choix);
 	if (choix >= ch_min && choix <= ch_max) {
 	    return choix;
