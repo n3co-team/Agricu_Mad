@@ -107,10 +107,10 @@ void me_pri(prod* p)
 	init_choix(&p);
 
 	printf("\nCHOISIR UN OPTION :\n");
-	printf("1) Type de produit\n");
-	printf("2) Caracteristique du sol\n");
-	printf("3) Saison\n");
-	printf("4) Mois\n");
+	printf("1) Karan'ny vokatra\n");
+	printf("2) Toe-tany\n");
+	printf("3) Toetr'andro\n");
+	printf("4) Volana\n");
 	printf("5) à propos\n ");
 	initialiser_cultures();
 	
@@ -141,10 +141,10 @@ void me_sty (prod* p)
 
 	printf("\nCHOISIR UN OPTION :\n");
 	printf("1) List de produit\n");
-	printf("2) Caracteristique du sol\n");
-	printf("3) Saison\n");
-	printf("4) Mois\n");
-	printf("5) Change choix déja mis\n");
+	printf("2) Toe-tany\n");
+	printf("3) Toetr'andro\n");
+	printf("4) Volana\n");
+	printf("5) Hanova safidy\n");
 	initialiser_cultures();
 	choix = choix_car(1,5);
 
@@ -175,10 +175,10 @@ void me_sso (prod* p)
 
 	printf("\nCHOISIR UN OPTION :\n");
 	printf("1) List de produit\n");
-	printf("2) Type de produit\n"); 
-	printf("3) Saison\n");
-	printf("4) Mois\n");
-	printf("5) Change choix déja mis\n");
+	printf("2) Karan'ny vokatra\n"); 
+	printf("3) Toetr'andro\n");
+	printf("4) Volana\n");
+	printf("5) Hanova safidy\n");
 	initialiser_cultures();
 	choix = choix_car(1,5);
 
@@ -207,9 +207,9 @@ void me_ssa(prod* p)
 
 	printf("\nCHOISIR UN OPTION :\n");
 	printf("1) List de produit\n");
-	printf("2) Type de produit\n"); 
-	printf("3) Sol\n");
-	printf("4) Change choix déja mis\n");
+	printf("2) Karan'ny vokatra\n"); 
+	printf("3) Toe-tany\n");
+	printf("4) Hanova safidy\n");
 	initialiser_cultures();
 	choix = choix_car(1,4);
 
@@ -236,9 +236,9 @@ void me_smo (prod* p)
 
 	printf("\nCHOISIR UN OPTION :\n");
 	printf("1) List de produit");
-	printf("2) Type de produit"); 
-	printf("3) Sol");
-	printf("4) Change choix déja mis\n");
+	printf("2) Karan'ny vokatra"); 
+	printf("3) Toe-tany");
+	printf("4) Hanova safidy\n");
 	initialiser_cultures();
 	choix = choix_car(1,3);
 
@@ -264,9 +264,9 @@ void me_ssamo (prod* p)
 	afchoix(p);
 	printf("\nCHOISIR UN OPTION :\n");
 	printf("1) List de produit\n");
-	printf("2) Type de produit\n"); 
-	printf("3) Sol\n");
-	printf("4) Change choix déja mis\n");
+	printf("2) Karan'ny vokatra\n"); 
+	printf("3) Toe-tany\n");
+	printf("4) Hanova safidy\n");
 	initialiser_cultures();
 	choix = choix_car(1,4);	
 
@@ -293,9 +293,9 @@ void me_styso (prod* p)
 
 	printf("\nCHOISIR UN OPTION :\n");
 	printf("1) List de produit\n");
-	printf("2) Saison\n"); 
-	printf("3) Mois\n");
-	printf("4) Change choix déja mis\n");
+	printf("2) Toetr'andro\n"); 
+	printf("3) Volana\n");
+	printf("4) Hanova safidy\n");
 	initialiser_cultures();
 	choix = choix_car(1,4);	
 
@@ -322,8 +322,8 @@ void me_stysamo (prod* p)
 
 	printf("\nCHOISIR UN OPTION :\n");
 	printf("1) List de produit\n");
-	printf("2) Sol\n");
-	printf("3) Change choix déja mis\n");
+	printf("2) Toe-tany\n");
+	printf("3) Hanova safidy\n");
 	initialiser_cultures();
 	choix = choix_car(1,3);	
 
@@ -347,8 +347,8 @@ void me_ssosamo (prod* p)
 
 	printf("\nCHOISIR UN OPTION :\n");
 	printf("1) List de produit\n");
-	printf("2) Type de produit\n");
-	printf("3) Change choix déja mis\n");
+	printf("2) Karan'ny vokatra\n");
+	printf("3) Hanova safidy\n");
 	initialiser_cultures();
 	choix = choix_car(1,3);	
 
@@ -419,13 +419,13 @@ int cchange(prod *p)
 {
 	int choix;
 
-	printf("\nCHOISIR CE QUE TU VEUX CHANGER:\n");
-	printf("1) Type de produit\n");
-	printf("2) Caracteristique du sol\n");
-	printf("3) Saison\n");
-	printf("4) Mois\n");
+	printf("\nInona no tianao hovaina ?:\n");
+	printf("1) Karan'ny vokatra\n");
+	printf("2) Toe-tany\n");
+	printf("3) Toetr'andro\n");
+	printf("4) Volana\n");
 	printf("5) Aide\n");
-	printf("6) Réafficher les choix déjà mis\n");
+	printf("6) Aseho izay efa nofidina\n");
 
 	choix=choix_car(1,6);
 	switch (choix) {
@@ -477,7 +477,7 @@ void prod_list(prod* p) {
 	}
 	
 
-	printf("\nq : quiter \np : menu principale\n==> ");
+	printf("\nq : Hiala \np : Hiverina amin'ny voalohany\n==> ");
 	scanf(" %c",&i);
 	switch (i) {
 		case 'q' : exit(0);
