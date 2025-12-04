@@ -60,13 +60,13 @@ int analyse_type(prod *p, prod **r)
 {
     switch (p->type) {
     case 1:
-	printf("céréal : pas disponible\n");
-	return 1;
+	printf("céréal : dans autre index\n");
+	exit (1);
     case 2:
-	printf("légumineuse : pas disponible\n");
+	printf("légumineuse : dans autre index\n");
 	return 2;
     case 3:
-	printf("fruit\n");
+	*r=fruit();
 	return 3;
     case 4:
 	printf("legume : pas disponible\n");

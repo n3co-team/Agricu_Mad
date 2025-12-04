@@ -22,21 +22,17 @@ void resultf(lprod** donne) {
 	int choix;
 	lprod* p = *donne;  //donne[0]
 	
-	printf("\n\n\e[1mLes produits disponible par votre choix :\e[0m\n");
+	printf("\n\n\e[1mIreo vokatra mifanaraka amin'ny safidinao :\e[0m\n");
 	//i=0;
 	lprod* temp = p;
 	while(temp != NULL  && temp ->c != NULL) {
 		i++;
 		printf("%d) %s\n",i,temp ->c->nom);
-      		/*
-		if (p->s == NULL || p->s->c == NULL ) {
-			break;
-		}*/
 
 		temp = temp->s;
 	}
 	
-	printf("\nEntrer le numero de resultat: ");
+	printf("\nMisafidiana laharana\n ");
 	choix=choix_car(1,i);
 	choix = choix - 1;
 	temp = *donne;
@@ -54,14 +50,6 @@ void resultf(lprod** donne) {
 		p=p->s;
 		i++;
 	}
-     /*
-	for (int j = 1; j < choix; j++){
-	  if(temp != NULL ) temp = temp ->s;
-        }
-	if (temp != NULL && temp ->c != NULL){
-	   infprod(*(temp->c));
-	}
-	*/
 }
 			
 void infprod(prod p)
@@ -70,8 +58,8 @@ void infprod(prod p)
 	int ref;
 	
 	printf("\n========================================================\n");
-	printf("Information sur %s :\n\n",p.nom);
-	printf("%s est un %s cultuve dans sol ",p.nom,c_type_prod(p.type));
+	printf("Mombamomban'ny %s :\n\n",p.nom);
+	printf("%s dia %s favoly amin'ny tany ",p.nom,c_type_prod(p.type));
 	for (i = 0; i < 11; i++) {
 		ref=p.sol[i];
 		if(i < 0 || i > 11 || ref == 0) {
@@ -81,7 +69,7 @@ void infprod(prod p)
 		printf(",");
 	}
 
-	printf(" pendant saison ");
+	printf(" amin'ny toetr'andro ");
 	for (i = 0; i < 5; i++) {
 		ref=p.sais[i];
 		if(ref < 0 || ref > 5 || ref == 0) {
@@ -91,7 +79,7 @@ void infprod(prod p)
 				printf(",");
 	}
 
-	printf(".\nPlus souvent on le cultive au mois du ");
+	printf(".\nMatetika amboly madritran'ny volana ");
 	for (i = 0; i < 12; i++) {
 		ref=p.mois[i];
 		if(ref < 0 || ref > 12 || ref == 0) {
@@ -100,7 +88,7 @@ void infprod(prod p)
 		printf("%s", c_mois(ref));
 		printf(",");
 	}
-	printf(" mais depend du saison.\n");
+	printf(" fa miankina amin'ny toetr'andro.\n");
 
 	printf("\n========================================================\n");
 }

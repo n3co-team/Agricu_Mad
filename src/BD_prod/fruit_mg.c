@@ -1,0 +1,155 @@
+/**@file fruit_mg.c
+* @brief cette programme qui stock les information basique des fruit
+* @author Windrick
+*/
+#include "prod.h"
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+/** @fn cette fonction qui stock le donnée de fruit
+* @param void
+* @return prod*
+*/
+prod* fruit()
+{
+        int NBR;
+        NBR=11;
+        prod* tub = malloc((NBR+1)*sizeof(prod));
+	for (int i=0; i<NBR; i++)
+	{
+		tub[i].ntp=NBR;
+	}
+
+	strcpy(tub[0].nom,"LEKSI");
+	tub[0].type=3;
+	tub[0].sol[0]=11;
+	tub[0].sais[0]=3;
+	tub[0].mois[0]=11;
+	tub[0].mois[1]=12;
+	tub[0].mois[2]=1;
+
+	strcpy(tub[1].nom,"SAHONAMBO");
+	tub[1].type=3;
+	tub[1].sol[0]=11;
+	tub[1].sol[1]=4;
+	tub[1].sais[0]=3;
+	tub[1].mois[0]=12;
+	tub[1].mois[1]=1;
+	tub[1].mois[2]=2;
+
+	strcpy(tub[2].nom,"AMPALIBE");
+	tub[2].type=3;
+	tub[2].sol[0]=1;
+	tub[2].sol[1]=3;
+	tub[2].sol[2]=11;
+	tub[2].sais[0]=3;
+	tub[2].mois[0]=12;
+	tub[2].mois[1]=1;
+	tub[2].mois[2]=2;
+	tub[2].mois[3]=3;
+
+	strcpy(tub[3].nom,"AKONDRO");
+	tub[3].type=3;
+	tub[3].sol[0]=8;
+	tub[3].sol[1]=11;
+	tub[3].sol[2]=3;
+	tub[3].sol[3]=4;
+	tub[3].sais[0]=1;
+	tub[3].sais[1]=2;
+	tub[3].sais[2]=3;
+	tub[3].sais[3]=4;
+	tub[3].sais[4]=5;
+	tub[3].mois[0]=10;
+	tub[3].mois[1]=11;
+	tub[3].mois[2]=12;
+
+	strcpy(tub[4].nom,"MANGA");
+	tub[4].type=3;
+	tub[4].sol[0]=11;
+	tub[4].sol[1]=10;
+	tub[4].sol[2]=1;
+	tub[4].sol[3]=3;
+	tub[4].sais[0]=3;
+	tub[4].mois[0]=11;
+	tub[4].mois[1]=12;
+	tub[4].mois[2]=1;
+	tub[4].mois[3]=2;
+
+	strcpy(tub[5].nom,"MANANASY");
+	tub[5].type=3;
+	tub[5].sol[0]=10;
+	tub[5].sol[1]=1;
+	tub[5].sol[2]=11;
+	tub[5].sais[0]=1;
+	tub[5].sais[1]=2;
+	tub[5].sais[2]=3;
+	tub[5].sais[3]=4;
+	tub[5].sais[4]=5;
+	tub[5].mois[0]=9;
+	tub[5].mois[1]=10;
+	tub[5].mois[2]=11;
+	tub[5].mois[3]=12;
+	tub[5].mois[4]=1;
+	tub[5].mois[5]=2;
+	tub[5].mois[6]=3;
+	tub[5].mois[7]=4;
+
+	strcpy(tub[6].nom,"VOAPAZA");
+	tub[6].type=3;
+	tub[6].sol[0]=1;
+	tub[6].sol[1]=10;
+	tub[6].sol[2]=11;
+	tub[6].sol[3]=8;
+	tub[6].sais[0]=3;
+	tub[6].mois[0]=3;
+	tub[6].mois[1]=4;
+	tub[6].mois[2]=5;
+
+	strcpy(tub[7].nom,"KIRESAOLO");
+	tub[7].type=3;
+	tub[7].sol[0]=1;
+	tub[7].sol[1]=3;
+	tub[7].sol[2]=11;
+	tub[7].sol[3]=8;
+	tub[7].sais[0]=3;
+	tub[7].sais[1]=5;
+	tub[7].mois[0]=11;
+	tub[7].mois[1]=12;
+	tub[7].mois[2]=1;
+
+	strcpy(tub[8].nom,"MANDIGNAZY");
+	tub[8].type=3;
+	tub[8].sol[0]=10;
+	tub[8].sol[1]=1;
+	tub[8].sol[2]=11;
+	tub[8].sais[0]=4;
+	tub[8].sais[1]=3;
+	tub[8].mois[0]=5;
+	tub[8].mois[1]=6;
+	tub[8].mois[2]=7;
+	tub[8].mois[3]=9;
+	tub[8].mois[4]=10;
+
+	strcpy(tub[9].nom,"GAVO");
+	tub[9].type=3;
+	tub[9].sol[0]=11;
+	tub[9].sol[1]=1;
+	tub[9].sol[2]=2;
+	tub[9].sol[3]=3;
+	tub[9].sol[4]=4;
+	tub[9].sais[0]=3;
+	tub[9].mois[0]=12;
+	tub[9].mois[1]=1;
+	tub[9].mois[2]=2;
+
+	strcpy(tub[10].nom,"PAISO");
+	tub[10].type=3;
+	tub[10].sol[0]=11;
+	tub[10].sol[1]=4;
+	tub[10].sais[0]=4;
+	tub[10].mois[0]=7;
+	tub[10].mois[1]=8;
+
+	return tub;
+}
