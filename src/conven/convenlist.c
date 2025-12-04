@@ -39,18 +39,18 @@ int choix_car(int ch_min, int ch_max)
 void lcmois(prod *p)
 {
     printf("  > Safidio ny volana:\n");
-    printf("	1) Janvier\n");
-    printf("	2) Fevrier\n");
-    printf("	3) Mars\n");
-    printf("	4) Avril\n");
-    printf("	5) Mai\n");
-    printf("	6) Juin\n");
-    printf("	7) Juillet\n");
-    printf("	8) Août\n");
-    printf("	9) Septembre\n");
-    printf("	10) Octobre\n");
-    printf("	11) Novembre\n");
-    printf("	12) Décembre\n");
+    printf("	1) Janoary\n");
+    printf("	2) Febroary\n");
+    printf("	3) Martsa\n");
+    printf("	4) Aprily\n");
+    printf("	5) Mey\n");
+    printf("	6) Jona\n");
+    printf("	7) Jolay\n");
+    printf("	8) Aogositra\n");
+    printf("	9) Septambra\n");
+    printf("	10) Oktobra\n");
+    printf("	11) Novambra\n");
+    printf("	12) Desambra\n");
     printf("	13) Tsy asiana\n");
 	
     
@@ -64,15 +64,15 @@ void lcmois(prod *p)
 void lctype(prod *p)
 {
     printf("  > Safidio ny karazan'ny vokatra:\n");
-    printf("	1) Vary\n");
-    printf("	2) Voamaina\n");
-    printf("	3) Voankazo\n");
-    printf("	4) Legioma\n");
-    printf("	5) Vokatr'antany\n");
-    printf("	6) Vahitra\n");
-    printf("	7) Tsy asiana\n");
+    //printf("	1) Vary\n");
+    printf("	1) Voamaina\n");
+    printf("	2) Voankazo\n");
+    printf("	3) Legioma\n");
+    printf("	4) Vokatr'antany\n");
+    printf("	5) Vahitra\n");
+    printf("	6) Tsy asiana\n");
 
-    p->type = choix_car(1, 7);
+    p->type = choix_car(1, 6);
     if (p->type == 1 || p->type == 2) {
 //	afficher_menu_principal();
 	cereale();
@@ -80,7 +80,7 @@ void lctype(prod *p)
 	//exit (0);
 	return;
     } 
-    if(p->type == 7)
+    if(p->type == 6)
     	p->type = 0;
     nett();
     me_auto(p); 
@@ -116,7 +116,7 @@ void lcsaison(prod* p)
     printf("	2) Mafana\n");
     printf("	3) Be orana\n");
     printf("	4) Maina\n");
-    printf("	5) tempéré\n");
+    printf("	5) Antonony\n");
     printf("	6) Tsy asiana\n");
 
     p->sais[0] = choix_car(1, 6);
