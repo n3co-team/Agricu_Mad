@@ -193,7 +193,7 @@ void initialiser_cultures()
 
 void afficher_menu_principal()
 {
-    printf("\n=== MENU PRINCIPAL ===\n\n",nombre_cultures);
+    printf("\n=== MENU PRINCIPAL ===\n\n");//nombre_cultures);
     printf("Lisitr'ireo fambolena misy :\n");
     printf("--------------------------------\n");
 
@@ -240,8 +240,8 @@ void afficher_menu_cultures()
 
 void afficher_menu_regions()
 {
-    printf("\n=== SAFIDY FARITRA ===\n\n");
-    printf("Lisitr'ireo faritra misy :\n");
+    //printf("\n=== SAFIDY FARITRA ===\n\n");
+    printf("Lisitr'ireo faritra misy ho an'ny voly %s:",cultures[culture_index].nom);
     printf("-----------------------------\n");
 
     for (int i = 0; i < nombre_regions; i++) {
@@ -486,7 +486,7 @@ void cereale()
     initialiser_cultures();
 
     printf("======================================\n");
-    printf("||  SYSTEME D'INFORMATION AGRICOLE\n||");
+    printf("||  SYSTEME D'INFORMATION AGRICOLE   ||\n");
     printf("======================================\n");
 
     while (en_cours) {
