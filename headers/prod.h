@@ -34,3 +34,9 @@ prod* tubercule();
  *  @return prod*
  */
 prod* racine(); 
+
+/** @fn cette fonction qui stock le donnée de fruit
+ *  @param void
+ *  @return prod*
+ */
+prod* fruit(); 
