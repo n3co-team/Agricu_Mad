@@ -18,8 +18,7 @@ void initialiser_regions()
     // Région 1: Alaotra Mangoro
     regions[0].id = 1;
     strcpy(regions[0].nom, "Alaotra Mangoro");
-    strcpy(regions[0].caracteristiques,
-	   "Region de riziculture, climat tropical humide");
+    strcpy(regions[0].caracteristiques,"Region de riziculture, climat tropical humide");
 
     // Région 2: Analamanga
     regions[1].id = 2;
@@ -34,8 +33,7 @@ void initialiser_regions()
     // Région 4: Atsinanana
     regions[3].id = 4;
     strcpy(regions[3].nom, "Atsinanana");
-    strcpy(regions[3].caracteristiques,
-	   "Cote est, climat chaud et humide");
+    strcpy(regions[3].caracteristiques, "Cote est, climat chaud et humide");
 
     // Région 5: Menabe
     regions[4].id = 5;
@@ -65,10 +63,9 @@ void initialiser_cultures()
     // Culture 1: Tsaramaso
     cultures[0].id = 1;
     strcpy(cultures[0].nom, "Tsaramaso");
-    strcpy(cultures[0].saison_plantation, "Avril - Mai");
-    strcpy(cultures[0].duree_croissance, "3-4 mois");
-    strcpy(cultures[0].informations,
-	   "Planter en sol bien draine. Besoin de soleil modere.");
+    strcpy(cultures[0].saison_plantation, "Aprily - Mey");
+    strcpy(cultures[0].duree_croissance, "3-4 volana");
+    strcpy(cultures[0].informations,"Planter en sol bien draine. Besoin de soleil modere.");
     strcpy(cultures[0].code, "TS01");
     int regions_tsaramaso[] = { 1, 2, 3, 4 };
     cultures[0].nb_regions = 4;
@@ -78,8 +75,8 @@ void initialiser_cultures()
     // Culture 2: Vary
     cultures[1].id = 2;
     strcpy(cultures[1].nom, "Vary");
-    strcpy(cultures[1].saison_plantation, "Octobre - Decembre");
-    strcpy(cultures[1].duree_croissance, "5-6 mois");
+    strcpy(cultures[1].saison_plantation, "Oktobra - Desembra");
+    strcpy(cultures[1].duree_croissance, "5-6 volana");
     strcpy(cultures[1].informations,
 	   "Necessite beaucoup d'eau. Planter en riziere.");
     strcpy(cultures[1].code, "VR02");
@@ -91,8 +88,8 @@ void initialiser_cultures()
     // Culture 3: Mangahazo
     cultures[2].id = 3;
     strcpy(cultures[2].nom, "Mangahazo");
-    strcpy(cultures[2].saison_plantation, "Aout - Septembre");
-    strcpy(cultures[2].duree_croissance, "8-12 mois");
+    strcpy(cultures[2].saison_plantation, "Aogositra - Septambra");
+    strcpy(cultures[2].duree_croissance, "8-12 volana");
     strcpy(cultures[2].informations,
 	   "Pousse bien en sol leger. Resistance a la secheresse.");
     strcpy(cultures[2].code, "MG03");
@@ -104,8 +101,8 @@ void initialiser_cultures()
     // Culture 4: Voanjo
     cultures[3].id = 4;
     strcpy(cultures[3].nom, "Voanjo");
-    strcpy(cultures[3].saison_plantation, "Novembre - Janvier");
-    strcpy(cultures[3].duree_croissance, "4-5 mois");
+    strcpy(cultures[3].saison_plantation, "Novambra - Janoary");
+    strcpy(cultures[3].duree_croissance, "4-5 volana");
     strcpy(cultures[3].informations,
 	   "Planter en sol sableux. Besoin de beaucoup de soleil.");
     strcpy(cultures[3].code, "VJ04");
@@ -116,9 +113,9 @@ void initialiser_cultures()
 
     // Culture 5: Ognon
     cultures[4].id = 5;
-    strcpy(cultures[4].nom, "Ognon");
-    strcpy(cultures[4].saison_plantation, "Mars - Mai");
-    strcpy(cultures[4].duree_croissance, "4-5 mois");
+    strcpy(cultures[4].nom, "Tongolo");
+    strcpy(cultures[4].saison_plantation, "Martsa - Mey");
+    strcpy(cultures[4].duree_croissance, "4-5 volana");
     strcpy(cultures[4].informations,
 	   "Sol riche en matiere organique. Arrosage regulier.");
     strcpy(cultures[4].code, "OG05");
@@ -130,8 +127,8 @@ void initialiser_cultures()
     // Culture 6: Karoty
     cultures[5].id = 6;
     strcpy(cultures[5].nom, "Karoty");
-    strcpy(cultures[5].saison_plantation, "Fevrier - Avril");
-    strcpy(cultures[5].duree_croissance, "3-4 mois");
+    strcpy(cultures[5].saison_plantation, "Febroary - Aprily");
+    strcpy(cultures[5].duree_croissance, "3-4 volana");
     strcpy(cultures[5].informations,
 	   "Sol meuble et sableux. Eviter les sols lourds.");
     strcpy(cultures[5].code, "KR06");
@@ -142,9 +139,9 @@ void initialiser_cultures()
 
     // Culture 7: Tomates
     cultures[6].id = 7;
-    strcpy(cultures[6].nom, "Tomates");
-    strcpy(cultures[6].saison_plantation, "Aout - Octobre");
-    strcpy(cultures[6].duree_croissance, "3-4 mois");
+    strcpy(cultures[6].nom, "Voatabia");
+    strcpy(cultures[6].saison_plantation, "Aogositra - Oktobra");
+    strcpy(cultures[6].duree_croissance, "3-4 volana");
     strcpy(cultures[6].informations,
 	   "Beaucoup de soleil. Tuteurage necessaire.");
     strcpy(cultures[6].code, "TM07");
@@ -156,8 +153,8 @@ void initialiser_cultures()
     // Culture 8: Brèdes
     cultures[7].id = 8;
     strcpy(cultures[7].nom, "Bredes");
-    strcpy(cultures[7].saison_plantation, "Toute l'annee");
-    strcpy(cultures[7].duree_croissance, "1-2 mois");
+    strcpy(cultures[7].saison_plantation, "Isan-taona");
+    strcpy(cultures[7].duree_croissance, "1-2 volana");
     strcpy(cultures[7].informations,
 	   "Croissance rapide. Arrosage frequent.");
     strcpy(cultures[7].code, "BR08");
@@ -169,8 +166,8 @@ void initialiser_cultures()
     // Culture 9: Ails
     cultures[8].id = 9;
     strcpy(cultures[8].nom, "Ails");
-    strcpy(cultures[8].saison_plantation, "Mai - Juin");
-    strcpy(cultures[8].duree_croissance, "5-6 mois");
+    strcpy(cultures[8].saison_plantation, "Mey - Jona");
+    strcpy(cultures[8].duree_croissance, "5-6 volana");
     strcpy(cultures[8].informations, "Sol bien draine. Peu d'arrosage.");
     strcpy(cultures[8].code, "AL09");
     int regions_ails[] = { 2, 3, 7 };
@@ -180,9 +177,9 @@ void initialiser_cultures()
 
     // Culture 10: Ananas
     cultures[9].id = 10;
-    strcpy(cultures[9].nom, "Ananas");
-    strcpy(cultures[9].saison_plantation, "Decembre - Fevrier");
-    strcpy(cultures[9].duree_croissance, "18-24 mois");
+    strcpy(cultures[9].nom, "Mananasy");
+    strcpy(cultures[9].saison_plantation, "Desembra - Febroary");
+    strcpy(cultures[9].duree_croissance, "18-24 volana");
     strcpy(cultures[9].informations,
 	   "Climat tropical. Sol acide et bien draine.");
     strcpy(cultures[9].code, "AN10");
@@ -196,8 +193,8 @@ void initialiser_cultures()
 
 void afficher_menu_principal()
 {
-    printf("\n=== MENU PRINCIPAL - %d ===\n\n", nombre_cultures);
-    printf("Liste des cultures disponibles:\n");
+    printf("\n=== MENU PRINCIPAL ===\n\n",nombre_cultures);
+    printf("Lisitr'ireo fambolena misy :\n");
     printf("--------------------------------\n");
 
     for (int i = 0; i < nombre_cultures; i++) {
@@ -205,7 +202,7 @@ void afficher_menu_principal()
     }
 
     //printf("\n0. Quitter le programme\n");
-    printf("\nChoisissez une culture (1-%d) ou 0 pour quitter: ",
+    printf("\nFidio ireo fambolena mety (1-%d) na 0 raha hiala: ",
 	   nombre_cultures);
     //
     int choix_locale;
@@ -229,29 +226,29 @@ void afficher_menu_principal()
 
 void afficher_menu_cultures()
 {
-    printf("\n=== CHOIX DE LA CULTURE ===\n\n");
-    printf("Listes des cultures disponibles: \n");
+    printf("\n=== VOLY VOAFIDY ===\n\n");
+    printf("Liitr'ireo fambolena misy : \n");
     printf("-----------------------------\n");
 
     for (int i = 0; i <= nombre_cultures; i++) {
 	printf("%d. %s\n", cultures[i].id, cultures[i].nom);
 
     }
-    printf("\n Choisisez votre cultures (1-%d): ", nombre_cultures);
+    printf("\n Fidio ireo fambolena mety (1-%d): ", nombre_cultures);
 }
 
 
 void afficher_menu_regions()
 {
-    printf("\n=== CHOIX DE LA REGION ===\n\n");
-    printf("Liste des regions disponibles:\n");
+    printf("\n=== SAFIDY FARITRA ===\n\n");
+    printf("Lisitr'ireo faritra misy :\n");
     printf("-----------------------------\n");
 
     for (int i = 0; i < nombre_regions; i++) {
 	printf("%d. %s\n", regions[i].id, regions[i].nom);
     }
 
-    printf("\nChoisissez votre region (1-%d): ", nombre_regions);
+    printf("\nSafidio ny faritra mety (1-%d): ", nombre_regions);
 }
 
 int est_region_compatible(int culture_id, int region_id)
@@ -267,46 +264,46 @@ int est_region_compatible(int culture_id, int region_id)
 void afficher_informations_cultures(int culture_choix, int region_choix)
 {
     if (culture_choix < 1 || culture_choix > nombre_cultures) {
-	printf("Choix de culture invalide!\n");
+	printf("Tsy nety ny safidy voly!\n");
 	return;
     }
 
     if (region_choix < 1 || region_choix > nombre_regions) {
-	printf("Choix de region invalide!\n");
+	printf("Tsy nety ny safidy faritra!\n");
 	return;
     }
 
     int culture_index = culture_choix - 1;
     int region_index = region_choix - 1;
 
-    printf("\n=== INFORMATIONS SUR %s ===\n", cultures[culture_index].nom);
-    printf("=== REGION: %s ===\n\n", regions[region_index].nom);
+    printf("\n=== MOMBAMOMBAN'NY %s ===\n", cultures[culture_index].nom);
+    printf("=== FARITRA: %s ===\n\n", regions[region_index].nom);
 
     printf("Code: %s\n", cultures[culture_index].code);
-    printf("Saison de plantation: %s\n",
+    printf("Fotoana fambolena: %s\n",
 	   cultures[culture_index].saison_plantation);
-    printf("Duree de croissance: %s\n",
+    printf("Faharetan'ny voly: %s\n",
 	   cultures[culture_index].duree_croissance);
 
     // Vérifier la compatibilité région/culture
     if (est_region_compatible(culture_choix, region_choix)) {
 	printf
-	    ("\n COMPATIBILITE: Cette culture est ADAPTEE a la region %s\n",
+	    ("\n MITOVY AMINY: Cette culture est ADAPTEE a la region %s\n",
 	     regions[region_index].nom);
     } else {
 	printf
-	    ("\n COMPATIBILITE: Cette culture est PEU ADAPTEE a la region %s\n",
+	    ("\n MITOVY AMINY: Cette culture est PEU ADAPTEE a la region %s\n",
 	     regions[region_index].nom);
     }
 
-    printf("\nCaracteristiques de la region:\n");
+    printf("\nToetran'ny faritra:\n");
     printf("%s\n", regions[region_index].caracteristiques);
 
-    printf("\nInformations techniques de la culture:\n");
+    printf("\nMombamomba sy teknika fambolena :\n");
     printf("%s\n", cultures[culture_index].informations);
 
     // Afficher autres régions compatibles
-    printf("\nAutres regions compatibles: ");
+    printf("\nFaritra afa mety aminy: ");
     for (int i = 0; i < cultures[culture_index].nb_regions; i++) {
 	int region_id = cultures[culture_index].regions_compatibles[i];
 	printf("%s", regions[region_id - 1].nom);
@@ -488,35 +485,35 @@ void cereale()
     initialiser_regions();
     initialiser_cultures();
 
-    printf("========================================\n");
-    printf("    SYSTEME D'INFORMATION AGRICOLE\n");
-    printf("========================================\n");
+    printf("======================================\n");
+    printf("||  SYSTEME D'INFORMATION AGRICOLE\n||");
+    printf("======================================\n");
 
     while (en_cours) {
 	// Menu voalohany
 	afficher_menu_principal();
 
 	// Takiana manao scanf miverina
-	printf("\nChoisissez une culture (1-%d) ou 0 pour quitter: ",
+	printf("\nSafidio ny voly mety (1-%d) na 0 raha hiala: ",
 	       nombre_cultures);
 	if (scanf("%d", &choix_culture) != 1) {
-	    printf("Saisie invalide!\n");
+	    printf("Fampidirana diso!\n");
 	    while (getchar() != '\n');
 	    continue;
 	}
 
 	if (choix_culture == 0) {
-	    printf("Au revoir!\n");
+	    printf("Veloma ô!\n");
 	    break;
 	}
 
 	if (choix_culture >= 1 && choix_culture <= nombre_cultures) {
 	    // Menu region
 	    afficher_menu_regions();
-	    printf("\nChoisissez votre region (1-%d): ", nombre_regions);
+	    printf("\nSafidio ny faritra mety  (1-%d): ", nombre_regions);
 
 	    if (scanf("%d", &choix_region) != 1) {
-		printf("Saisie invalide!\n");
+		printf("Fampidirana tsy mety!\n");
 		while (getchar() != '\n');
 		continue;
 	    }
@@ -526,13 +523,13 @@ void cereale()
 
 		// Menu faharoa
 		printf("\n--- MENU SECONDARIE ---\n");
-		printf("1. Voir une autre culture\n");
-		printf("2. Changer de region pour cette culture\n");
-		printf("3. Quitter\n");
-		printf("\nVotre choix: ");
+		printf("1. Jereo ny fambolena hafa\n");
+		printf("2. Hanova faritra ho an'ny voly\n");
+		printf("3. Miala\n");
+		printf("\nAlefaso ny safidy: ");
 
 		if (scanf("%d", &sous_choix) != 1) {
-		    printf("Saisie invalide!\n");
+		    printf("Fampidirana diso!\n");
 		    while (getchar() != '\n');
 		    continue;
 		}
@@ -546,16 +543,16 @@ void cereale()
 		    break;
 		case 3:
 		    en_cours = 0;
-		    printf("Au revoir!\n");
+		    printf("Veloma ary ô!\n");
 		    break;
 		default:
-		    printf("Choix invalide!\n");
+		    printf("Safidy diso!\n");
 		}
 	    } else {
-		printf("Region invalide!\n");
+		printf("Faritra diso!\n");
 	    }
 	} else {
-	    printf("Culture invalide!\n");
+	    printf("Fambolena diso!\n");
 	}
     }
 }
