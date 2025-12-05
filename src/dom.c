@@ -242,7 +242,7 @@ void afficher_menu_regions()
 {
    
     int culture_index = culture_choix - 1;
-    int region_index = region_choix - 1;
+//    int region_index = region_choix - 1;
     //printf("\n=== SAFIDY FARITRA ===\n\n");
     printf("Lisitr'ireo faritra misy ho an'ny voly %s:",cultures[culture_index].nom);
     printf("-----------------------------\n");
