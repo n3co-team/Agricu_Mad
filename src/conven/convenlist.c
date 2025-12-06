@@ -41,7 +41,7 @@ int choix_car(int ch_min, int ch_max)
 	//printf("Avereno azafady\n");
 	printf("Mbola manana %d safidy ianao.\n", MAX_TENTATIVE - 1 - tentative );
         tentative ++;
-	pintf("Avereno azafady.\n");
+	printf("Avereno azafady.\n");
     }
     fprintf("\n Nandiso safidy %d intelo ianao. Azafady mijanona ny fandaharana, veloma ");
     exit(1);
