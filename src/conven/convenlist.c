@@ -43,7 +43,7 @@ int choix_car(int ch_min, int ch_max)
         tentative ++;
 	printf("Avereno azafady.\n");
     }
-    fprintf("\n Nandiso safidy %d intelo ianao. Azafady mijanona ny fandaharana, veloma ");
+    fprintf(stderr, "\n Nandiso safidy %d intelo ianao. Azafady mijanona ny fandaharana, veloma ");
     exit(1);
 
 }
