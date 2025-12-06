@@ -23,15 +23,27 @@
 int choix_car(int ch_min, int ch_max)
 {
     int choix;
-    while (1) {
+    int tentative = 0;
+    const int MAX_TENTATIVE = 3;
+ /*   while (1) */
+      while (tentative <  MAX_TENTATIVE ) {
 	printf("Ampidiro ny safidinao : ");
-	scanf("%d", &choix);
+	if(scanf("%d", &choix) != 1){
+	   while (getchar() != '\n');
+	   fprintf(stderr, "Ny fampidirana tsy maintsy isa. Avereno azafady.\n");
+	   tentative++;
+	   continue;
+        }
 	if (choix >= ch_min && choix <= ch_max) {
 	    return choix;
 	}
 	fprintf(stderr, "Safidinao dia tsy maintsy  anelanelan'ny %d sy %d\n", ch_min,ch_max);
-	printf("Avereno azafady\n");
+	//printf("Avereno azafady\n");
+	printf("Mbola manana %d safidy ianao.\n", MAX_TENTATIVE - 1 - tentative );
+        tentative ++;
+	pintf("Avereno azafady.\n");
     }
+    fprintf("\n Nandiso safidy %d intelo ianao. Azafady mijanona ny fandaharana, veloma ");
     exit(1);
 
 }
