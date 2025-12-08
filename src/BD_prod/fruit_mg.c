@@ -21,7 +21,7 @@ prod* fruit()
 		tub[i].ntp=NBR;
 	}
 
-	strcpy(tub[0].nom,"LEKSI");
+	strcpy(tub[0].nom,"LETSIA");
 	tub[0].type=3;
 	tub[0].sol[0]=11;
 	tub[0].sais[0]=3;

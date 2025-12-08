@@ -92,7 +92,9 @@ void init_choix(prod** p)
 	}
 	//initialiser de  produi
 //	for (i = 0; i)
-	printf("****** TONGASOA ETO SEHA-PAMOKARANA  ****** \n");
+	printf("\n*******************************************\n");
+	printf("     TONGASOA ETO SEHA-PAMOKARANA    \n");
+	printf("\n*******************************************\n");
 }
 
 /** @fn me_pri
@@ -140,7 +142,7 @@ void me_sty (prod* p)
 	afchoix(p);
 
 	printf("\nAtaovy ny safidy :\n");
-	printf("1) List de produit\n");
+	printf("1) Lisitrin'ny vokatra \n");
 	printf("2) Toe-tany\n");
 	printf("3) Toetr'andro\n");
 	printf("4) Volana\n");
@@ -174,7 +176,7 @@ void me_sso (prod* p)
 	afchoix(p);
 
 	printf("\nAtaovy ny safidy :\n");
-	printf("1) List de produit\n");
+	printf("1) Lisitrin'ny vokatra \n");
 	printf("2) Karan'ny vokatra\n"); 
 	printf("3) Toetr'andro\n");
 	printf("4) Volana\n");
@@ -206,7 +208,7 @@ void me_ssa(prod* p)
 	afchoix(p);
 
 	printf("\nAtaovy ny safidy :\n");
-	printf("1) List de produit\n");
+	printf("1) Lisitrin'ny vokatra \n");
 	printf("2) Karan'ny vokatra\n"); 
 	printf("3) Toe-tany\n");
 	printf("4) Hanova safidy\n");
@@ -235,9 +237,9 @@ void me_smo (prod* p)
 	afchoix(p);
 
 	printf("\nAtaovy ny safidy :\n");
-	printf("1) List de produit");
-	printf("2) Karan'ny vokatra"); 
-	printf("3) Toe-tany");
+	printf("1) Lisitrin'ny vokatra \n");
+	printf("2) Karan'ny vokatra\n"); 
+	printf("3) Toe-tany\n");
 	printf("4) Hanova safidy\n");
 	initialiser_cultures();
 	choix = choix_car(1,3);
@@ -263,7 +265,7 @@ void me_ssamo (prod* p)
 	int choix;
 	afchoix(p);
 	printf("\nAtaovy ny safidy :\n");
-	printf("1) List de produit\n");
+	printf("1) Lisitrin'ny vokatra \n");
 	printf("2) Karan'ny vokatra\n"); 
 	printf("3) Toe-tany\n");
 	printf("4) Hanova safidy\n");
@@ -292,7 +294,7 @@ void me_styso (prod* p)
 	afchoix(p);
 
 	printf("\nAtaovy ny safidy :\n");
-	printf("1) List de produit\n");
+	printf("1) Lisitrin'ny vokatra \n");
 	printf("2) Toetr'andro\n"); 
 	printf("3) Volana\n");
 	printf("4) Hanova safidy\n");
@@ -321,7 +323,7 @@ void me_stysamo (prod* p)
 	afchoix(p);
 
 	printf("\nAtaovy ny safidy :\n");
-	printf("1) List de produit\n");
+	printf("1) Lisitrin'ny vokatra \n");
 	printf("2) Toe-tany\n");
 	printf("3) Hanova safidy\n");
 	initialiser_cultures();
@@ -346,7 +348,7 @@ void me_ssosamo (prod* p)
 	afchoix(p);
 
 	printf("\nAtaovy ny safidy :\n");
-	printf("1) List de produit\n");
+	printf("1) Lisitrin'ny vokatra \n");
 	printf("2) Karan'ny vokatra\n");
 	printf("3) Hanova safidy\n");
 	initialiser_cultures();

@@ -227,7 +227,7 @@ void afficher_menu_principal()
 void afficher_menu_cultures()
 {
     printf("\n=== VOLY VOAFIDY ===\n\n");
-    printf("Liitr'ireo fambolena misy : \n");
+    printf("Lisitr'ireo fambolena misy : \n");
     printf("-----------------------------\n");
 
     for (int i = 0; i <= nombre_cultures; i++) {
@@ -291,11 +291,11 @@ void afficher_informations_cultures(int culture_choix, int region_choix)
     // Vérifier la compatibilité région/culture
     if (est_region_compatible(culture_choix, region_choix)) {
 	printf
-	    ("\n MITOVY AMINY: Cette culture est ADAPTEE a la region %s\n",
+	    ("\n METY AMINY: Cette culture est ADAPTEE a la region %s\n",
 	     regions[region_index].nom);
     } else {
 	printf
-	    ("\n MITOVY AMINY: Cette culture est PEU ADAPTEE a la region %s\n",
+	    ("\n METY AMINY: Cette culture est PEU ADAPTEE a la region %s\n",
 	     regions[region_index].nom);
     }
 
@@ -528,7 +528,8 @@ void cereale()
 		printf("\n--- MENU SECONDARIE ---\n");
 		printf("1. Jereo ny fambolena hafa\n");
 		printf("2. Hanova faritra ho an'ny voly\n");
-		printf("3. Miala\n");
+		printf("3. Hiverina any amin'ny menu fandraisana\n");
+		printf("4. Miala\n");
 		printf("\nAlefaso ny safidy: ");
 
 		if (scanf("%d", &sous_choix) != 1) {
@@ -546,8 +547,12 @@ void cereale()
 		    break;
 		case 3:
 		    en_cours = 0;
-		    printf("Veloma ary ô!\n");
+		    //printf("Veloma ary ô!\n");
 		    break;
+		case 4:
+		    en_cours = 0;
+		    printf("Veloma!\n");
+		    exit(0);
 		default:
 		    printf("Safidy diso!\n");
 		}
