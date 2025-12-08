@@ -193,9 +193,9 @@ void initialiser_cultures()
 
 void afficher_menu_principal()
 {
-    printf("\n=== MENU PRINCIPAL ===\n\n");//nombre_cultures);
+//    printf("\n=== MENU PRINCIPAL ===\n\n");//nombre_cultures);
     printf("Lisitr'ireo fambolena misy :\n");
-    printf("--------------------------------\n");
+    printf("\n--------------------------------\n");
 
     for (int i = 0; i < nombre_cultures; i++) {
 	printf("%2d. %s\n", cultures[i].id, cultures[i].nom);
@@ -227,14 +227,14 @@ void afficher_menu_principal()
 void afficher_menu_cultures()
 {
     printf("\n=== VOLY VOAFIDY ===\n\n");
-    printf("Lisitr'ireo fambolena misy : \n");
-    printf("-----------------------------\n");
+    printf("==> Lisitr'ireo fambolena misy : \n");
+    printf("\n-----------------------------\n");
 
     for (int i = 0; i <= nombre_cultures; i++) {
 	printf("%d. %s\n", cultures[i].id, cultures[i].nom);
 
     }
-    printf("\n Fidio ireo fambolena mety (1-%d): ", nombre_cultures);
+    printf("\n==> Fidio ireo fambolena mety (1-%d): ", nombre_cultures);
 }
 
 
@@ -244,14 +244,14 @@ void afficher_menu_regions()
     int culture_index = culture_choix - 1;
 //    int region_index = region_choix - 1;
     //printf("\n=== SAFIDY FARITRA ===\n\n");
-    printf("Lisitr'ireo faritra misy ho an'ny voly %s:",cultures[culture_index].nom);
-    printf("-----------------------------\n");
+    printf("==> Lisitr'ireo faritra misy ho an'ny voly %s:",cultures[culture_index].nom);
+    printf("\n-----------------------------\n");
 
     for (int i = 0; i < nombre_regions; i++) {
 	printf("%d. %s\n", regions[i].id, regions[i].nom);
     }
 
-    printf("\nSafidio ny faritra mety (1-%d): ", nombre_regions);
+    printf("\n==> Safidio ny faritra mety (1-%d): ", nombre_regions);
 }
 
 int est_region_compatible(int culture_id, int region_id)
@@ -487,17 +487,17 @@ void cereale()
 
     initialiser_regions();
     initialiser_cultures();
-
+/*
     printf("======================================\n");
     printf("||  SYSTEME D'INFORMATION AGRICOLE   ||\n");
     printf("======================================\n");
-
+*/
     while (en_cours) {
 	// Menu voalohany
 	afficher_menu_principal();
 
 	// Takiana manao scanf miverina
-	printf("\nSafidio ny voly mety (1-%d) na 0 raha hiala: ",
+	printf("\n==> Safidio ny voly mety (1-%d) na 0 raha hiala: ",
 	       nombre_cultures);
 	if (scanf("%d", &choix_culture) != 1) {
 	    printf("Fampidirana diso!\n");
@@ -525,12 +525,12 @@ void cereale()
 		afficher_informations_cultures(choix_culture, choix_region);
 
 		// Menu faharoa
-		printf("\n--- MENU SECONDARIE ---\n");
-		printf("1. Jereo ny fambolena hafa\n");
-		printf("2. Hanova faritra ho an'ny voly\n");
-		printf("3. Hiverina any amin'ny menu fandraisana\n");
-		printf("4. Miala\n");
-		printf("\nAlefaso ny safidy: ");
+//		printf("\n--- MENU SECONDARIE ---\n");
+		printf("\t1. Jereo ny fambolena hafa\n");
+		printf("\t2. Hanova faritra ho an'ny voly\n");
+		printf("\t3. Hiverina any amin'ny menu fandraisana\n");
+		printf("\t4. Miala\n");
+		printf("\n==> Alefaso ny safidy: ");
 
 		if (scanf("%d", &sous_choix) != 1) {
 		    printf("Fampidirana diso!\n");

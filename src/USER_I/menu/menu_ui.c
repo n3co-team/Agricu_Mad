@@ -92,9 +92,9 @@ void init_choix(prod** p)
 	}
 	//initialiser de  produi
 //	for (i = 0; i)
-	printf("\n*******************************************\n");
-	printf("     TONGASOA ETO SEHA-PAMOKARANA    \n");
-	printf("\n*******************************************\n");
+	printf("\n***************************************\n");
+	printf("  \n   TONGASOA ETO SEHA-PAMOKARANA    \n  ");
+	printf("\n***************************************\n");
 }
 
 /** @fn me_pri
@@ -107,13 +107,14 @@ void me_pri(prod* p)
 	nett();
 	int choix;
 	init_choix(&p);
-
-	printf("\nAtaovy ny safidy :\n");
-	printf("1) Karan'ny vokatra\n");
-	printf("2) Toe-tany\n");
-	printf("3) Toetr'andro\n");
-	printf("4) Volana\n");
-	printf("5) Mombamoba\n ");
+//	printf("\n--------------------------------\n");
+	printf("\n==> Ataovy ny safidy :\n");
+	printf("\t1) Karan'ny vokatra\n");
+	printf("\t2) Toe-tany\n");
+	printf("\t3) Toetr'andro\n");
+	printf("\t4) Volana\n");
+	printf("\t5) Mombamoba\n ");
+	printf("\n----------------------------------\n");
 	initialiser_cultures();
 	
 	choix = choix_car(1,5);
@@ -141,12 +142,13 @@ void me_sty (prod* p)
 	int choix;
 	afchoix(p);
 
-	printf("\nAtaovy ny safidy :\n");
-	printf("1) Lisitrin'ny vokatra \n");
-	printf("2) Toe-tany\n");
-	printf("3) Toetr'andro\n");
-	printf("4) Volana\n");
-	printf("5) Hanova safidy\n");
+	printf("\n==> Ataovy ny safidy :\n");
+//	printf("\n------------------------------------------\n");
+	printf("\t1) Lisitrin'ny vokatra \n");
+	printf("\t2) Toe-tany\n");
+	printf("\t3) Toetr'andro\n");
+	printf("\t4) Volana\n");
+	printf("\t5) Hanova safidy\n");
 	initialiser_cultures();
 	choix = choix_car(1,5);
 
@@ -176,8 +178,9 @@ void me_sso (prod* p)
 	afchoix(p);
 
 	printf("\nAtaovy ny safidy :\n");
+//	printf("\n-------------------------------------\n");
 	printf("1) Lisitrin'ny vokatra \n");
-	printf("2) Karan'ny vokatra\n"); 
+	printf("2) Karazan'ny vokatra\n"); 
 	printf("3) Toetr'andro\n");
 	printf("4) Volana\n");
 	printf("5) Hanova safidy\n");
@@ -209,7 +212,7 @@ void me_ssa(prod* p)
 
 	printf("\nAtaovy ny safidy :\n");
 	printf("1) Lisitrin'ny vokatra \n");
-	printf("2) Karan'ny vokatra\n"); 
+	printf("2) Karazan'ny vokatra\n"); 
 	printf("3) Toe-tany\n");
 	printf("4) Hanova safidy\n");
 	initialiser_cultures();
@@ -238,7 +241,7 @@ void me_smo (prod* p)
 
 	printf("\nAtaovy ny safidy :\n");
 	printf("1) Lisitrin'ny vokatra \n");
-	printf("2) Karan'ny vokatra\n"); 
+	printf("2) Karazan'ny vokatra\n"); 
 	printf("3) Toe-tany\n");
 	printf("4) Hanova safidy\n");
 	initialiser_cultures();
@@ -266,7 +269,7 @@ void me_ssamo (prod* p)
 	afchoix(p);
 	printf("\nAtaovy ny safidy :\n");
 	printf("1) Lisitrin'ny vokatra \n");
-	printf("2) Karan'ny vokatra\n"); 
+	printf("2) Karazan'ny vokatra\n"); 
 	printf("3) Toe-tany\n");
 	printf("4) Hanova safidy\n");
 	initialiser_cultures();
@@ -292,12 +295,12 @@ void me_styso (prod* p)
 {
 	int choix;
 	afchoix(p);
-
+	printf("\n--------------------------------\n");
 	printf("\nAtaovy ny safidy :\n");
-	printf("1) Lisitrin'ny vokatra \n");
-	printf("2) Toetr'andro\n"); 
-	printf("3) Volana\n");
-	printf("4) Hanova safidy\n");
+	printf("\t1) Lisitrin'ny vokatra \n");
+	printf("\t2) Toetr'andro\n"); 
+	printf("\t3) Volana\n");
+	printf("\t4) Hanova safidy\n");
 	initialiser_cultures();
 	choix = choix_car(1,4);	
 
@@ -349,7 +352,7 @@ void me_ssosamo (prod* p)
 
 	printf("\nAtaovy ny safidy :\n");
 	printf("1) Lisitrin'ny vokatra \n");
-	printf("2) Karan'ny vokatra\n");
+	printf("2) Karazan'ny vokatra\n");
 	printf("3) Hanova safidy\n");
 	initialiser_cultures();
 	choix = choix_car(1,3);	
@@ -422,7 +425,7 @@ int cchange(prod *p)
 	int choix;
 
 	printf("\nInona no tianao hovaina ?:\n");
-	printf("1) Karan'ny vokatra\n");
+	printf("1) Karazan'ny vokatra\n");
 	printf("2) Toe-tany\n");
 	printf("3) Toetr'andro\n");
 	printf("4) Volana\n");
