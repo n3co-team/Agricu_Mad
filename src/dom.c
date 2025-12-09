@@ -298,13 +298,13 @@ void afficher_informations_cultures(int culture_choix, int region_choix)
 	    ("\n METY AMINY: Cette culture est PEU ADAPTEE a la region %s\n",
 	     regions[region_index].nom);
     }
-
+    printf("\n---------------------------------------------\n");
     printf("\nToetran'ny faritra:\n");
     printf("%s\n", regions[region_index].caracteristiques);
-
+    printf("\n---------------------------------------------\n");
     printf("\nMombamomba sy teknika fambolena :\n");
     printf("%s\n", cultures[culture_index].informations);
-
+    printf("\n---------------------------------------------\n");
     // Afficher autres régions compatibles
     printf("\nFaritra afa mety aminy: ");
     for (int i = 0; i < cultures[culture_index].nb_regions; i++) {

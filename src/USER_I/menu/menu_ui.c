@@ -109,7 +109,7 @@ void me_pri(prod* p)
 	init_choix(&p);
 //	printf("\n--------------------------------\n");
 	printf("\n==> Ataovy ny safidy :\n");
-	printf("\t1) Karan'ny vokatra\n");
+	printf("\t1) Karazan'ny vokatra\n");
 	printf("\t2) Toe-tany\n");
 	printf("\t3) Toetr'andro\n");
 	printf("\t4) Volana\n");
@@ -350,7 +350,7 @@ void me_ssosamo (prod* p)
 	int choix;
 	afchoix(p);
 
-	printf("\nAtaovy ny safidy :\n");
+	printf("\n==> Ataovy ny safidy :\n");
 	printf("1) Lisitrin'ny vokatra \n");
 	printf("2) Karazan'ny vokatra\n");
 	printf("3) Hanova safidy\n");
@@ -424,7 +424,7 @@ int cchange(prod *p)
 {
 	int choix;
 
-	printf("\nInona no tianao hovaina ?:\n");
+	printf("\n-> Inona no tianao hovaina ?:\n");
 	printf("1) Karazan'ny vokatra\n");
 	printf("2) Toe-tany\n");
 	printf("3) Toetr'andro\n");
