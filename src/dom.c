@@ -17,42 +17,42 @@ void initialiser_regions()
 {
     // Région 1: Alaotra Mangoro
     regions[0].id = 1;
-    strcpy(regions[0].nom, "Alaotra Mangoro");
+    strcpy(regions[0].nom, "\033[1m Alaotra Mangoro \033[0m");
     strcpy(regions[0].caracteristiques,"Region de riziculture, climat tropical humide");
 
     // Région 2: Analamanga
     regions[1].id = 2;
-    strcpy(regions[1].nom, "Analamanga");
+    strcpy(regions[1].nom, "\033[1m Analamanga \033[0m");
     strcpy(regions[1].caracteristiques, "Hauts plateaux, climat tempere");
 
     // Région 3: Vakinankaratra
     regions[2].id = 3;
-    strcpy(regions[2].nom, "Vakinankaratra");
+    strcpy(regions[2].nom, "\033[1m Vakinankaratra \033[0m");
     strcpy(regions[2].caracteristiques, "Region froide, sols volcaniques");
 
     // Région 4: Atsinanana
     regions[3].id = 4;
-    strcpy(regions[3].nom, "Atsinanana");
+    strcpy(regions[3].nom, "\033[1m Atsinanana \033[0m");
     strcpy(regions[3].caracteristiques, "Cote est, climat chaud et humide");
 
     // Région 5: Menabe
     regions[4].id = 5;
-    strcpy(regions[4].nom, "Menabe");
+    strcpy(regions[4].nom, "\033[1m Menabe \033[0m");
     strcpy(regions[4].caracteristiques, "Cote ouest, climat sec");
 
     // Région 6: Boeny
     regions[5].id = 6;
-    strcpy(regions[5].nom, "Boeny");
+    strcpy(regions[5].nom, "\033[1m Boeny \033[0m");
     strcpy(regions[5].caracteristiques, "Nord-ouest, climat tropical");
 
     // Région 7: Anosy
     regions[6].id = 7;
-    strcpy(regions[6].nom, "Anosy");
+    strcpy(regions[6].nom, "\033[1m Anosy \033[0m");
     strcpy(regions[6].caracteristiques, "Sud-est, climat varie");
 
     // Région 8: Diana
     regions[7].id = 8;
-    strcpy(regions[7].nom, "Diana");
+    strcpy(regions[7].nom, "\033[1m Diana \033[0m");
     strcpy(regions[7].caracteristiques, "Extreme nord, climat chaud");
 
     nombre_regions = 8;
@@ -62,7 +62,7 @@ void initialiser_cultures()
 {
     // Culture 1: Tsaramaso
     cultures[0].id = 1;
-    strcpy(cultures[0].nom, "Tsaramaso");
+    strcpy(cultures[0].nom, "\033[35m Tsaramaso \033[0m");
     strcpy(cultures[0].saison_plantation, "Aprily - Mey");
     strcpy(cultures[0].duree_croissance, "3-4 volana");
     strcpy(cultures[0].informations,"Planter en sol bien draine. Besoin de soleil modere.");
@@ -74,7 +74,7 @@ void initialiser_cultures()
 
     // Culture 2: Vary
     cultures[1].id = 2;
-    strcpy(cultures[1].nom, "Vary");
+    strcpy(cultures[1].nom, "\033[35m Vary \033[0m");
     strcpy(cultures[1].saison_plantation, "Oktobra - Desembra");
     strcpy(cultures[1].duree_croissance, "5-6 volana");
     strcpy(cultures[1].informations,
@@ -87,7 +87,7 @@ void initialiser_cultures()
 
     // Culture 3: Mangahazo
     cultures[2].id = 3;
-    strcpy(cultures[2].nom, "Mangahazo");
+    strcpy(cultures[2].nom, "\033[35m Mangahazo \033[0m");
     strcpy(cultures[2].saison_plantation, "Aogositra - Septambra");
     strcpy(cultures[2].duree_croissance, "8-12 volana");
     strcpy(cultures[2].informations,
@@ -100,7 +100,7 @@ void initialiser_cultures()
 
     // Culture 4: Voanjo
     cultures[3].id = 4;
-    strcpy(cultures[3].nom, "Voanjo");
+    strcpy(cultures[3].nom, "\033[35m Voanjo \033[0m");
     strcpy(cultures[3].saison_plantation, "Novambra - Janoary");
     strcpy(cultures[3].duree_croissance, "4-5 volana");
     strcpy(cultures[3].informations,
@@ -113,7 +113,7 @@ void initialiser_cultures()
 
     // Culture 5: Ognon
     cultures[4].id = 5;
-    strcpy(cultures[4].nom, "Tongolo");
+    strcpy(cultures[4].nom, "\033[35m Tongolo \033[0m");
     strcpy(cultures[4].saison_plantation, "Martsa - Mey");
     strcpy(cultures[4].duree_croissance, "4-5 volana");
     strcpy(cultures[4].informations,
@@ -126,7 +126,7 @@ void initialiser_cultures()
 
     // Culture 6: Karoty
     cultures[5].id = 6;
-    strcpy(cultures[5].nom, "Karoty");
+    strcpy(cultures[5].nom, "\033[35m Karoty \033[0m");
     strcpy(cultures[5].saison_plantation, "Febroary - Aprily");
     strcpy(cultures[5].duree_croissance, "3-4 volana");
     strcpy(cultures[5].informations,
@@ -139,7 +139,7 @@ void initialiser_cultures()
 
     // Culture 7: Tomates
     cultures[6].id = 7;
-    strcpy(cultures[6].nom, "Voatabia");
+    strcpy(cultures[6].nom, "\033[35m Voatabia \033[0m");
     strcpy(cultures[6].saison_plantation, "Aogositra - Oktobra");
     strcpy(cultures[6].duree_croissance, "3-4 volana");
     strcpy(cultures[6].informations,
@@ -152,7 +152,7 @@ void initialiser_cultures()
 
     // Culture 8: Brèdes
     cultures[7].id = 8;
-    strcpy(cultures[7].nom, "Bredes");
+    strcpy(cultures[7].nom, "\033[35m Bredes \033[0m");
     strcpy(cultures[7].saison_plantation, "Isan-taona");
     strcpy(cultures[7].duree_croissance, "1-2 volana");
     strcpy(cultures[7].informations,
@@ -165,7 +165,7 @@ void initialiser_cultures()
 
     // Culture 9: Ails
     cultures[8].id = 9;
-    strcpy(cultures[8].nom, "Ails");
+    strcpy(cultures[8].nom, "\033[35m Ails \033[0m");
     strcpy(cultures[8].saison_plantation, "Mey - Jona");
     strcpy(cultures[8].duree_croissance, "5-6 volana");
     strcpy(cultures[8].informations, "Sol bien draine. Peu d'arrosage.");
@@ -177,7 +177,7 @@ void initialiser_cultures()
 
     // Culture 10: Ananas
     cultures[9].id = 10;
-    strcpy(cultures[9].nom, "Mananasy");
+    strcpy(cultures[9].nom, "\033[35m Mananasy \033[0m");
     strcpy(cultures[9].saison_plantation, "Desembra - Febroary");
     strcpy(cultures[9].duree_croissance, "18-24 volana");
     strcpy(cultures[9].informations,
@@ -244,14 +244,14 @@ void afficher_menu_regions()
     int culture_index = culture_choix - 1;
 //    int region_index = region_choix - 1;
     //printf("\n=== SAFIDY FARITRA ===\n\n");
-    printf("==> Lisitr'ireo faritra misy ho an'ny voly %s:",cultures[culture_index].nom);
+    printf("\033[37m ==> Lisitr'ireo faritra misy ho an'ny voly %s: \033[0m",cultures[culture_index].nom);
     printf("\n-----------------------------\n");
 
     for (int i = 0; i < nombre_regions; i++) {
 	printf("%d. %s\n", regions[i].id, regions[i].nom);
     }
 
-    printf("\n==> Safidio ny faritra mety (1-%d): ", nombre_regions);
+    printf("\n\033[34==> Safidio ny faritra mety (1-%d): \033[0m", nombre_regions);
 }
 
 int est_region_compatible(int culture_id, int region_id)
@@ -488,11 +488,6 @@ void cereale()
 
     initialiser_regions();
     initialiser_cultures();
-/*
-    printf("======================================\n");
-    printf("||  SYSTEME D'INFORMATION AGRICOLE   ||\n");
-    printf("======================================\n");
-*/
     while (en_cours) {
 	// Menu voalohany
 	afficher_menu_principal();

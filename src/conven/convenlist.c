@@ -50,20 +50,20 @@ int choix_car(int ch_min, int ch_max)
 
 void lcmois(prod *p)
 {
-    printf("  > Safidio ny volana:\n");
-    printf("	1) Janoary\n");
-    printf("	2) Febroary\n");
-    printf("	3) Martsa\n");
-    printf("	4) Aprily\n");
-    printf("	5) Mey\n");
-    printf("	6) Jona\n");
-    printf("	7) Jolay\n");
-    printf("	8) Aogositra\n");
-    printf("	9) Septambra\n");
-    printf("	10) Oktobra\n");
-    printf("	11) Novambra\n");
-    printf("	12) Desambra\n");
-    printf("	13) Tsy asiana\n");
+    printf(" \033[34m --> Safidio ny volana:\033[0m\n");
+    printf("\033[37m 1) Janoary \033[0m\n");
+    printf("\033[37m 2) Febroary \033[0m\n");
+    printf("\033[37m 3) Martsa \033[0m\n");
+    printf("\033[37m 4) Aprily \033[0m\n");
+    printf("\033[37m 5) Mey \033[0m\n");
+    printf("\033[37m 6) Jona \033[0m\n");
+    printf("\033[37m 7) Jolay \033[0m\n");
+    printf("\033[37m 8) Aogositra \033[0m\n");
+    printf("\033[37m 9) Septambra \033[0m\n");
+    printf("\033[37m 10) Oktobra \033[0m\n");
+    printf("\033[37m 11) Novambra \033[0m\n");
+    printf("\033[37m 12) Desambra \033[0m\n");
+    printf("\033[37m 13) Tsy asiana \033[0m\n");
 	
     
     p->mois[0] = choix_car(1, 13);
@@ -75,14 +75,14 @@ void lcmois(prod *p)
 
 void lctype(prod *p)
 {
-    printf("  > Safidio ny karazan'ny vokatra:\n");
+    printf("\033[34m --> Safidio ny karazan'ny vokatra:\033[0m\n");
     //printf("	1) Vary\n");
-    printf("	1) Voamaina\n");
-    printf("	2) Voankazo\n");
-    printf("	3) Legioma\n");
-    printf("	4) Vokatr'antany\n");
-    printf("	5) Vahitra\n");
-    printf("	6) Tsy asiana\n");
+    printf("\033[37m 1) Voamaina \033[0m\n");
+    printf("\033[37m 2) Voankazo \033[0m\n");
+    printf("\033[37m 3) Legioma \033[0m\n");
+    printf("\033[37m 4) Vokatr'antany \033[0m\n");
+    printf("\033[37m 5) Vahitra \033[0m\n");
+    printf("\033[37m 6) Tsy asiana \033[0m\n");
 
     p->type = choix_car(1, 6);
     if (p->type == 1 || p->type == 2) {
@@ -101,19 +101,19 @@ void lctype(prod *p)
 
 void lcsol(prod *p)
 {
-    printf("  > Safidio ny toetany:\n");
-    printf("	1) Tora-pasika,\n");
-    printf("	2) Fotaka,\n");
-    printf("	3) Sol limoneux,\n");
-    printf("	4) tany Mainty (ou organique),\n");
-    printf("	5) Mando\n");
-    printf("	6) Aquatique\n");
-    printf("	7) Meuble\n");
-    printf("	8) Riche\n");
-    printf("	9) Vaseux\n");
-    printf("	10) Léger\n");
-    printf("	11) Drainé\n");
-    printf("	12) Tsy asiana,\n");
+    printf("\033[34m  --> Safidio ny toetany: \033[0m\n");
+    printf("\033[34m 1) Tora-pasika, \033[0m\n");
+    printf("\033[34m 2) Fotaka, \033[0m\n");
+    printf("\033[34m 3) Sol limoneux, \033[0m\n");
+    printf("\033[34m 4) tany Mainty (ou organique), \033[0m\n");
+    printf("\033[34m 5) Mando \033[0m\n");
+    printf("\033[34m 6) Aquatique \033[0m\n");
+    printf("\033[34m 7) Meuble \033[0m\n");
+    printf("\033[34m 8) Riche \033[0m\n");
+    printf("\033[34m 9) Vaseux \033[0m\n");
+    printf("\033[34m 10) Léger \033[0m\n");
+    printf("\033[34m 11) Drainé \033[0m\n");
+    printf("\033[34m 12) Tsy asiana, \033[0m\n");
 
     p->sol[0] = choix_car(1, 12);
     if(p->sol[0] == 12)
@@ -124,13 +124,13 @@ void lcsol(prod *p)
 
 void lcsaison(prod* p)
 {
-    printf("  > Safidio ny toetr'andro :\n");
-    printf("	1) Mangatsika\n");
-    printf("	2) Mafana\n");
-    printf("	3) Be orana\n");
-    printf("	4) Maina\n");
-    printf("	5) Antonony\n");
-    printf("	6) Tsy asiana\n");
+    printf("\033[34m-->Safidio ny toetr'andro : \033[0m\n");
+    printf("\033[34m 	1) Mangatsika \033[0m\n");
+    printf("\033[34m	2) Mafana \033[0m\n");
+    printf("\033[34m	3) Be orana \033[0m\n");
+    printf("\033[34m	4) Maina \033[0m\n");
+    printf("\033[34m	5) Antonony \033[0m\n");
+    printf("\033[34m	6) Tsy asiana \033[0m\n");
 
     p->sais[0] = choix_car(1, 6);
     if(p->sais[0] == 6)
