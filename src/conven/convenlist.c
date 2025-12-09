@@ -88,6 +88,7 @@ void lctype(prod *p)
     if (p->type == 1 || p->type == 2) {
 //	afficher_menu_principal();
 	cereale();
+	initialiser_cultures();
 //	fruit ();
 	//exit (0);
 	return;
