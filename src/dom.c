@@ -194,7 +194,7 @@ void initialiser_cultures()
 void afficher_menu_principal()
 {
 //    printf("\n=== MENU PRINCIPAL ===\n\n");//nombre_cultures);
-    printf("Lisitr'ireo fambolena misy :\n");
+    printf("\033[34m -->Lisitr'ireo fambolena misy :\033[0m\n");
     printf("\n--------------------------------\n");
 
     for (int i = 0; i < nombre_cultures; i++) {
@@ -202,7 +202,7 @@ void afficher_menu_principal()
     }
 
     //printf("\n0. Quitter le programme\n");
-    printf("\nFidio ireo fambolena mety (1-%d) na 0 raha hiala: ",
+    printf("\n\033[34m -->Fidio ireo fambolena mety (1-%d) na 0 raha hiala: \033[0m",
 	   nombre_cultures);
     //
     int choix_locale;
@@ -226,15 +226,15 @@ void afficher_menu_principal()
 
 void afficher_menu_cultures()
 {
-    printf("\n=== VOLY VOAFIDY ===\n\n");
-    printf("==> Lisitr'ireo fambolena misy : \n");
+    printf("\n \033[34m === VOLY VOAFIDY ===\033[0m \n\n");
+    printf("\033[32m ==> Lisitr'ireo fambolena misy : \033[0m\n");
     printf("\n-----------------------------\n");
 
     for (int i = 0; i <= nombre_cultures; i++) {
 	printf("%d. %s\n", cultures[i].id, cultures[i].nom);
 
     }
-    printf("\n==> Fidio ireo fambolena mety (1-%d): ", nombre_cultures);
+    printf("\n\033[34m ==> Fidio ireo fambolena mety (1-%d): \033[0m ", nombre_cultures);
 }
 
 
