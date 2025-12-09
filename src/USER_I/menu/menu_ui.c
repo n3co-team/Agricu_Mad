@@ -93,7 +93,8 @@ void init_choix(prod** p)
 	//initialiser de  produi
 //	for (i = 0; i)
 	printf("\n***************************************\n");
-	printf("  \n   TONGASOA ETO SEHA-PAMOKARANA    \n  ");
+//	printf("  \n   TONGASOA ETO SEHA-PAMOKARANA    \n  ");
+	int result = system("figlet -f standard tongasoa");
 	printf("\n***************************************\n");
 }
 
