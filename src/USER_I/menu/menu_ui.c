@@ -180,11 +180,11 @@ void me_sso (prod* p)
 
 	printf("\n\033[34m --> Ataovy ny safidy : \033[0m\n");
 //	printf("\n-------------------------------------\n");
-	printf("\t\033[30m 1) Lisitrin'ny vokatra \033[0m\n");
-	printf("\t\033[30m 2) Karazan'ny vokatra \033[0m\n");
-	printf("\t\033[30m 3) Toetr'andro \033[0m\n");
-	printf("\t\033[30m 4) Volana \033[0m\n");
-	printf("\t\033[30m 5) Hanova safidy \033[0m\n");
+	printf("\t\033[37m 1) Lisitrin'ny vokatra \033[0m\n");
+	printf("\t\033[37m 2) Karazan'ny vokatra \033[0m\n");
+	printf("\t\033[37m 3) Toetr'andro \033[0m\n");
+	printf("\t\033[37m 4) Volana \033[0m\n");
+	printf("\t\033[37m 5) Hanova safidy \033[0m\n");
 	initialiser_cultures();
 	choix = choix_car(1,5);
 
@@ -212,10 +212,10 @@ void me_ssa(prod* p)
 	afchoix(p);
 
 	printf("\n\033[34m--> Ataovy ny safidy : \033[0m\n");
-	printf("\033[30m 1) Lisitrin'ny vokatra \033[0m\n");
-	printf("\033[30m 2) Karazan'ny vokatra \033[0m\n"); 
-	printf("\033[30m 3) Toe-tany \033[0m\n");
-	printf("\033[30m 4) Hanova safidy \033[0m\n");
+	printf("\033[37m 1) Lisitrin'ny vokatra \033[0m\n");
+	printf("\033[37m 2) Karazan'ny vokatra \033[0m\n"); 
+	printf("\033[37m 3) Toe-tany \033[0m\n");
+	printf("\033[37m 4) Hanova safidy \033[0m\n");
 	initialiser_cultures();
 	choix = choix_car(1,4);
 
@@ -241,10 +241,10 @@ void me_smo (prod* p)
 	afchoix(p);
 
 	printf("\n\033[34m-->Ataovy ny safidy : \033[0m\n");
-	printf("\033[30m 1) Lisitrin'ny vokatra \033[0m\n");
-	printf("\033[30m 2) Karazan'ny vokatra \033[0m\n"); 
-	printf("\033[30m 3) Toe-tany \033[0m\n");
-	printf("\033[30m 4) Hanova safidy \033[0m\n");
+	printf("\033[37m 1) Lisitrin'ny vokatra \033[0m\n");
+	printf("\033[37m 2) Karazan'ny vokatra \033[0m\n"); 
+	printf("\033[37m 3) Toe-tany \033[0m\n");
+	printf("\033[37m 4) Hanova safidy \033[0m\n");
 	initialiser_cultures();
 	choix = choix_car(1,3);
 
@@ -269,10 +269,10 @@ void me_ssamo (prod* p)
 	int choix;
 	afchoix(p);
 	printf("\n\033[34m-->Ataovy ny safidy : \033[0m\n");
-	printf("\033[30m 1) Lisitrin'ny vokatra \033[0m\n");
-	printf("\033[30m 2) Karazan'ny vokatra \033[0m\n"); 
-	printf("\033[30m 3) Toe-tany \033[0m\n");
-	printf("\033[30m 4) Hanova safidy \033[0m\n");
+	printf("\033[37m 1) Lisitrin'ny vokatra \033[0m\n");
+	printf("\033[37m 2) Karazan'ny vokatra \033[0m\n"); 
+	printf("\033[37m 3) Toe-tany \033[0m\n");
+	printf("\033[37m 4) Hanova safidy \033[0m\n");
 	initialiser_cultures();
 	choix = choix_car(1,4);	
 
@@ -298,10 +298,10 @@ void me_styso (prod* p)
 	afchoix(p);
 	printf("\n--------------------------------\n");
 	printf("\n\033[34m-->Ataovy ny safidy : \033[0m\n");
-	printf("\t\033[30m 1) Lisitrin'ny vokatra \033[0m\n");
-	printf("\t\033[30m 2) Toetr'andro \033[0m\n"); 
-	printf("\t\033[30m 3) Volana \033[0m\n");
-	printf("\t\033[30m 4) Hanova safidy \033[0m\n");
+	printf("\t\033[37m 1) Lisitrin'ny vokatra \033[0m\n");
+	printf("\t\033[37m 2) Toetr'andro \033[0m\n"); 
+	printf("\t\033[37m 3) Volana \033[0m\n");
+	printf("\t\033[37m 4) Hanova safidy \033[0m\n");
 	initialiser_cultures();
 	choix = choix_car(1,4);	
 
@@ -327,9 +327,9 @@ void me_stysamo (prod* p)
 	afchoix(p);
 
 	printf("\n\033[34m-->Ataovy ny safidy : \033[0m\n");
-	printf("\033[30m    1) Lisitrin'ny vokatra \033[0m\n");
-	printf("\033[30m    2) Toe-tany \033[0m\n");
-	printf("\033[30m    3) Hanova safidy \033[0m\n");
+	printf("\033[37m    1) Lisitrin'ny vokatra \033[0m\n");
+	printf("\033[37m    2) Toe-tany \033[0m\n");
+	printf("\033[37m    3) Hanova safidy \033[0m\n");
 	initialiser_cultures();
 	choix = choix_car(1,3);	
 
@@ -352,9 +352,9 @@ void me_ssosamo (prod* p)
 	afchoix(p);
 
 	printf("\n\033[34m==> Ataovy ny safidy : \033[0m\n");
-	printf("\033[30m 1) Lisitrin'ny vokatra \033[0m\n");
-	printf("\033[30m 2) Karazan'ny vokatra \033[0m\n");
-	printf("\033[30m 3) Hanova safidy \033[0m\n");
+	printf("\033[37m 1) Lisitrin'ny vokatra \033[0m\n");
+	printf("\033[37m 2) Karazan'ny vokatra \033[0m\n");
+	printf("\033[37m 3) Hanova safidy \033[0m\n");
 	initialiser_cultures();
 	choix = choix_car(1,3);	
 
@@ -426,12 +426,12 @@ int cchange(prod *p)
 	int choix;
 
 	printf("\n-> Inona no tianao hovaina ?:\n");
-	printf("1) Karazan'ny vokatra\n");
-	printf("2) Toe-tany\n");
-	printf("3) Toetr'andro\n");
-	printf("4) Volana\n");
-	printf("5) Aide\n");
-	printf("6) Aseho izay efa nofidina\n");
+	printf("\t\033[32m 1) Karazan'ny vokatra \033[0m\n");
+	printf("\t\033[32m 2) Toe-tany \033[0m\n");
+	printf("\t\033[32m 3) Toetr'andro \033[0m\n");
+	printf("\t\033[32m 4) Volana \033[0m\n");
+	printf("\t\033[32m 5) Aide \033[0m\n");
+	printf("\t\033[32m 6) Aseho izay efa nofidina \033[0m\n");
 
 	choix=choix_car(1,6);
 	switch (choix) {
