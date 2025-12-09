@@ -110,11 +110,11 @@ void me_pri(prod* p)
 	init_choix(&p);
 //	printf("\n--------------------------------\n");
 	printf("\033[34m ==> Ataovy ny safidy :\033[0m \n");
-	printf("\t\033[32m1) Karazan'ny vokatra\033[0m\n");
-	printf("\t\033[32m2) Toe-tany\033[0m\n");
-	printf("\t\033[32m3) Toetr'andro\033[0m\n");
-	printf("\t\033[32m4) Volana\033[0m\n");
-	printf("\t\033[32m5) Mombamoba\033[0m\n ");
+	printf("\t\033[36m1) Karazan'ny vokatra\033[0m\n");
+	printf("\t\033[36m2) Toe-tany\033[0m\n");
+	printf("\t\033[36m3) Toetr'andro\033[0m\n");
+	printf("\t\033[36m4) Volana\033[0m\n");
+	printf("\t\033[36m5) Mombamoba\033[0m\n ");
 	printf("\n----------------------------------\n");
 	initialiser_cultures();
 	
@@ -145,11 +145,11 @@ void me_sty (prod* p)
 
 	printf("\n\033[34m ==> Ataovy ny safidy :\033[0m\n");
 //	printf("\n------------------------------------------\n");
-	printf("\t\033[32m1) Lisitrin'ny vokatra \033[0m\n");
-	printf("\t\033[032m2) Toe-tany\033[0m\n");
-	printf("\t\033[032m3) Toetr'andro\033[0m\n");
-	printf("\t\033[032m4) Volana\033[0m\n");
-	printf("\t\033[032m5) Hanova safidy\033[0m\n");
+	printf("\t\033[30m1) Lisitrin'ny vokatra \033[0m\n");
+	printf("\t\033[30m2) Toe-tany\033[0m\n");
+	printf("\t\033[30m3) Toetr'andro\033[0m\n");
+	printf("\t\033[30m4) Volana\033[0m\n");
+	printf("\t\033[30m5) Hanova safidy\033[0m\n");
 	initialiser_cultures();
 	choix = choix_car(1,5);
 
@@ -178,13 +178,13 @@ void me_sso (prod* p)
 	int choix;
 	afchoix(p);
 
-	printf("\nAtaovy ny safidy :\n");
+	printf("\n\033[34m --> Ataovy ny safidy : \033[0m\n");
 //	printf("\n-------------------------------------\n");
-	printf("1) Lisitrin'ny vokatra \n");
-	printf("2) Karazan'ny vokatra\n"); 
-	printf("3) Toetr'andro\n");
-	printf("4) Volana\n");
-	printf("5) Hanova safidy\n");
+	printf("\t\033[30m 1) Lisitrin'ny vokatra \033[0m\n");
+	printf("\t\033[30m 2) Karazan'ny vokatra \033[0m\n");
+	printf("\t\033[30m 3) Toetr'andro \033[0m\n");
+	printf("\t\033[30m 4) Volana \033[0m\n");
+	printf("\t\033[30m 5) Hanova safidy \033[0m\n");
 	initialiser_cultures();
 	choix = choix_car(1,5);
 
@@ -211,11 +211,11 @@ void me_ssa(prod* p)
 	int choix;
 	afchoix(p);
 
-	printf("\nAtaovy ny safidy :\n");
-	printf("1) Lisitrin'ny vokatra \n");
-	printf("2) Karazan'ny vokatra\n"); 
-	printf("3) Toe-tany\n");
-	printf("4) Hanova safidy\n");
+	printf("\n\033[34m--> Ataovy ny safidy : \033[0m\n");
+	printf("\033[30m 1) Lisitrin'ny vokatra \033[0m\n");
+	printf("\033[30m 2) Karazan'ny vokatra \033[0m\n"); 
+	printf("\033[30m 3) Toe-tany \033[0m\n");
+	printf("\033[30m 4) Hanova safidy \033[0m\n");
 	initialiser_cultures();
 	choix = choix_car(1,4);
 
@@ -240,11 +240,11 @@ void me_smo (prod* p)
 	int choix;
 	afchoix(p);
 
-	printf("\nAtaovy ny safidy :\n");
-	printf("1) Lisitrin'ny vokatra \n");
-	printf("2) Karazan'ny vokatra\n"); 
-	printf("3) Toe-tany\n");
-	printf("4) Hanova safidy\n");
+	printf("\n\033[34m-->Ataovy ny safidy : \033[0m\n");
+	printf("\033[30m 1) Lisitrin'ny vokatra \033[0m\n");
+	printf("\033[30m 2) Karazan'ny vokatra \033[0m\n"); 
+	printf("\033[30m 3) Toe-tany \033[0m\n");
+	printf("\033[30m 4) Hanova safidy \033[0m\n");
 	initialiser_cultures();
 	choix = choix_car(1,3);
 
@@ -268,11 +268,11 @@ void me_ssamo (prod* p)
 {
 	int choix;
 	afchoix(p);
-	printf("\nAtaovy ny safidy :\n");
-	printf("1) Lisitrin'ny vokatra \n");
-	printf("2) Karazan'ny vokatra\n"); 
-	printf("3) Toe-tany\n");
-	printf("4) Hanova safidy\n");
+	printf("\n\033[34m-->Ataovy ny safidy : \033[0m\n");
+	printf("\033[30m 1) Lisitrin'ny vokatra \033[0m\n");
+	printf("\033[30m 2) Karazan'ny vokatra \033[0m\n"); 
+	printf("\033[30m 3) Toe-tany \033[0m\n");
+	printf("\033[30m 4) Hanova safidy \033[0m\n");
 	initialiser_cultures();
 	choix = choix_car(1,4);	
 
@@ -297,11 +297,11 @@ void me_styso (prod* p)
 	int choix;
 	afchoix(p);
 	printf("\n--------------------------------\n");
-	printf("\nAtaovy ny safidy :\n");
-	printf("\t1) Lisitrin'ny vokatra \n");
-	printf("\t2) Toetr'andro\n"); 
-	printf("\t3) Volana\n");
-	printf("\t4) Hanova safidy\n");
+	printf("\n\033[34m-->Ataovy ny safidy : \033[0m\n");
+	printf("\t\033[30m 1) Lisitrin'ny vokatra \033[0m\n");
+	printf("\t\033[30m 2) Toetr'andro \033[0m\n"); 
+	printf("\t\033[30m 3) Volana \033[0m\n");
+	printf("\t\033[30m 4) Hanova safidy \033[0m\n");
 	initialiser_cultures();
 	choix = choix_car(1,4);	
 
@@ -326,10 +326,10 @@ void me_stysamo (prod* p)
 	int choix;
 	afchoix(p);
 
-	printf("\nAtaovy ny safidy :\n");
-	printf("1) Lisitrin'ny vokatra \n");
-	printf("2) Toe-tany\n");
-	printf("3) Hanova safidy\n");
+	printf("\n\033[34m-->Ataovy ny safidy : \033[0m\n");
+	printf("\033[30m    1) Lisitrin'ny vokatra \033[0m\n");
+	printf("\033[30m    2) Toe-tany \033[0m\n");
+	printf("\033[30m    3) Hanova safidy \033[0m\n");
 	initialiser_cultures();
 	choix = choix_car(1,3);	
 
@@ -351,10 +351,10 @@ void me_ssosamo (prod* p)
 	int choix;
 	afchoix(p);
 
-	printf("\n==> Ataovy ny safidy :\n");
-	printf("1) Lisitrin'ny vokatra \n");
-	printf("2) Karazan'ny vokatra\n");
-	printf("3) Hanova safidy\n");
+	printf("\n\033[34m==> Ataovy ny safidy : \033[0m\n");
+	printf("\033[30m 1) Lisitrin'ny vokatra \033[0m\n");
+	printf("\033[30m 2) Karazan'ny vokatra \033[0m\n");
+	printf("\033[30m 3) Hanova safidy \033[0m\n");
 	initialiser_cultures();
 	choix = choix_car(1,3);	
 
@@ -376,16 +376,16 @@ void afchoix(prod *p) {
 	char* TYPE=c_type_prod(p->type);
 	char* SOL=c_sol(p->sol[0]);
 	printf("\n.__________________________");
-	printf("\n| Choix dejà mis :\n");
+	printf("\n\033[36m | Choix dejà mis : \033[0m\n");
 	
 	if(p->type != 0)
-		printf("| KARAZANY:%s\n",TYPE);
+		printf("\033[36m | KARAZANY:%s \033[0m\n",TYPE);
 	if(p->sol[0] != 0)
-		printf("| TANY:%s\n",SOL);
+		printf("\033[36m | TANY:%s \033[0m\n",SOL);
 	if(p->sais[0] != 0)
-		printf("| TOETR'ANDRO:%s\n",SAISON);
+		printf("\033[36m | TOETR'ANDRO:%s \033[0m\n",SAISON);
 	if(p->mois[0] != 0)
-		printf("| VOLANA:%s\n",MOIS);
+		printf("\033[36m | VOLANA:%s \033[0m\n",MOIS);
 	printf("|__________________________");
 
 	if (MOIS != NULL)
@@ -401,8 +401,8 @@ void afchoix(prod *p) {
 /** @fn verification de choix */	
 void verification_choix(prod* p) {
 	afchoix(p);;
-	printf("\nTout est correct? (\"y\" pour oui) ");
-	printf("\nc : changer un choix\np: pour tout les initialiser et retour au menu principal\n==> ");
+	printf("\n\033[1m Tout est correct? (\"y\" pour oui) \033[0m");
+	printf("\n\033[1m c : changer un choix\np: pour tout les initialiser et retour au menu principal\n==> \033[0m");
 
 	char a='a';
 	while (a != 'y') {
@@ -493,4 +493,3 @@ void prod_list(prod* p) {
 	}
 	exit (0);
 }
-
