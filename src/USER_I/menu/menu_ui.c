@@ -109,8 +109,8 @@ void me_pri(prod* p)
 	int choix;
 	init_choix(&p);
 //	printf("\n--------------------------------\n");
-	printf("\n==> Ataovy ny safidy :\n");
-	printf("\t1) Karazan'ny vokatra\n");
+	printf("\033[34m ==> Ataovy ny safidy :\033[0m \n");
+	printf("\t\033[32m1) Karazan'ny vokatra\033[0m\n");
 	printf("\t2) Toe-tany\n");
 	printf("\t3) Toetr'andro\n");
 	printf("\t4) Volana\n");
