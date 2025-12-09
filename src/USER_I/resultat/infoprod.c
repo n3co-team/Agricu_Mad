@@ -79,7 +79,7 @@ void infprod(prod p)
 				printf(",");
 	}
 
-	printf(".\nMatetika amboly madritran'ny volana ");
+	printf(".\nMatetika ambolena  madritran'ny volana ");
 	for (i = 0; i < 12; i++) {
 		ref=p.mois[i];
 		if(ref < 0 || ref > 12 || ref == 0) {

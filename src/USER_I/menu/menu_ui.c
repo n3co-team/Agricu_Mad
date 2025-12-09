@@ -92,10 +92,10 @@ void init_choix(prod** p)
 	}
 	//initialiser de  produi
 //	for (i = 0; i)
-	printf("\n***************************************\n");
+	printf("\n**************************************************************************\n");
 //	printf("  \n   TONGASOA ETO SEHA-PAMOKARANA    \n  ");
-	int result = system("figlet -f standard tongasoa");
-	printf("\n***************************************\n");
+	int result = system("\tfiglet -f standard tongasoa   ianao\n");
+	printf("\n**************************************************************************\n");
 }
 
 /** @fn me_pri
@@ -145,11 +145,11 @@ void me_sty (prod* p)
 
 	printf("\n\033[34m ==> Ataovy ny safidy :\033[0m\n");
 //	printf("\n------------------------------------------\n");
-	printf("\t\033[30m1) Lisitrin'ny vokatra \033[0m\n");
-	printf("\t\033[30m2) Toe-tany\033[0m\n");
-	printf("\t\033[30m3) Toetr'andro\033[0m\n");
-	printf("\t\033[30m4) Volana\033[0m\n");
-	printf("\t\033[30m5) Hanova safidy\033[0m\n");
+	printf("\t\033[1m1) Lisitrin'ny vokatra \033[0m\n");
+	printf("\t\033[1m2) Toe-tany\033[0m\n");
+	printf("\t\033[1m3) Toetr'andro\033[0m\n");
+	printf("\t\033[1m4) Volana\033[0m\n");
+	printf("\t\033[1m5) Hanova safidy\033[0m\n");
 	initialiser_cultures();
 	choix = choix_car(1,5);
 

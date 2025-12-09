@@ -62,7 +62,7 @@ void initialiser_cultures()
 {
     // Culture 1: Tsaramaso
     cultures[0].id = 1;
-    strcpy(cultures[0].nom, "\033[35m Tsaramaso \033[0m");
+    strcpy(cultures[0].nom, "\033[35m \tTsaramaso \033[0m");
     strcpy(cultures[0].saison_plantation, "Aprily - Mey");
     strcpy(cultures[0].duree_croissance, "3-4 volana");
     strcpy(cultures[0].informations,"Planter en sol bien draine. Besoin de soleil modere.");
@@ -74,7 +74,7 @@ void initialiser_cultures()
 
     // Culture 2: Vary
     cultures[1].id = 2;
-    strcpy(cultures[1].nom, "\033[35m Vary \033[0m");
+    strcpy(cultures[1].nom, "\033[35m \tVary \033[0m");
     strcpy(cultures[1].saison_plantation, "Oktobra - Desembra");
     strcpy(cultures[1].duree_croissance, "5-6 volana");
     strcpy(cultures[1].informations,
@@ -87,7 +87,7 @@ void initialiser_cultures()
 
     // Culture 3: Mangahazo
     cultures[2].id = 3;
-    strcpy(cultures[2].nom, "\033[35m Mangahazo \033[0m");
+    strcpy(cultures[2].nom, "\033[35m \tMangahazo \033[0m");
     strcpy(cultures[2].saison_plantation, "Aogositra - Septambra");
     strcpy(cultures[2].duree_croissance, "8-12 volana");
     strcpy(cultures[2].informations,
@@ -100,7 +100,7 @@ void initialiser_cultures()
 
     // Culture 4: Voanjo
     cultures[3].id = 4;
-    strcpy(cultures[3].nom, "\033[35m Voanjo \033[0m");
+    strcpy(cultures[3].nom, "\033[35m \tVoanjo \033[0m");
     strcpy(cultures[3].saison_plantation, "Novambra - Janoary");
     strcpy(cultures[3].duree_croissance, "4-5 volana");
     strcpy(cultures[3].informations,
@@ -113,7 +113,7 @@ void initialiser_cultures()
 
     // Culture 5: Ognon
     cultures[4].id = 5;
-    strcpy(cultures[4].nom, "\033[35m Tongolo \033[0m");
+    strcpy(cultures[4].nom, "\033[35m \tTongolo \033[0m");
     strcpy(cultures[4].saison_plantation, "Martsa - Mey");
     strcpy(cultures[4].duree_croissance, "4-5 volana");
     strcpy(cultures[4].informations,
@@ -126,7 +126,7 @@ void initialiser_cultures()
 
     // Culture 6: Karoty
     cultures[5].id = 6;
-    strcpy(cultures[5].nom, "\033[35m Karoty \033[0m");
+    strcpy(cultures[5].nom, "\033[35m \tKaroty \033[0m");
     strcpy(cultures[5].saison_plantation, "Febroary - Aprily");
     strcpy(cultures[5].duree_croissance, "3-4 volana");
     strcpy(cultures[5].informations,
@@ -139,7 +139,7 @@ void initialiser_cultures()
 
     // Culture 7: Tomates
     cultures[6].id = 7;
-    strcpy(cultures[6].nom, "\033[35m Voatabia \033[0m");
+    strcpy(cultures[6].nom, "\033[35m \tVoatabia \033[0m");
     strcpy(cultures[6].saison_plantation, "Aogositra - Oktobra");
     strcpy(cultures[6].duree_croissance, "3-4 volana");
     strcpy(cultures[6].informations,
@@ -152,7 +152,7 @@ void initialiser_cultures()
 
     // Culture 8: Brèdes
     cultures[7].id = 8;
-    strcpy(cultures[7].nom, "\033[35m Bredes \033[0m");
+    strcpy(cultures[7].nom, "\033[35m \tBredes \033[0m");
     strcpy(cultures[7].saison_plantation, "Isan-taona");
     strcpy(cultures[7].duree_croissance, "1-2 volana");
     strcpy(cultures[7].informations,
@@ -165,7 +165,7 @@ void initialiser_cultures()
 
     // Culture 9: Ails
     cultures[8].id = 9;
-    strcpy(cultures[8].nom, "\033[35m Ails \033[0m");
+    strcpy(cultures[8].nom, "\033[35m \tAils \033[0m");
     strcpy(cultures[8].saison_plantation, "Mey - Jona");
     strcpy(cultures[8].duree_croissance, "5-6 volana");
     strcpy(cultures[8].informations, "Sol bien draine. Peu d'arrosage.");
@@ -177,7 +177,7 @@ void initialiser_cultures()
 
     // Culture 10: Ananas
     cultures[9].id = 10;
-    strcpy(cultures[9].nom, "\033[35m Mananasy \033[0m");
+    strcpy(cultures[9].nom, "\033[35m \tMananasy \033[0m");
     strcpy(cultures[9].saison_plantation, "Desembra - Febroary");
     strcpy(cultures[9].duree_croissance, "18-24 volana");
     strcpy(cultures[9].informations,
