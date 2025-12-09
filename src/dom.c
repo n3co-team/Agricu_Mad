@@ -278,33 +278,34 @@ void afficher_informations_cultures(int culture_choix, int region_choix)
 
     int culture_index = culture_choix - 1;
     int region_index = region_choix - 1;
-
-    printf("\n=== MOMBAMOMBAN'NY %s ===\n", cultures[culture_index].nom);
-    printf("=== FARITRA: %s ===\n\n", regions[region_index].nom);
-
-    printf("Code: %s\n", cultures[culture_index].code);
-    printf("Fotoana fambolena: %s\n",
+    printf("\n¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\n");
+    printf("\t\n=== MOMBAMOMBAN'NY %s ===\n", cultures[culture_index].nom);
+    printf("\t=== FARITRA: %s ===\n\n", regions[region_index].nom);
+    
+    //printf("Code: %s\n", cultures[culture_index].code);
+    printf("\tFotoana fambolena: %s\n",
 	   cultures[culture_index].saison_plantation);
-    printf("Faharetan'ny voly: %s\n",
+    printf("\tFaharetan'ny voly: %s\n",
 	   cultures[culture_index].duree_croissance);
 
     // Vérifier la compatibilité région/culture
     if (est_region_compatible(culture_choix, region_choix)) {
 	printf
-	    ("\n METY AMINY: Cette culture est ADAPTEE a la region %s\n",
+	    ("\t\n METY AMINY: Cette culture est ADAPTEE a la region %s\n",
 	     regions[region_index].nom);
     } else {
 	printf
-	    ("\n METY AMINY: Cette culture est PEU ADAPTEE a la region %s\n",
+	    ("\t\n METY AMINY: Cette culture est PEU ADAPTEE a la region %s\n",
 	     regions[region_index].nom);
     }
-    printf("\n---------------------------------------------\n");
+    printf("\n¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\n");
+    printf("\n-------------------------------------------------------\n");
     printf("\nToetran'ny faritra:\n");
     printf("%s\n", regions[region_index].caracteristiques);
-    printf("\n---------------------------------------------\n");
+    printf("\n-------------------------------------------------------\n");
     printf("\nMombamomba sy teknika fambolena :\n");
     printf("%s\n", cultures[culture_index].informations);
-    printf("\n---------------------------------------------\n");
+    printf("\n-------------------------------------------------------\n");
     // Afficher autres régions compatibles
     printf("\nFaritra afa mety aminy: ");
     for (int i = 0; i < cultures[culture_index].nb_regions; i++) {
