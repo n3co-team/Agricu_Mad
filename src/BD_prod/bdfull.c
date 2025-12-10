@@ -1,5 +1,9 @@
 #include <stdio.h>
+<<<<<<< HEAD
 #include<stdlib>
+=======
+#include<stdlib.h>
+>>>>>>> 688c3bbd230171e02f3ac477d334d31cd118ddc6
 #ifndef PROD_H
 #include"prod.h"
 #endif
