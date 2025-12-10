@@ -5,7 +5,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "prod.h"
 
 #define MAX_CULTURES 10
 #define MAX_REGIONS 8
