@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<stdlib.h>
 #ifndef PROD_H
 #include"prod.h"
 #endif
