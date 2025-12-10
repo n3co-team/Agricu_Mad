@@ -34,7 +34,7 @@ void resultf(lprod** donne) {
 	
 	printf("\nMisafidiana laharana\n ");
 	choix=choix_car(1,i);
-	choix = choix - 2;
+	choix = choix - 1;
 	printf("choix=%d\n",choix);
 	temp = *donne;
 	i=0;
@@ -42,7 +42,7 @@ void resultf(lprod** donne) {
 		if(choix==i) {
 			printf("choix=%d %d\n",choix,i);
 			venull(p->s[0].c,"p->s[0].c","resultf");
-			infprod(p->s[0].c[0]);
+			infprod(p[0].c[0]);
 			break;
 		}
 		if(p->s == NULL || p->s->c == NULL) {
