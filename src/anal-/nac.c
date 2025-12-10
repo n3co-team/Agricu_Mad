@@ -93,7 +93,8 @@ int analyse_type(prod *p, prod **r)
 	venull(*r, "r racine", "analyse_type");
 	return 6;
     default:
-	printf("indefine\n");
+    	*r=bdfull();
+	//printf("indefine\n");
 	return -1;
     }
 }

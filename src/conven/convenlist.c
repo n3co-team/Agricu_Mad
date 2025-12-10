@@ -83,7 +83,7 @@ void lctype(prod *p)
     printf("\033[37m 5) Vahitra \033[0m\n");
     printf("\033[37m 6) Tsy asiana \033[0m\n");
 
-    p->type = choix_car(1, 6) + 1;
+    p->type = choix_car(1, 6) ;
     if (p->type == 1) {
 //	afficher_menu_principal();
 	cereale();
