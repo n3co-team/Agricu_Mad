@@ -375,7 +375,7 @@ void afchoix(prod *p) {
 	char* TYPE=c_type_prod(p->type);
 	char* SOL=c_sol(p->sol[0]);
 	printf("\n.__________________________");
-	printf("\n\033[36m | Choix dejà mis : \033[0m\n");
+	printf("\n\033[36m | Safisy efa azo : \033[0m\n");
 	
 	if(p->type != 0)
 		printf("\033[36m | KARAZANY:%s \033[0m\n",TYPE);
@@ -400,8 +400,8 @@ void afchoix(prod *p) {
 /** @fn verification de choix */	
 void verification_choix(prod* p) {
 	afchoix(p);;
-	printf("\n\033[1m Tout est correct? (\"y\" pour oui) \033[0m");
-	printf("\n\033[1m c : changer un choix\np: pour tout les initialiser et retour au menu principal\n==> \033[0m");
+	printf("\n\033[1m Marina daholo ve (\"y\" ho an'ny eny) \033[0m");
+	printf("\n\033[1m c : Fanovana safidy\np: Fanovana sy fiverenana any amin'ny meio lehibe\n==> \033[0m");
 
 	char a='a';
 	while (a != 'y') {
@@ -414,11 +414,10 @@ void verification_choix(prod* p) {
 			me_pri(p);
 		else if (a == 'y') 
 			break;
-		fprintf(stderr,"Veuillez repondre par 'y' pour oui ou 'n' pour non\n==>");
+		fprintf(stderr,"Valio amin'ny 'y' raha eny na 'n' raha tsia!\n==>");
 	}
     prod_list(p);
 }
-
 
 /** @fn changer un choix */
 int cchange(prod *p) 

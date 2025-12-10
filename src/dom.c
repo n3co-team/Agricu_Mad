@@ -216,7 +216,6 @@ void afficher_menu_principal()
     }
 }
 
-
 void afficher_menu_cultures()
 {
     printf("\n \033[34m === VOLY VOAFIDY ===\033[0m \n\n");
@@ -346,7 +345,7 @@ void cereale()
 
 	if (choix_culture >= 1 && choix_culture <= nombre_cultures) {
 	    // Menu region
-	    afficher_menu_regions();
+	    afficher_menu_regions(choix_culture);
 	    printf("\nSafidio ny faritra mety  (1-%d): ", nombre_regions);
 
 	    if (scanf("%d", &choix_region) != 1) {
