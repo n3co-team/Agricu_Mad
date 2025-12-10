@@ -292,7 +292,7 @@ void afficher_informations_cultures(int culture_choix, int region_choix)
     // Vérifier la compatibilité région/culture
     if (est_region_compatible(culture_choix, region_choix)) {
 	printf
-	    ("\t\n\t\033[34m===>METY AMINY\033[0m : Voarindra tsara amin'ny toetran'ny faritra io voly  %s io\n",
+	    ("\t\n\t\033[34m   ===>METY AMINY\033[0m : Voarindra tsara amin'ny toetran'ny faritra io voly  %s io\n",
 	     regions[region_index].nom);
     } else {
 	printf
