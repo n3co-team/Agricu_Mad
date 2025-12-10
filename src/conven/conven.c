@@ -43,8 +43,8 @@ char* c_type_prod(int i)
 {
     char t[34];
     switch (i) {
-        case 1: strcpy(t,"Zavamaniry vary"); break;
-        case 2: strcpy(t,"Zavamaniry tsy misy hazondamosina"); break;
+        case 1: strcpy(t," vary"); break;
+        case 2: strcpy(t,"Voamaina"); break;
         case 3: strcpy(t,"Voankazo"); break;
         case 4: strcpy(t,"Anana"); break;
         case 5: strcpy(t,"Ovy"); break;
