@@ -4,6 +4,7 @@
 */
 
 #include "voamaina.h"
+#include"menu_ui.h"
 
 // Définition des variables globales
 Culture cultures[MAX_CULTURES];
