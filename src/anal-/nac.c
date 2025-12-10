@@ -33,7 +33,7 @@ printf("\n0 : changer le parametre de produit\n");
 
 	    switch (choix_car(0,2)) {
 		    case 0: cchange(p);
-			    me_auto(p);
+			    me_auto(p); break;
 		    case 1: me_pri(p); break;
 		    case 2: exit(0);
 		    default: exit(1);
