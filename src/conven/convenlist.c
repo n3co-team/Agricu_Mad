@@ -86,7 +86,7 @@ void lctype(prod *p)
     p->type = choix_car(1, 6);
     if (p->type == 1) {
 //	afficher_menu_principal();
-	cereale(p);
+	cereale();
 	initialiser_cultures();
 //	prod* fruit();
 	//exit (0);
@@ -108,15 +108,15 @@ void lcsol(prod *p)
     printf("\033[34m  --> Safidio ny toetany: \033[0m\n");
     printf("\033[34m 1) Tora-pasika, \033[0m\n");
     printf("\033[34m 2) Fotaka, \033[0m\n");
-    printf("\033[34m 3) Sol limoneux, \033[0m\n");
-    printf("\033[34m 4) tany Mainty (ou organique), \033[0m\n");
+    printf("\033[34m 3) Tany misy fotaka, \033[0m\n");
+    printf("\033[34m 4) tany Mainty, \033[0m\n");
     printf("\033[34m 5) Mando \033[0m\n");
-    printf("\033[34m 6) Aquatique \033[0m\n");
-    printf("\033[34m 7) Meuble \033[0m\n");
-    printf("\033[34m 8) Riche \033[0m\n");
-    printf("\033[34m 9) Vaseux \033[0m\n");
-    printf("\033[34m 10) Léger \033[0m\n");
-    printf("\033[34m 11) Drainé \033[0m\n");
+    printf("\033[34m 6) Tany tsy ialana rano \033[0m\n");
+    printf("\033[34m 7) Tany malemy \033[0m\n");
+    printf("\033[34m 8) Tany be otik'aina na lonaka \033[0m\n");
+    printf("\033[34m 9) Tany be fotaka \033[0m\n");
+    printf("\033[34m 10) Tany misy fasika na tany maivana\033[0m\n");
+    printf("\033[34m 11) Tany misy rano tsara\033[0m\n");
     printf("\033[34m 12) Tsy asiana, \033[0m\n");
 
     p->sol[0] = choix_car(1, 12);
