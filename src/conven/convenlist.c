@@ -85,14 +85,19 @@ void lctype(prod *p)
     printf("\033[37m 6) Tsy asiana \033[0m\n");
 
     p->type = choix_car(1, 6);
-    if (p->type == 1 || p->type == 2) {
+    if (p->type == 1) {
 //	afficher_menu_principal();
 	cereale();
 	initialiser_cultures();
-//	fruit ();
+//	prod* fruit();
 	//exit (0);
 	return;
-    } 
+    }
+/*    if(p->type == 2){
+	prod* fruit();
+	return;
+    }*/
+
     if(p->type == 6)
     	p->type = 0;
     nett();
