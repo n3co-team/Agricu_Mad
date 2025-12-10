@@ -86,7 +86,7 @@ void lctype(prod *p)
     p->type = choix_car(1, 6);
     if (p->type == 1) {
 //	afficher_menu_principal();
-	cereale();
+	cereale(p);
 	initialiser_cultures();
 //	prod* fruit();
 	//exit (0);
