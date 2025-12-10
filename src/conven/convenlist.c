@@ -138,7 +138,6 @@ void lcsaison(prod* p)
      initialiser_cultures();
     	p->sais[0] = 0;
     nett();
-    me_auto(p); 
-    lctype(prod *p);
+    me_auto(p);
 }
 

@@ -244,7 +244,8 @@ void afficher_menu_regions()
     int culture_index = culture_choix - 1;
 //    int region_index = region_choix - 1;
     //printf("\n=== SAFIDY FARITRA ===\n\n");
-    printf("\033[37m ==> Lisitr'ireo faritra misy ho an'ny voly %s: \033[0m",cultures[culture_index].nom);
+//37
+    printf("==> Lisitr'ireo faritra misy ho an'ny voly %s: ",cultures[culture_index].nom);
     printf("\n-----------------------------\n");
 
     for (int i = 0; i < nombre_regions; i++) {
@@ -364,35 +365,7 @@ void cereale() {
 
             if(choix_region >= 1 && choix_region <= nombre_regions) {
                 // Afficher les informations avec la région sélectionnée
-                afficher_informations_culture(choix_culture, choix_region);
-//
-	if (choix_cultures > 0 ){
-                // Menu secondaire
-                printf("\n--- MENU SECONDARIE ---\n");
-                printf("1. Voir une autre culture\n");
-                printf("2. Changer de region pour cette culture\n");
-                printf("3. Retour au menu principal\n");
-                printf("4. Quitter\n");
-                printf("\nVotre choix: ");
-                if (scanf("%d", &sous_choix) != 1){
-			printf("Saisie invalide. Retour au menu principale.\n");
-			while (getchar() != '\n');
-			continue;
-		}
-
-                switch(sous_choix) {
-                    case 1:
-                        // Voir une autre culture
-                        break;
-                    case 2:
-                        // Changer de région pour la même culture
-                        afficher_menu_regions();
-                        if (scanf("%d", &choix_region) != 1){
-				printf("Saisie invalide. Retour au menu principale.\n");
-				while (getchar () != '\n');
-				break;
-			}
-			if (choix_region >= 1 && choix_region <= nombre_regions){
+ 			if (choix_region >= 1 && choix_region <= nombre_regions){
 				 afficher_informations_culture(choix_cultures, choix_region);
 			}
                        // afficher_informations_culture(choix_culture, choix_region);
@@ -444,33 +417,7 @@ void fruit (){
                 printf("\n--- MENU SECONDAIRE ---\n");
                 printf("1. Voir une autre culture\n");
                 printf("2. Changer de region pour cette culture \n");
-                printf("3. Retour au menu principale \n");
-                printf("4. Quitter\n");
-                printf("\n Entrer votre choix: ");
-                scanf("%d", &sous_choix);
-
-                switch (sous_choix) {
-                    case 1: 
-                        break;
-                    case 2: 
-                        afficher_menu_regions();
-                        scanf("%d", &choix_region);
-                        afficher_informations_culture(choix_culture, choix_region);
-                        break;
-                    case 3: 
-                        continue;
-                    case 4: 
-                        en_cours = 0;
-                        printf("Au revoir! \n");
-                        break;
-                    default:
-                        printf("Choix invalide, retour au menu principale. \n");
-                }
-            } 
-            else {
-                printf("Region invalide! Retour au menu principal. \n");
-            } 
-        } 
+       
         else {
             printf("Choix invalide! Veuillez choisir entre 0 et %d. \n ",nombre_cultures);
         }
@@ -527,7 +474,8 @@ void cereale()
 		printf("\t3. Hiverina any amin'ny menu fandraisana\n");
 		printf("\t4. Miala\n");
 		printf("\n==> Alefaso ny safidy: ");
-
+//teste
+		initialiser_cultures();
 		if (scanf("%d", &sous_choix) != 1) {
 		    printf("Fampidirana diso!\n");
 		    while (getchar() != '\n');
