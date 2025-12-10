@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "prod.h"
 
 #define MAX_CULTURES 10
 #define MAX_REGIONS 8
@@ -42,6 +43,6 @@ void afficher_menu_regions();
 int est_region_compatible(int culture_id, int region_id);
 void afficher_informations_cultures(int culture_choix, int region_choix);
 void afficher_menu_cultures();
-void cereale(prod *p);
+void cereale();
 //void afficher_informations_cultures(int choix_culture, int choix_region);
 //void fruit();

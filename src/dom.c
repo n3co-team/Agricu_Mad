@@ -492,7 +492,7 @@ void cereale()
 		case 3:
 		    en_cours = 0;
 		    //printf("Veloma ary ô!\n");
-		    me_auto(p);
+//		    me_auto();
 		    break;
 		case 4:
 		    en_cours = 0;
