@@ -16,7 +16,7 @@
 void retnac(prod* p, lprod** lps) {
 		    lprod* lp=*lps;
 		    lprod* lpt;
-printf("\n0 : changer le parametre de produit\n");
+printf("\n0 : Hanova safidy iray\n");
 	    printf("1 : menu principal\n");
 	    printf("2 : quitter\n");
 			//Libere les memoire alloué
@@ -132,7 +132,7 @@ int analyse_mois(prod *p, lprod **res)
 	if (l->s != NULL && l->s->c != NULL)
 	    l = l->s;
 	else {
-	    fprintf(stderr, "Pas de produit chercher\n");
+	    fprintf(stderr, "Mialatsy fa tsy misy ato ny vokatra tadiavina\n");
 	    
 	    retnac(p,res);
 	    exit(0);
@@ -183,7 +183,7 @@ int analyse_sol(prod *p, lprod **res)
 	if (l->s != NULL && l->s->c != NULL)
 	    l = l->s;
 	else {
-	    fprintf(stderr, "Pas de produit chercher\n");
+	    fprintf(stderr, "Mialatsy fa tsy misy ato ny vokatra tadiavina\n");
 	    retnac(p,res);
 	    exit(0);
 	}
@@ -233,7 +233,7 @@ int analyse_saison(prod *p, lprod **res)
 	if (l->s != NULL && l->s->c != NULL)
 	    l = l->s;
 	else {
-	    fprintf(stderr, "Pas de produit chercher\n");
+	    fprintf(stderr, "Mialatsy fa tsy misy ato ny vokatra tadiavinan");
 	    retnac(p,res);
 	    exit(0);
 	}

@@ -40,7 +40,6 @@ void resultf(lprod** donne) {
 	i=0;
 	while (1) {
 		if(choix==i) {
-			printf("choix=%d %d\n",choix,i);
 			infprod(p[0].c[0]);
 			break;
 		}
