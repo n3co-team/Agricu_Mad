@@ -117,6 +117,7 @@ void lcsol(prod *p)
 
     p->sol[0] = choix_car(1, 12);
     if(p->sol[0] == 12)
+      initialiser_cultures();
     	p->sol[0] = 0;
     nett();
     me_auto(p); 
@@ -134,8 +135,10 @@ void lcsaison(prod* p)
 
     p->sais[0] = choix_car(1, 6);
     if(p->sais[0] == 6)
+     initialiser_cultures();
     	p->sais[0] = 0;
     nett();
     me_auto(p); 
+    lctype(prod *p);
 }
 
