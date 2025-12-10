@@ -41,7 +41,6 @@ void resultf(lprod** donne) {
 	while (1) {
 		if(choix==i) {
 			printf("choix=%d %d\n",choix,i);
-			venull(p->s[0].c,"p->s[0].c","resultf");
 			infprod(p[0].c[0]);
 			break;
 		}
