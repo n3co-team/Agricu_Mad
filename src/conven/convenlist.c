@@ -43,7 +43,7 @@ int choix_car(int ch_min, int ch_max)
         tentative ++;
 	printf("Avereno azafady.\n");
     }
-    fprintf(stderr, "\n Nandiso safidy %d intelo ianao. Azafady mijanona ny fandaharana, veloma \n", tentative);
+    fprintf(stderr, "\033[1m \n Nandiso safidy %d (intelo) ianao. Azafady mijanona ny fandaharana, veloma \033[0m \n", tentative);
     exit(1);
 
 }
@@ -64,7 +64,7 @@ void lcmois(prod *p)
     printf("\033[37m 11) Novambra \033[0m\n");
     printf("\033[37m 12) Desambra \033[0m\n");
     printf("\033[37m 13) Tsy asiana \033[0m\n");
-	
+    cchange(prod *p);
     initialiser_cultures();
     p->mois[0] = choix_car(1, 13);
     if(p->mois[0] == 13)
@@ -89,6 +89,7 @@ void lctype(prod *p)
 //	afficher_menu_principal();
 	cereale();
 	initialiser_cultures();
+	cchange(prod *p);
 //	prod* fruit();
 	//exit (0);
 	return;

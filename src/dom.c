@@ -279,7 +279,7 @@ void afficher_informations_cultures(int culture_choix, int region_choix)
 
     int culture_index = culture_choix - 1;
     int region_index = region_choix - 1;
-    printf("\n¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\n");
+    printf("\n¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\n");
     printf("\t\n\t\033[34m ===>MOMBAMOMBAN'NY\033[0m%s \n", cultures[culture_index].nom);
     printf("\t\033[34m ===>FARITRA\033[0m: %s\n\n", regions[region_index].nom);
     
@@ -292,16 +292,16 @@ void afficher_informations_cultures(int culture_choix, int region_choix)
     // Vérifier la compatibilité région/culture
     if (est_region_compatible(culture_choix, region_choix)) {
 	printf
-	    ("\t\n\t\033[34m   ===>METY AMINY\033[0m : Voarindra tsara amin'ny toetran'ny faritra io voly  %s io\n",
+	    ("\t\n\t\033[34m ===>METY AMINY\033[0m : Voarindra tsara amin'ny toetran'ny faritra %s io voly io \n",
 	     regions[region_index].nom);
     } else {
 	printf
 	    ("\t\n\t\033[34m===>TSY METY AMINY \033[0m : Tsy dia mety tsara amin'io faritra io ito voly  %s ito\n",
 	     regions[region_index].nom);
     }
-    printf("\n¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\n");
+    printf("\n¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\n");
     printf("\n-------------------------------------------------------\n");
-    printf("\n\033[34mToetran'ny faritra\033[0m:\n");
+    printf("\n\033[34mToetran'ny faritra\033[0m:                    \n");
     printf("%s\n", regions[region_index].caracteristiques);
     printf("\n-------------------------------------------------------\n");
     printf("\n\033[34mMombamomba sy teknika fambolena \033[0m:\n");
