@@ -17,9 +17,9 @@
 char* c_saison(int i) {
     char s[50];
     switch (i) {
-        case 1: strcpy(s,"Hatsiaka"); break;
+        case 1: strcpy(s,"matsiaka"); break;
         case 2: strcpy(s,"Mafana"); break;
-        case 3: strcpy(s,"Orana"); break;
+        case 3: strcpy(s," be orana"); break;
         case 4: strcpy(s,"Maina"); break;
         case 5: strcpy(s,"Antonontonony"); break;
         default: strcpy(s,"Tsy voafaritra"); break;
@@ -47,8 +47,8 @@ char* c_type_prod(int i)
         case 2: strcpy(t,"Voamaina"); break;
         case 3: strcpy(t,"Voankazo"); break;
         case 4: strcpy(t,"Anana"); break;
-        case 5: strcpy(t,"Vokatr'antany"); break;
-        case 6: strcpy(t,"Vahitra"); break;
+        case 5: strcpy(t,"Vokatran-tany"); break;
+        case 6: strcpy(t,"voka-bahitra"); break;
         default: strcpy(t,"Tsy voafaritra"); break;
     }
     
@@ -106,14 +106,14 @@ char* c_sol(int i)
         case 1: strcpy(s,"Fasika"); break;
         case 2: strcpy(s,"Tanimbary"); break;
         case 3: strcpy(s,"Tanindrano"); break;
-        case 4: strcpy(s,"matavy"); break;
-        case 5: strcpy(s,"mando"); break;
-        case 6: strcpy(s,"anaty rano"); break;
-        case 7: strcpy(s,"malemy"); break;
-        case 8: strcpy(s,"mahavokatra"); break;
-        case 9: strcpy(s,"feno fotaka"); break;
-        case 10: strcpy(s,"maivana"); break;
-        case 11: strcpy(s,"tsy mando"); break;
+        case 4: strcpy(s,"Tany matavy"); break;
+        case 5: strcpy(s,"Tany mando"); break;
+        case 6: strcpy(s,"Tany anaty rano"); break;
+        case 7: strcpy(s,"Tany malemy"); break;
+        case 8: strcpy(s,"Tany mahavokatra"); break;
+        case 9: strcpy(s,"Tany feno fotaka"); break;
+        case 10: strcpy(s,"Tany maivana"); break;
+        case 11: strcpy(s,"Tany tsy mando"); break;
         default: strcpy(s,"Tsy voafaritra"); break;
     }
     
