@@ -64,7 +64,7 @@ void lcmois(prod *p)
     printf("\033[37m 11) Novambra \033[0m\n");
     printf("\033[37m 12) Desambra \033[0m\n");
     printf("\033[37m 13) Tsy asiana \033[0m\n");
-    cchange(prod *p);
+    cchange();
     initialiser_cultures();
     p->mois[0] = choix_car(1, 13);
     if(p->mois[0] == 13)
@@ -89,7 +89,7 @@ void lctype(prod *p)
 //	afficher_menu_principal();
 	cereale();
 	initialiser_cultures();
-	cchange(prod *p);
+	cchange();
 //	prod* fruit();
 	//exit (0);
 	return;
