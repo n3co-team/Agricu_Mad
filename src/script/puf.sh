@@ -1,6 +1,6 @@
 set -e
 
-
+HISTORY=".puf_history"
 CURRENT_BRANCH=$(git branch | grep "^\*" | cut -d" " -f2)
 
 if [[ $1 == "lo" ]]
@@ -13,6 +13,16 @@ fi
 
 read -rp "Voullez vous pousser vers github votre nouveau modification ?"
 read -p "Message de validation : " message
+
+if [[ ! -z "$message" ]]
+then
+echo "$message">"$HISTORY"
+elif [[ ! -z $(tail -n 1 $HISTORY) ]]
+then
+  message=$(tail -n 1 $HISTORY)
+  read -r -p "Message de confirmation est $message ?"
+fi
+
 if [[ -z ${message} ]] 
 then
 	message=$(date +%D)
