@@ -345,7 +345,7 @@ void cereale()
 
 	if (choix_culture >= 1 && choix_culture <= nombre_cultures) {
 	    // Menu region
-	    afficher_menu_regions(choix_culture);
+	    afficher_menu_regions();
 	    printf("\nSafidio ny faritra mety  (1-%d): ", nombre_regions);
 
 	    if (scanf("%d", &choix_region) != 1) {
