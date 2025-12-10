@@ -1,2 +1,2 @@
 set -e
-gcc ./src/src_glob/*.c agricu
+gcc ./src/src_glob/*.c -o agricu
