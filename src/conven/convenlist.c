@@ -93,10 +93,11 @@ void lctype(prod *p)
 	//exit (0);
 	return;
     }
-    if(p->type == 2){
+/*    if(p->type == 2){
 	prod* fruit();
 	return;
-    }
+    }*/
+
     if(p->type == 6)
     	p->type = 0;
     nett();
