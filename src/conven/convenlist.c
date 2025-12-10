@@ -51,6 +51,22 @@ int choix_car(int ch_min, int ch_max)
 void lcmois(prod *p)
 {
     printf(" \033[34m --> Safidio ny volana:\033[0m\n");
+<<<<<<< HEAD
+    printf("\033[37m    1) Janoary \033[0m\n");
+    printf("\033[37m    2) Febroary \033[0m\n");
+    printf("\033[37m    3) Martsa \033[0m\n");
+    printf("\033[37m    4) Aprily \033[0m\n");
+    printf("\033[37m    5) Mey \033[0m\n");
+    printf("\033[37m    6) Jona \033[0m\n");
+    printf("\033[37m    7) Jolay \033[0m\n");
+    printf("\033[37m    8) Aogositra \033[0m\n");
+    printf("\033[37m    9) Septambra \033[0m\n");
+    printf("\033[37m    10) Oktobra \033[0m\n");
+    printf("\033[37m    11) Novambra \033[0m\n");
+    printf("\033[37m    12) Desambra \033[0m\n");
+    printf("\033[37m    13) Tsy asiana \033[0m\n");
+	
+=======
     printf("\033[37m 1) Janoary \033[0m\n");
     printf("\033[37m 2) Febroary \033[0m\n");
     printf("\033[37m 3) Martsa \033[0m\n");
@@ -64,6 +80,7 @@ void lcmois(prod *p)
     printf("\033[37m 11) Novambra \033[0m\n");
     printf("\033[37m 12) Desambra \033[0m\n");
     printf("\033[37m 13) Tsy asiana \033[0m\n");
+>>>>>>> c9a20a346745923c1d268cfb9c96bf6bd1837d76
     initialiser_cultures();
     p->mois[0] = choix_car(1, 13);
     if(p->mois[0] == 13)
