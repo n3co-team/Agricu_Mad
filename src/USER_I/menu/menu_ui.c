@@ -475,7 +475,6 @@ void prod_list(prod* p) {
 		lpt=lp->s;
 		if(lp->c != NULL)
 			free(lp->c);
-
 		free(lp);
 		if(lpt == NULL)
 			break;
@@ -488,7 +487,7 @@ void prod_list(prod* p) {
 	switch (i) {
 		case 'q' : exit(0);
 		case 'p':me_pri(p); break;
-		default: fprintf(stderr,"choix incorrect");
+		default: fprintf(stderr,"Safidy tsy izy");
 			 exit (1);
 	}
 	exit (0);
