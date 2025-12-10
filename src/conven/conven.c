@@ -106,14 +106,14 @@ char* c_sol(int i)
         case 1: strcpy(s,"Fasika"); break;
         case 2: strcpy(s,"Tanimbary"); break;
         case 3: strcpy(s,"Tanindrano"); break;
-        case 4: strcpy(s,"Tany matavy"); break;
-        case 5: strcpy(s,"Tany mando"); break;
-        case 6: strcpy(s,"Tany anaty rano"); break;
-        case 7: strcpy(s,"Tany malemy"); break;
-        case 8: strcpy(s,"Tany mahavokatra"); break;
-        case 9: strcpy(s,"Tany feno fotaka"); break;
-        case 10: strcpy(s,"Tany maivana"); break;
-        case 11: strcpy(s,"Tany tsy mando"); break;
+        case 4: strcpy(s,"matavy"); break;
+        case 5: strcpy(s,"mando"); break;
+        case 6: strcpy(s,"anaty rano"); break;
+        case 7: strcpy(s,"malemy"); break;
+        case 8: strcpy(s,"mahavokatra"); break;
+        case 9: strcpy(s,"feno fotaka"); break;
+        case 10: strcpy(s,"maivana"); break;
+        case 11: strcpy(s,"tsy mando"); break;
         default: strcpy(s,"Tsy voafaritra"); break;
     }
     
