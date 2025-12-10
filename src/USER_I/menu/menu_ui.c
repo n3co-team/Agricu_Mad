@@ -432,7 +432,7 @@ int cchange(prod *p)
 	printf("\t\033[32m 4) Volana \033[0m\n");
 	printf("\t\033[32m 5) Aide \033[0m\n");
 	printf("\t\033[32m 6) Aseho izay efa nofidina \033[0m\n");
-
+        initialiser_cultures();
 	choix=choix_car(1,6);
 	switch (choix) {
 		case 1:lctype(p); break;	//affiche le menu type
