@@ -413,10 +413,11 @@ void verification_choix(prod* p) {
 		}
 		else if ( a == 'p')
 			me_pri(p);
-		else if (a == 'y')
+		else if (a == 'y') 
 			break;
 		fprintf(stderr,"Veuillez repondre par 'y' pour oui ou 'n' pour non\n==>");
 	}
+    prod_list(p);
 }
 
 
