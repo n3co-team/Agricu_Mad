@@ -40,3 +40,5 @@ prod* racine();
  *  @return prod*
  */
 prod* fruit(); 
+
+prod* bdfull();
