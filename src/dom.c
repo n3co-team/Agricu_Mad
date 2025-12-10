@@ -289,10 +289,10 @@ void afficher_informations_cultures(int culture_choix, int region_choix)
 	     regions[region_index].nom);
     } else {
 	printf
-	    ("\t\n\t\033[34m===>TSY METY AMINY \033[0m : Tsy dia mety tsara amin'io faritra io ito voly  %s ito\n",
+	    ("\t\n\t\033[34m===>TSY METY AMINY \033[0m : Tsy dia mety tsara amin'io faritra %s io voly io\n",
 	     regions[region_index].nom);
     }
-    printf("\n¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\n");
+    printf("\n¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\n\n");
     printf("\n-------------------------------------------------------\n");
     printf("\n\033[34mToetran'ny faritra\033[0m:                    \n");
     printf("%s\n", regions[region_index].caracteristiques);
@@ -318,108 +318,6 @@ int get_choix_cultures()
 {
     return choix_cultures;
 }
-
-/*
-
-void cereale() {
-    int choix_culture, choix_region, sous_choix;
-    int en_cours = 1;
-
-    initialiser_regions();
-    initialiser_cultures();
-
-    printf("========================================\n");
-    printf("    SYSTEME D'INFORMATION AGRICOLE\n");
-    printf("========================================\n");
-
-    while(en_cours) {
-        afficher_menu_principal();
-	// nampiana if dia alana aveo
-//        if(scanf("%d", &choix_culture)){
-	   printf("Saisie invalide. Veuillez entrer un nombre.\n");
-	   while (getchar() != '\n'); // vider le buffer
-	   continue;
-	}
-
-        if(choix_culture == 0) {
-            printf("Au revoir!\n");
-            break;
-        }
-	
-
-        if(choix_culture >= 1 && choix_culture <= nombre_cultures) {
-            // Afficher le menu des régions
-            afficher_menu_regions();
-            if (scanf("%d", &choix_region) != 1 ){
-	        printf("Saisie invalide. Veuillez entrer un nombre.\n");
-		while (getchar() != '\n' )
-	        continue;
-	    }
-
-            if(choix_region >= 1 && choix_region <= nombre_regions) {
-                // Afficher les informations avec la région sélectionnée
- 			if (choix_region >= 1 && choix_region <= nombre_regions){
-				 afficher_informations_culture(choix_cultures, choix_region);
-			}
-                       // afficher_informations_culture(choix_culture, choix_region);
-                        else {
-				printf("Choix de region invalide.\n");
-			}
-			break;
-                    case 3:
-                        // Retour au menu principal
-                        continue;
-                    case 4:
-                        en_cours = 0;
-                        printf("Au revoir!\n");
-                         break;
-                    default:
-                        printf("Choix invalide, retour au menu principal.\n");
-                }
-            } else {
-                printf("Region invalide! Retour au menu principal.\n");
-            }
-        } else {
-            printf("Choix invalide! Veuillez choisir entre 0 et %d.\n", nombre_cultures);
-        }
-      }
-    }
-// teste pour les iformations de la cultures 
-//	void afficher_informations_cultures();
-}
-
-//
-void fruit (){
-    int choix_culture, choix_region, sous_choix;
-    int en_cours = 1;
-
-    while (en_cours){
-        afficher_menu_principal ();
-        scanf("%d", &choix_culture);
-        
-        if (choix_culture == 0){
-            printf("Au revoir !\n");
-            break;
-        }
-        if (choix_culture >= 1 && choix_culture <= nombre_cultures){
-            scanf("%d", &choix_region);
-            if (choix_region >= 1 && choix_region <= nombre_regions){
-                afficher_informations_culture(choix_culture,choix_region);
-
-                //menu secondaire----
-                printf("\n--- MENU SECONDAIRE ---\n");
-                printf("1. Voir une autre culture\n");
-                printf("2. Changer de region pour cette culture \n");
-       
-        else {
-            printf("Choix invalide! Veuillez choisir entre 0 et %d. \n ",nombre_cultures);
-        }
-    }
-// Teste pour les informations des cultures
-	void afficher_informations_cultures();
-}
-*/
-
 
 void cereale()
 {
