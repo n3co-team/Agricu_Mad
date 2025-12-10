@@ -14,7 +14,7 @@
 #endif
 
 void retnac(prod* p, lprod** lps) {
-		    lptod* lp=*lps;
+		    lprod* lp=*lps;
 		    lprod* lpt;
 printf("\n0 : changer le parametre de produit\n");
 	    printf("1 : menu principal\n");
