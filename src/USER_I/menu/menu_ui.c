@@ -19,34 +19,6 @@
 #include"nac.h"
 #endif
 
-int choix_car(int ch_min, int ch_max)
-{
-    int choix;
-    int tentative = 0;
-    const int MAX_TENTATIVE = 3;
- /*   while (1) */
-      while (tentative <  MAX_TENTATIVE ) {
-        printf("Ampidiro ny safidinao : ");
-        if(scanf("%d", &choix) != 1){
-           while (getchar() != '\n');
-           fprintf(stderr, "Ny fampidirana tsy maintsy isa. Avereno azafady.\n">
-           tentative++;
-           continue;
-        }
-        if (choix >= ch_min && choix <= ch_max) {
-            return choix;
-        }
-        fprintf(stderr, "Safidinao dia tsy maintsy  anelanelan'ny %d sy %d\n", >
-        //printf("Avereno azafady\n");
-        printf("Mbola manana %d safidy ianao.\n", MAX_TENTATIVE - 1 - tentative>
-        tentative ++;
-        printf("Avereno azafady.\n");
-    }
-    fprintf(stderr, "\n Nandiso safidy %d intelo ianao. Azafady mijanona ny fan>
-    exit(1);
-
-}
-
 /** @fn nettoyer le terminal */
 void nett() {
     printf("\033[H\033[J");
