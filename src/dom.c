@@ -281,7 +281,7 @@ void afficher_informations_cultures(int culture_choix, int region_choix)
     int region_index = region_choix - 1;
     printf("\n¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\n");
     printf("\t\n\033[34m === MOMBAMOMBAN'NY\033[0m %s ===\n", cultures[culture_index].nom);
-    printf("\t \033[34m === FARITRA\033[0m: %s ===\n\n", regions[region_index].nom);
+    printf("\t\033[34m=== FARITRA\033[0m: %s ===\n\n", regions[region_index].nom);
     
     //printf("Code: %s\n", cultures[culture_index].code);
     printf("\t\033[34m Fotoana fambolena\033[0m: %s\n",
