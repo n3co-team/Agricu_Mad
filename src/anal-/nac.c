@@ -13,14 +13,27 @@
 #include"menu_ui.h"
 #endif
 
-void retnac(prod* p, lprod** lp) {
+void retnac(prod* p, lprod** lps) {
+		    lprod* lp=*lps;
+		    lprod* lpt;
 printf("\n0 : changer le parametre de produit\n");
 	    printf("1 : menu principal\n");
 	    printf("2 : quitter\n");
+			//Libere les memoire alloué
+	while (lp != NULL) {
+		lpt=lp->s;
+		if(lp->c != NULL)
+			free(lp->c);
+		free(lp);
+		if(lpt == NULL)
+			break;
+		lp=lpt;
+	}
+
 
 	    switch (choix_car(0,2)) {
 		    case 0: cchange(p);
-			    rdata(p,lp); break;
+			    me_auto(p);
 		    case 1: me_pri(p); break;
 		    case 2: exit(0);
 		    default: exit(1);
