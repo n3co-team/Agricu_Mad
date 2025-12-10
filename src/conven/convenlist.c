@@ -89,6 +89,7 @@ void lctype(prod *p)
 //	afficher_menu_principal();
 	cereale();
 	initialiser_cultures();
+	prod* fruit();
 //	fruit ();
 	//exit (0);
 	return;
