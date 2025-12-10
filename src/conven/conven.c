@@ -47,8 +47,8 @@ char* c_type_prod(int i)
         case 2: strcpy(t,"Voamaina"); break;
         case 3: strcpy(t,"Voankazo"); break;
         case 4: strcpy(t,"Anana"); break;
-        case 5: strcpy(t,"Ovy"); break;
-        case 6: strcpy(t,"Faka"); break;
+        case 5: strcpy(t,"Vokatr'antany"); break;
+        case 6: strcpy(t,"Vahitra"); break;
         default: strcpy(t,"Tsy voafaritra"); break;
     }
     
