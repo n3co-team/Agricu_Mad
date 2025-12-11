@@ -250,7 +250,7 @@ void me_smo (prod* p)
 	switch (choix) {
 		case 0: prod_apropos(); break;
 		case 1: prod_list(p); break;
-		case 2: lctype(p);
+//		case 2: lctype(p);
 			break;
 		case 3: lcsol(p);
 			 break;

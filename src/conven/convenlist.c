@@ -71,7 +71,7 @@ void lcmois(prod *p)
     me_auto(p); 
 }
 
-/*void lctype(prod *p)
+void lctype(prod *p)
 {
     printf("\033[34m --> Safidio ny karazan'ny vokatra:\033[0m\n");
     printf("\033[37m 1) Voamaina \033[0m\n");
@@ -94,7 +94,7 @@ void lcmois(prod *p)
     nett();
     me_auto(p); 
 }
-*/
+
 void lcsol(prod *p)
 {
     printf("\033[34m  --> Safidio ny toetany: \033[0m\n");
