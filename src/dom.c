@@ -186,7 +186,6 @@ void initialiser_cultures()
 
 void afficher_menu_principal()
 {
-//    printf("\n=== MENU PRINCIPAL ===\n\n");//nombre_cultures);
     printf("\033[34m -->Lisitr'ireo fambolena misy :\033[0m\n");
     printf("\n--------------------------------\n");
 
@@ -352,6 +351,7 @@ void cereale()
 		printf("Fampidirana tsy mety!\n");
 		while (getchar() != '\n');
 		continue;
+
 	    }
 
 	    if (choix_region >= 1 && choix_region <= nombre_regions) {
