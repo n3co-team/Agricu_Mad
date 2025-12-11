@@ -1,3 +1,7 @@
+/**@file voamaina.h
+ * @brief fichier qui contient les donnés pour les cereale
+ * @author dominique
+*/
 #ifndef VOAMAINA_H
 #define VOAMAINA_H
 #endif
@@ -43,5 +47,3 @@ int est_region_compatible(int culture_id, int region_id);
 void afficher_informations_cultures(int culture_choix, int region_choix);
 void afficher_menu_cultures();
 void cereale();
-//void afficher_informations_cultures(int choix_culture, int choix_region);
-//void fruit();

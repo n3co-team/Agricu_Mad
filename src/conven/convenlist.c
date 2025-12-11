@@ -18,7 +18,6 @@
 #ifndef VOAMAINA_H
 #include"voamaina.h"
 #endif
-// #include"prod.h"
 
 int choix_car(int ch_min, int ch_max)
 {
@@ -43,7 +42,7 @@ int choix_car(int ch_min, int ch_max)
         tentative ++;
 	printf("Avereno azafady.\n");
     }
-    fprintf(stderr, "\033[1m \n Nandiso safidy %d (intelo) ianao. Azafady mijanona ny fandaharana, veloma \033[0m \n", tentative);
+    fprintf(stderr, "\033[1m \n Nandiso safidy %d (intelo) ianao. Azafady mijanona ny kely aloha ny fandaharana fa mbola afaka mamerina ianao, veloma \033[0m \n", tentative);
     exit(1);
 
 }
@@ -75,7 +74,6 @@ void lcmois(prod *p)
 void lctype(prod *p)
 {
     printf("\033[34m --> Safidio ny karazan'ny vokatra:\033[0m\n");
-    //printf("	1) Vary\n");
     printf("\033[37m 1) Voamaina \033[0m\n");
     printf("\033[37m 2) Voankazo \033[0m\n");
     printf("\033[37m 3) Legioma \033[0m\n");
