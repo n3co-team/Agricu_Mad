@@ -401,7 +401,7 @@ void afchoix(prod *p) {
 void verification_choix(prod* p) {
 	afchoix(p);;
 	printf("\n\033[1m Marina daholo ve (\"y\" ho an'ny eny) \033[0m");
-	printf("\n\033[1m c : Fanovana safidy\np: Fanovana sy fiverenana any amin'ny meio lehibe\n==> \033[0m");
+	printf("\n\033[1m c : Fanovana safidy\np: Fanovana sy fiverenana any amin'ny menio lehibe\n==> \033[0m");
 
 	char a='a';
 	while (a != 'y') {
