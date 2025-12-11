@@ -1,5 +1,5 @@
-/** 
-* @file menu_ui.c 
+/**
+* @file menu_ui.c
 * @brief fichier contient les fonctions de menu
 * @author Dominique
 */
@@ -109,11 +109,11 @@ void me_pri(prod* p)
 	init_choix(&p);
 //	printf("\n--------------------------------\n");
 	printf("\033[34m ==> Ataovy ny safidy :\033[0m \n");
-	printf("\t\033[36m1) Karazan'ny vokatra\033[0m\n");
-	printf("\t\033[36m2) Toe-tany\033[0m\n");
-	printf("\t\033[36m3) Toetr'andro\033[0m\n");
-	printf("\t\033[36m4) Volana\033[0m\n");
-	printf("\t\033[36m5) Mombamoba\033[0m\n ");
+	printf("\t\033[36m 1)Karazan'ny vokatra\033[0m\n");
+	printf("\t\033[36m 2)Toe-tany\033[0m\n");
+	printf("\t\033[36m 3)Toetr'andro\033[0m\n");
+	printf("\t\033[36m 4)Volana\033[0m\n");
+	printf("\t\033[36m 5)Hanova\033[0m\n ");
 	printf("\n----------------------------------\n");
 	initialiser_cultures();
 	
@@ -130,6 +130,8 @@ void me_pri(prod* p)
 			break;
 		case 4: lcmois(p);	// affiche le menu du mois
 			 break;
+		case 5: cchange(p);  //affiche le menu pour changer
+			break;
 		default: //fprintf(stderr,"Erreur\n");
 			me_auto(p);
 			exit (1); break;
