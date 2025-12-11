@@ -17,9 +17,9 @@
 char* c_saison(int i) {
     char s[50];
     switch (i) {
-        case 1: strcpy(s,"Hatsiaka"); break;
+        case 1: strcpy(s,"matsiaka"); break;
         case 2: strcpy(s,"Mafana"); break;
-        case 3: strcpy(s,"Orana"); break;
+        case 3: strcpy(s," be orana"); break;
         case 4: strcpy(s,"Maina"); break;
         case 5: strcpy(s,"Antonontonony"); break;
         default: strcpy(s,"Tsy voafaritra"); break;
@@ -47,8 +47,8 @@ char* c_type_prod(int i)
         case 2: strcpy(t,"Voamaina"); break;
         case 3: strcpy(t,"Voankazo"); break;
         case 4: strcpy(t,"Anana"); break;
-        case 5: strcpy(t,"Ovy"); break;
-        case 6: strcpy(t,"Faka"); break;
+        case 5: strcpy(t,"Vokatran-tany"); break;
+        case 6: strcpy(t,"voka-bahitra"); break;
         default: strcpy(t,"Tsy voafaritra"); break;
     }
     

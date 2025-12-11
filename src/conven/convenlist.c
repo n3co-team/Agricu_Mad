@@ -92,6 +92,7 @@ void lctype(prod *p)
 
     if(p->type == 6)
     	p->type = 0;
+   p->type=p->type+1;
     nett();
     me_auto(p); 
 }
