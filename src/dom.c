@@ -5,7 +5,6 @@
 
 #include "voamaina.h"
 #include "menu_ui.h"
-#include "prod.h"
 // Définition des variables globales
 Culture cultures[MAX_CULTURES];
 Region regions[MAX_REGIONS];
@@ -306,7 +305,6 @@ void afficher_informations_cultures(int culture_choix, int region_choix)
 	    printf(", ");
 	}
     }
-	prod_list(prod* p);
     printf("\n");
 }
 
