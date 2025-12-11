@@ -451,7 +451,6 @@ int cchange(prod *p)
 	}
 	return 1;
 }
-	
 
 /** @fn Menu de produit obtenu */
 void prod_list(prod* p) {
