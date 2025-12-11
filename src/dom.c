@@ -283,11 +283,11 @@ void afficher_informations_cultures(int culture_choix, int region_choix)
     // Vérifier la compatibilité région/culture
     if (est_region_compatible(culture_choix, region_choix)) {
 	printf
-	    ("\t\n\t\033[34m ===>METY AMINY\033[0m : Voarindra tsara amin'ny toetran'ny faritra %s io voly io \n",
+	    ("\t\n\t\033[34m ===>METY AMINY\033[0m : Voarindra tsara amin'ny toetran'ny faritra %s io voly ilay voly. Araho tsara foana ny toromarika\n",
 	     regions[region_index].nom);
     } else {
 	printf
-	    ("\t\n\t\033[34m===>TSY METY AMINY \033[0m : Tsy dia mety tsara amin'io faritra %s io voly io\n",
+	    ("\t\n\t\033[34m===>TSY METY AMINY \033[0m : Tsy dia mety tsara amin'io faritra %s io voly ilay voly nofidinao. Tsaratsara kokoa raha mijery faritra hafa\n",
 	     regions[region_index].nom);
     }
     printf("\n¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\n\n");
@@ -338,7 +338,7 @@ void cereale()
 	}
 
 	if (choix_culture == 0) {
-	    printf("Veloma ô!\n");
+	    printf("Misaotra betsaka anao nampiasa ny angom-baovavao mikasika ny ny fambolena. Makasitraka tompooko dia Veloma ô!\n");
 	    break;
 	}
 
