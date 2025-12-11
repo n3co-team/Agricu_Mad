@@ -75,21 +75,20 @@ void lctype(prod *p)
 {
     printf("\033[34m --> Safidio ny karazan'ny vokatra:\033[0m\n");
     printf("\033[37m 1) Voamaina \033[0m\n");
-    printf("\033[37m 2) Vary \033[0m\n");
-    printf("\033[37m 3) Voankazo \033[0m\n");
-    printf("\033[37m 4) Legioma \033[0m\n");
-    printf("\033[37m 5) Vokatr'antany \033[0m\n");
-    printf("\033[37m -) Vahitra \033[0m\n");
-    printf("\033[37m 7) Tsy asiana \033[0m\n");
+    printf("\033[37m 2) Voankazo \033[0m\n");
+    printf("\033[37m 3) Legioma \033[0m\n");
+    printf("\033[37m 4) Vokatr'antany \033[0m\n");
+    printf("\033[37m 5) Vahitra \033[0m\n");
+    printf("\033[37m 6) Tsy asiana \033[0m\n");
 
-    p->type = choix_car(1, 7) ;
+    p->type = choix_car(1, 6) ;
     if (p->type == 1) {
 	cereale();
 	initialiser_cultures();
 	return;
     }
 
-    if(p->type == 7)
+    if(p->type == 6)
     	p->type = 0;
    p->type=p->type+1;
     nett();
