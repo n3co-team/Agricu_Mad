@@ -1,7 +1,7 @@
 /** 
 * @file menu_ui.c 
 * @brief fichier contient les fonctions de menu
-* @author Windrick
+* @author Dominique
 */
 
 #include<stdio.h>

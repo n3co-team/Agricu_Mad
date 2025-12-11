@@ -338,7 +338,7 @@ void cereale()
 	}
 
 	if (choix_culture == 0) {
-	    printf("Misaotra betsaka anao nampiasa ny angom-baovavao mikasika ny ny fambolena. Makasitraka tompooko dia Veloma ô!\n");
+	    printf("Misaotra betsaka anao nampiasa ny angom-baovavao mikasika ny ny fambolena. Makasitraka tompoko dia Veloma ô!\n");
 	    break;
 	}
 
