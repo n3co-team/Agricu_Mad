@@ -19,42 +19,42 @@ void initialiser_regions()
     // Région 1: Alaotra Mangoro
     regions[0].id = 1;
     strcpy(regions[0].nom, "\033[1m Alaotra Mangoro \033[0m");
-    strcpy(regions[0].caracteristiques,"Faritra fambolem-bary,mafana no sady be rotsakorana. Tena ilaina amin'ny fampitomboana ny vary izany");
+    strcpy(regions[0].caracteristiques,"-Faritra fambolem-bary,mafana no sady be rotsakorana.\n -Tena ilaina amin'ny fampitomboana ny vary izany");
 
     // Région 2: Analamanga
     regions[1].id = 2;
     strcpy(regions[1].nom, "\033[1m Analamanga \033[0m");
-    strcpy(regions[1].caracteristiques, "Toetr'andro tsy mafana loatra nefa tsy mangatsika ihany koa, misy fiovana tsara eo amin'ny fiovan'ny taona(afovoan-tany)");
+    strcpy(regions[1].caracteristiques, "-Toetr'andro tsy mafana loatra nefa tsy mangatsika ihany koa, \nmisy fiovana tsara eo amin'ny fiovan'ny taona(afovoan-tany)");
 
     // Région 3: Vakinankaratra
     regions[2].id = 3;
     strcpy(regions[2].nom, "\033[1m Vakinankaratra \033[0m");
-    strcpy(regions[2].caracteristiques, "Toetr'andro mangatsika sy tany avy nisy volkano fa kosa mety amin'ny fambolena satria lemaka");
+    strcpy(regions[2].caracteristiques, "-Toetr'andro mangatsika sy tany avy nisy volkano fa kosa mety amin'ny fambolena satria lemaka");
 
     // Région 4: Atsinanana
     regions[3].id = 4;
     strcpy(regions[3].nom, "\033[1m Atsinanana \033[0m");
-    strcpy(regions[3].caracteristiques, "Toetr'andro manana mari-pana ambony ary be hamandona (Morotsiraka-Atsinanana)");
+    strcpy(regions[3].caracteristiques, "-Toetr'andro manana mari-pana ambony ary be hamandona (Morotsiraka-Atsinanana)");
 
     // Région 5: Menabe
     regions[4].id = 5;
     strcpy(regions[4].nom, "\033[1m Menabe \033[0m");
-    strcpy(regions[4].caracteristiques, "Toetr'andro izay tsy dia misy orana firy nefa matetika mafana (Morotsiraka-Andrefana )");
+    strcpy(regions[4].caracteristiques, "-Toetr'andro izay tsy dia misy orana firy nefa matetika mafana (Morotsiraka-Andrefana )");
 
     // Région 6: Boeny
     regions[5].id = 6;
     strcpy(regions[5].nom, "\033[1m Boeny \033[0m");
-    strcpy(regions[5].caracteristiques, "Toetr'andro izay matetika mafana mandritra ny taona (Avaratra-Andrefana)");
+    strcpy(regions[5].caracteristiques, "-Toetr'andro izay matetika mafana mandritra ny taona (Avaratra-Andrefana)");
 
     // Région 7: Anosy
     regions[6].id = 7;
     strcpy(regions[6].nom, "\033[1m Anosy \033[0m");
-    strcpy(regions[6].caracteristiques, "Toetr'andro miovaova(atsimo-atsinanana)");
+    strcpy(regions[6].caracteristiques, "-Toetr'andro miovaova(atsimo-atsinanana)");
 
     // Région 8: Diana
     regions[7].id = 8;
     strcpy(regions[7].nom, "\033[1m Diana \033[0m");
-    strcpy(regions[7].caracteristiques, "Manana mari-pana ambony indrindra mandritra ny taona (Tendrony avaratra)");
+    strcpy(regions[7].caracteristiques, "-Manana mari-pana ambony indrindra mandritra ny taona (Tendrony avaratra)");
 
     nombre_regions = 8;
 }
@@ -66,7 +66,7 @@ void initialiser_cultures()
     strcpy(cultures[0].nom, "\033[35m \tTsaramaso \033[0m");
     strcpy(cultures[0].saison_plantation, "Aprily - Mey");
     strcpy(cultures[0].duree_croissance, "3-4 volana");
-    strcpy(cultures[0].informations,"Tany tsy mila rano be loatra fa manjary lo ny fakany. Tsy mila masoandro be loatra, toerana tsy mamay be fa manjary may nyraviny nefa kosa misy azavana tsara ampy itomboany");
+    strcpy(cultures[0].informations,"-Tany tsy mila rano be loatra fa manjary lo ny fakany. \n-Tsy mila masoandro be loatra, toerana tsy mamay be fa manjary may ny raviny nefa kosa misy azavana tsara ampy itomboany");
     strcpy(cultures[0].code, "TS01");
     int regions_tsaramaso[] = { 1, 2, 3, 4 };
     cultures[0].nb_regions = 4;
@@ -78,7 +78,7 @@ void initialiser_cultures()
     strcpy(cultures[1].nom, "\033[35m \tVary \033[0m");
     strcpy(cultures[1].saison_plantation, "Oktobra - Desembra");
     strcpy(cultures[1].duree_croissance, "5-6 volana");
-    strcpy(cultures[1].informations,"Mila rano betsaka sy tsy tapaka fa iny no sakafo ho azy. tsy azo atao ny manao ny tany tsy misy rano");
+    strcpy(cultures[1].informations,"-Mila rano betsaka sy tsy tapaka fa iny no sakafo ho azy. \n-Tsy azo atao ny manao ny tany tsy misy rano");
     strcpy(cultures[1].code, "VR02");
     int regions_vary[] = { 1, 4, 6, 8 };
     cultures[1].nb_regions = 4;
@@ -90,7 +90,7 @@ void initialiser_cultures()
     strcpy(cultures[2].nom, "\033[35m \tMangahazo \033[0m");
     strcpy(cultures[2].saison_plantation, "Aogositra - Septambra");
     strcpy(cultures[2].duree_croissance, "8-12 volana");
-    strcpy(cultures[2].informations,"Tsy mila rano betsaka, tsy azo asina rano mijanona fa manjary lo ny any ambany. Afaka miaina zany na dia tsy misy rano mandalo aza .");
+    strcpy(cultures[2].informations,"-Tsy mila rano betsaka, tsy azo asina rano mijanona fa manjary lo ny any ambany.\n -Afaka miaina zany na dia tsy misy rano mandalo aza .");
     strcpy(cultures[2].code, "MG03");
     int regions_mangahazo[] = { 1, 2, 3, 4, 5, 6, 7, 8 };
     cultures[2].nb_regions = 8;
@@ -102,7 +102,7 @@ void initialiser_cultures()
     strcpy(cultures[3].nom, "\033[35m \tVoanjo \033[0m");
     strcpy(cultures[3].saison_plantation, "Novambra - Janoary");
     strcpy(cultures[3].duree_croissance, "4-5 volana");
-    strcpy(cultures[3].informations,"Mila azavana sy afanana avy amin'ny masoandro, tsy maninona zany na tsy misy rano mandalo aza.");
+    strcpy(cultures[3].informations,"-Mila azavana sy afanana avy amin'ny masoandro, \ntsy maninona zany na tsy misy rano mandalo aza.");
     strcpy(cultures[3].code, "VJ04");
     int regions_voanjo[] = { 4, 5, 6, 7, 8 };
     cultures[3].nb_regions = 5;
@@ -114,7 +114,7 @@ void initialiser_cultures()
     strcpy(cultures[4].nom, "\033[35m \tTongolo \033[0m");
     strcpy(cultures[4].saison_plantation, "Martsa - Mey");
     strcpy(cultures[4].duree_croissance, "4-5 volana");
-    strcpy(cultures[4].informations,"Mila zava-maniry na ravin-kazo efa lo mba hivadika zezika ho azy ka hanome otikaina maromaro ho azy. Noho izany mila tany mando tsara zany ka manondraka azy amin'ny fotoana voafaritra tsara(ohatra: indroa isan'andro).");
+    strcpy(cultures[4].informations,"-Mila zava-maniry na ravin-kazo efa lo mba hivadika zezika ho azy ka hanome otikaina maromaro ho azy.\n-->Noho izany mila tany mando tsara zany ka manondraka azy amin'ny fotoana voafaritra tsara(ohatra: indroa isan'andro).");
     strcpy(cultures[4].code, "OG05");
     int regions_ognon[] = { 1, 2, 3 };
     cultures[4].nb_regions = 3;
@@ -126,7 +126,7 @@ void initialiser_cultures()
     strcpy(cultures[5].nom, "\033[35m \tKaroty \033[0m");
     strcpy(cultures[5].saison_plantation, "Febroary - Aprily");
     strcpy(cultures[5].duree_croissance, "3-4 volana");
-    strcpy(cultures[5].informations,"Mila tany mora volena(malemy),misy rano manodidina ary mety ho an'ny fakan-javamaniry.");
+    strcpy(cultures[5].informations,"-Mila tany mora volena(malemy),misy rano manodidina ary mety ho an'ny fakan-javamaniry.");
     strcpy(cultures[5].code, "KR06");
     int regions_karoty[] = { 2, 3, 6, 7 };
     cultures[5].nb_regions = 4;
@@ -138,7 +138,7 @@ void initialiser_cultures()
     strcpy(cultures[6].nom, "\033[35m \tVoatabia \033[0m");
     strcpy(cultures[6].saison_plantation, "Aogositra - Oktobra");
     strcpy(cultures[6].duree_croissance, "3-4 volana");
-    strcpy(cultures[6].informations,"Mila azavana sy afanana avy amin'ny masoandro mandritra nny fotoana maharitra mba hitomboany sy afahany mamoha. Mila asiana hazo na tsatoka eo akaikiny mba hijoroany tsara rehefa mamoha ka tsy lavon'ny rivotra");
+    strcpy(cultures[6].informations,"-Mila azavana sy afanana avy amin'ny masoandro mandritra nny fotoana maharitra mba hitomboany sy afahany mamoha.\n -Mila asiana hazo na tsatoka eo akaikiny mba hijoroany tsara rehefa mamoha ka tsy lavon'ny rivotra");
     strcpy(cultures[6].code, "TM07");
     int regions_tomates[] = { 1, 2, 3, 4, 6, 8 };
     cultures[6].nb_regions = 6;
@@ -150,7 +150,7 @@ void initialiser_cultures()
     strcpy(cultures[7].nom, "\033[35m \tAnana \033[0m");
     strcpy(cultures[7].saison_plantation, "Isan-taona");
     strcpy(cultures[7].duree_croissance, "1-2 volana");
-    strcpy(cultures[7].informations, "Mila rano ilay izy. Zany hoe mila manondraka azy matetika fa tsy avela maina be (ohatra: isan'andro na isaka roa andro) fa tsy isak'erinandro .");
+    strcpy(cultures[7].informations, "-Mila rano ilay izy. Zany hoe mila manondraka azy matetika fa tsy avela maina be \n#ohatra: isan'andro na isaka roa andro fa tsy isak'erinandro .");
     strcpy(cultures[7].code, "BR08");
     int regions_bredes[] = { 1, 2, 3, 4, 5, 6, 7, 8 };
     cultures[7].nb_regions = 8;
@@ -162,7 +162,7 @@ void initialiser_cultures()
     strcpy(cultures[8].nom, "\033[35m \tTongolo gasy \033[0m");
     strcpy(cultures[8].saison_plantation, "Mey - Jona");
     strcpy(cultures[8].duree_croissance, "5-6 volana");
-    strcpy(cultures[8].informations, "Tsy mila rano betsaka, mety foana na dia amina tany maina aza.");
+    strcpy(cultures[8].informations, "-Tsy mila rano betsaka, mety foana na dia amina tany maina aza.");
     strcpy(cultures[8].code, "AL09");
     int regions_ails[] = { 2, 3, 7 };
     cultures[8].nb_regions = 3;
@@ -174,7 +174,7 @@ void initialiser_cultures()
     strcpy(cultures[9].nom, "\033[35m \tMananasy \033[0m");
     strcpy(cultures[9].saison_plantation, "Desembra - Febroary");
     strcpy(cultures[9].duree_croissance, "18-24 volana");
-    strcpy(cultures[9].informations,"Tany tsy mitazona rano besaka fa madeha tsara.");
+    strcpy(cultures[9].informations,"-Tany tsy mitazona rano besaka fa madeha tsara.");
     strcpy(cultures[9].code, "AN10");
     int regions_ananas[] = { 4, 5, 6, 8 };
     cultures[9].nb_regions = 4;
@@ -270,7 +270,7 @@ void afficher_informations_cultures(int culture_choix, int region_choix)
 
     int culture_index = culture_choix - 1;
     int region_index = region_choix - 1;
-    printf("\n¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\n");
+    printf("\n¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\n");
     printf("\t\n\t\033[34m ===>MOMBAMOMBAN'NY\033[0m%s \n", cultures[culture_index].nom);
     printf("\t\033[34m ===>FARITRA\033[0m: %s\n\n", regions[region_index].nom);
     
@@ -290,7 +290,7 @@ void afficher_informations_cultures(int culture_choix, int region_choix)
 	    ("\t\n\t\033[34m===>TSY METY AMINY \033[0m : Tsy dia mety tsara amin'io faritra %s io voly ilay voly nofidinao. Tsaratsara kokoa raha mijery faritra hafa\n",
 	     regions[region_index].nom);
     }
-    printf("\n¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\n\n");
+    printf("\n¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\n\n");
     printf("\n-------------------------------------------------------\n");
     printf("\n\033[34mToetran'ny faritra\033[0m:                    \n");
     printf("%s\n", regions[region_index].caracteristiques);
