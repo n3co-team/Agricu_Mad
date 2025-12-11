@@ -226,7 +226,6 @@ void afficher_menu_cultures()
 
     }
     printf("\n\033[34m ==> Fidio ireo fambolena mety (1-%d): \033[0m ", nombre_cultures);
-    verification_choix(prod* choix);
 }
 
 void afficher_menu_regions()
@@ -307,7 +306,6 @@ void afficher_informations_cultures(int culture_choix, int region_choix)
 	    printf(", ");
 	}
     }
-    verification_choix(prod* choix);
     printf("\n");
 }
 
