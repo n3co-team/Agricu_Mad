@@ -4,8 +4,8 @@
 */
 
 #include "voamaina.h"
-#include"menu_ui.h"
-
+#include "menu_ui.h"
+#include "prod.h"
 // Définition des variables globales
 Culture cultures[MAX_CULTURES];
 Region regions[MAX_REGIONS];
@@ -286,7 +286,7 @@ void afficher_informations_cultures(int culture_choix, int region_choix)
 	     regions[region_index].nom);
     } else {
 	printf
-	    ("\t\n\t\033[34m===>TSY METY AMINY \033[0m : Tsy dia mety tsara amin'io faritra %s io voly ilay voly nofidinao. Tsaratsara kokoa raha mijery faritra hafa\n",
+	    ("\t\n\t\033[34m ===>TSY METY AMINY \033[0m : Tsy dia mety tsara amin'io faritra %s io voly ilay voly nofidinao. Tsaratsara kokoa raha mijery faritra hafa\n",
 	     regions[region_index].nom);
     }
     printf("\n¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\n\n");
@@ -306,6 +306,7 @@ void afficher_informations_cultures(int culture_choix, int region_choix)
 	    printf(", ");
 	}
     }
+	prod_list(prod* p);
     printf("\n");
 }
 
