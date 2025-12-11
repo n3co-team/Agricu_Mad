@@ -69,7 +69,6 @@ void lcmois(prod *p)
     	p->mois[0] = 0;
     nett();
     me_auto(p);
-    cchange(p);
 }
 
 void lctype(prod *p)
