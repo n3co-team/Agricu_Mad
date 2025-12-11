@@ -20,7 +20,7 @@ prod* tubercule()
         NBR=8;
         prod* tub = malloc((NBR+1)*sizeof(prod));
 	
-	for (int i=0; i<NBR; i++)TARO {
+	for (int i=0; i<NBR; i++) {
 		tub[i].ntp=NBR;
 	}
 
