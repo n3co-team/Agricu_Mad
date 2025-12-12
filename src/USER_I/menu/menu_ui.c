@@ -19,6 +19,70 @@
 #include"nac.h"
 #endif
 
+// [Eo am-piandohan'ny menu_ui.c, aorian'ny include hafa]
+
+#include<stdio.h>
+#include<stdlib.h>
+#include <unistd.h> // <- Tsy maintsy ampidirina ho an'ny fiasa alarm()
+#include <signal.h> // <- Tsy maintsy ampidirina ho an'ny signal handling (sigaction)
+#include "voamaina.h"
+// ... (include hafa)
+
+// Fiasa hitantana ny SIGALRM (tapitra ny fotoana)
+void alarm_handler(int sig) {
+    if (sig == SIGALRM) {
+        // Mampiasa write() ho an'ny fiarovana amin'ny I/O mandritra ny signal
+        write(STDOUT_FILENO, "\n\n\033[31m⛔ Tsy voavaly tao anatin'ny fotoana voafetra (10 segondra)!\033[0m\n", 84);
+        write(STDOUT_FILENO, "\033[31mMijanona ny programme.\033[0m\n", 31);
+        exit(0); // Mijanona ny programme
+    }
+}
+
+// Fiasa manao ny fanontaniana sy mametra fetr'ora
+void start_quiz() {
+    char valiny;
+    int fetra_ora = 10; // Fetra: 10 segondra
+
+    // Apetraka ny fiasa hitantana ny SIGALRM amin'ny fampiasana sigaction
+    struct sigaction sa;
+    sa.sa_handler = alarm_handler;
+    sigemptyset(&sa.sa_mask);
+    sa.sa_flags = 0;
+    if (sigaction(SIGALRM, &sa, NULL) == -1) {
+        perror("sigaction");
+        exit(1);
+    }
+    
+    printf("\n**************************************************************************\n");
+    printf("\033[33m❓ FANONTANIANA MAIKA:\033[0m Alohan'ny hidirana, vonona ve ianao hanohy? (y/n)\n");
+    printf("👉 Misy \033[31m%d segondra\033[0m ianao hamaliana. (Valiny: y na n)\n==> ", fetra_ora);
+
+    // Manomboka ny fetr'ora
+    alarm(fetra_ora); 
+
+    // Miandry ny valin'ny mpampiasa
+    if (scanf(" %c", &valiny) != 1) {
+        return; // Raha tsy voaray ny input, mamela ny alarm handler hanao ny asany
+    }
+    
+    // Atsahatra ny alarm raha mbola tsy tapitra ny fotoana
+    alarm(0); 
+
+    printf("\n**************************************************************************\n");
+
+    // Fanamarinana ny valiny
+    if (valiny == 'y' || valiny == 'Y') {
+        printf("\033[32m✅ Tsara! Manohy miditra...\033[0m\n");
+    } else {
+        printf("\033[31m❌ Tsy vonona. Mijanona ny programme.\033[0m\n");
+        exit(0); // Mijanona
+    }
+}
+// ... (Tohizana amin'ny fiasa nett())
+
+
+
+
 /** @fn nettoyer le terminal */
 void nett() {
     printf("\033[H\033[J");
@@ -104,6 +168,14 @@ void init_choix(prod** p)
 */
 void me_pri(prod* p)
 {
+	static init quiz_done = 0;
+	if (!quiz_done){
+	  start_quiz();
+	  if(p == NULL){
+		init_choix(&p);
+	  }
+	   quiz_done = 1;
+        }
 	nett();
 	int choix;
 	init_choix(&p);
