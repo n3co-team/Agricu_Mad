@@ -58,7 +58,7 @@ void infprod(prod p)
 	
 	printf("\n========================================================\n");
 	printf("Mombamomban'ny %s :\n\n",p.nom);
-	printf("%s dia %s favoly amin'ny tany ",p.nom,c_type_prod(p.type));
+	printf("%s dia %s fambolena amin'ny tany ",p.nom,c_type_prod(p.type));
 	for (i = 0; i < 11; i++) {
 		ref=p.sol[i];
 		if(i < 0 || i > 11 || ref == 0) {
