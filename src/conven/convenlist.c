@@ -48,8 +48,8 @@ int choix_car(int ch_min, int ch_max)
 }
 //manampy
 void lcman(prod *p){
-       char fan;
-	printf("Inona no voly ampidirinao? Alefaso ny fanampiny: ",fan);
+//       char fan;
+	printf("Inona no voly ampidirinao? Alefaso ny fanampiny: ");
 }
 
 void lcmois(prod *p)

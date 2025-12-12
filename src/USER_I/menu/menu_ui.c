@@ -223,7 +223,8 @@ void me_sty (prod* p)
 	printf("\t\033[1m2) Toe-tany\033[0m\n");
 	printf("\t\033[1m3) Toetr'andro\033[0m\n");
 	printf("\t\033[1m4) Volana\033[0m\n");
-	printf("\t\033[1m5) Hanova safidy\033[0m\n");
+        printf("\t\033[1m5) manampy\033[0m\n");
+	printf("\t\033[1m6) Hanova safidy\033[0m\n");
 	initialiser_cultures();
 	choix = choix_car(1,5);
 
@@ -238,7 +239,9 @@ void me_sty (prod* p)
 			 break;
 		case 4: lcmois(p);
 			 break;
-		case 5: cchange(p);
+		case 5: lcman(p);
+			break;
+		case 6: cchange(p);
 			break;
 		default: fprintf(stderr,"Erreur");
 			exit (1); 
