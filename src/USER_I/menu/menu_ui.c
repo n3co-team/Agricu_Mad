@@ -203,8 +203,8 @@ void me_pri(prod* p)
 			break;
 		case 4: lcmois(p);	// affiche le menu du mois
 			 break;
-		case 6: lcman(p);  //manamp
-			break;
+//		case 6: lcman(p);  //manamp
+//			break;
 		default: //fprintf(stderr,"Erreur\n");
 			me_auto(p);
 			exit (1); break;
