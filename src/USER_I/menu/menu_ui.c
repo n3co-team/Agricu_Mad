@@ -6,6 +6,8 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+#include<unistd.h>  //pour les alarm
+#include<signal.h>  //pour les signal
 #include "voamaina.h"
 #ifndef MENU_UI_H
 #include"menu_ui.h"
@@ -18,6 +20,52 @@
 #ifndef NAC_H
 #include"nac.h"
 #endif
+
+
+// Fiasa hitantana ny SIGALRM (tapitra ny fotoana)
+void alarm_handler(int sig) {
+    if (sig == SIGALRM) {
+        printf("\n\n\033[31m⛔ Tsy voavaly tao anatin'ny fotoana voafetra (10 segondra)!\033[0m\n");
+        printf("\033[31mMijanona ny programme.\033[0m\n");
+        exit(0); // Mijanona ny programme
+    }
+}
+
+// Fiasa manao ny fanontaniana sy mametra fetr'ora
+void start_quiz() {
+    char valiny;
+    int fetra_ora = 10; // Fetra: 10 segondra
+
+    // Apetraka ny fiasa hitantana ny SIGALRM
+    signal(SIGALRM, alarm_handler);
+
+    printf("\n**************************************************************************\n");
+    printf("\033[33m❓ FANONTANIANA MAIKA:\033[0m Alohan'ny hidirana, vonona ve ianao hanohy? (y/n)\n");
+    printf("👉 Misy \033[31m%d segondra\033[0m ianao hamaliana. (Valiny: y na n)\n==> ", fetra_ora);
+
+    // Manomboka ny fetr'ora
+    alarm(fetra_ora); 
+
+    // Miandry ny valin'ny mpampiasa
+    if (scanf(" %c", &valiny) != 1) {
+        // Raha misy hadisoana na TSY voavaly (signal no mi-trigger)
+        valiny = 'n'; 
+    }
+
+    // Atsahatra ny alarm raha mbola tsy tapitra ny fotoana
+    alarm(0); 
+
+    printf("\n**************************************************************************\n");
+
+    // Fanamarinana ny valiny
+    if (valiny == 'y' || valiny == 'Y') {
+        printf("\033[32m✅ Tsara! Manohy miditra...\033[0m\n");
+    } else {
+        printf("\033[31m❌ Tsy vonona. Mijanona ny programme.\033[0m\n");
+        exit(0); // Mijanona
+    }
+}
+
 
 /** @fn nettoyer le terminal */
 void nett() {
