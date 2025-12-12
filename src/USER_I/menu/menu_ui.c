@@ -375,7 +375,7 @@ void afchoix(prod *p) {
 	char* TYPE=c_type_prod(p->type);
 	char* SOL=c_sol(p->sol[0]);
 	printf("\n.__________________________");
-	printf("\n\033[36m | Safisy efa azo : \033[0m\n");
+	printf("\n\033[36m | Safidy efa azo : \033[0m\n");
 	
 	if(p->type != 0)
 		printf("\033[36m | KARAZANY:%s \033[0m\n",TYPE);

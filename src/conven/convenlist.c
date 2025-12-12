@@ -89,11 +89,11 @@ void lctype(prod *p)
 	return;
     }
 
-   if(p->type == 3){
+/*   if(p->type == 3){
 	initialiser_cultures();
 	return;
     }
-
+*/
     if(p->type == 6)
     	p->type = 0;
    p->type=p->type+1;
