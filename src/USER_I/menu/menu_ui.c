@@ -186,10 +186,11 @@ void me_pri(prod* p)
 	printf("\t\033[36m 3)Toetr'andro\033[0m\n");
 	printf("\t\033[36m 4)Volana\033[0m\n");
 	printf("\t\033[36m 5)Mombamomba\033[0m\n ");
+	printf("\t\033[36m 6)Manampy voly\033[0m");
 	printf("\n----------------------------------\n");
 	initialiser_cultures();
 	
-	choix = choix_car(1,5);
+	choix = choix_car(1,6);
 
 	switch (choix) {
 		case 0: prod_apropos(); 
@@ -202,6 +203,8 @@ void me_pri(prod* p)
 			break;
 		case 4: lcmois(p);	// affiche le menu du mois
 			 break;
+		case 6: lcman(p);  //manamp
+			break;
 		default: //fprintf(stderr,"Erreur\n");
 			me_auto(p);
 			exit (1); break;

@@ -180,6 +180,7 @@ void initialiser_cultures()
     memcpy(cultures[9].regions_compatibles, regions_ananas,
 	   sizeof(regions_ananas));
 
+    //manampy voly
     nombre_cultures = 10;
 }
 
