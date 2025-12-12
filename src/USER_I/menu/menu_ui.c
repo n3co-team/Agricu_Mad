@@ -54,8 +54,8 @@ void start_quiz() {
     }
     
     printf("\n**************************************************************************\n");
-    printf("\033[33m❓ FANONTANIANA MAIKA:\033[0m Alohan'ny hidirana, vonona ve ianao hanohy? (y/n)\n");
-    printf("👉 Misy \033[31m%d segondra\033[0m ianao hamaliana. (Valiny: y na n)\n==> ", fetra_ora);
+    printf("\033[33m❓ FANONTANIANA MAIKA:\033[0m Alohan'ny hidiranao, vonona ve ianao. Tena mila an'ilay fampitahana vaovao mikasika ny fambolena tokoa ve ianao? (y(eny)/n(tsy))\n");
+    printf("👉 Misy \033[31m%d segondra\033[0m ianao hamaliana. (Valiny: y(eny) na n(tsy))\n==> ", fetra_ora);
 
     // Manomboka ny fetr'ora
     alarm(fetra_ora); 
@@ -74,7 +74,7 @@ void start_quiz() {
     if (valiny == 'y' || valiny == 'Y') {
         printf("\033[32m✅ Tsara! Manohy miditra...\033[0m\n");
     } else {
-        printf("\033[31m❌ Tsy vonona. Mijanona ny programme.\033[0m\n");
+        printf("\033[31m❌ Mbola tsy  vonona ianao. Mijanona ny programme.\033[0m\n");
         exit(0); // Mijanona
     }
 }
