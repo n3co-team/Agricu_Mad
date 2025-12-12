@@ -25,7 +25,7 @@
 #include<stdlib.h>
 #include <unistd.h> // <- Tsy maintsy ampidirina ho an'ny fiasa alarm()
 #include <signal.h> // <- Tsy maintsy ampidirina ho an'ny signal handling (sigaction)
-#include "voamaina.h"
+//#include "voamaina.h"
 // ... (include hafa)
 
 // Fiasa hitantana ny SIGALRM (tapitra ny fotoana)
