@@ -168,7 +168,7 @@ void init_choix(prod** p)
 */
 void me_pri(prod* p)
 {
-	static init quiz_done = 0;
+	static int quiz_done = 0;
 	if (!quiz_done){
 	  start_quiz();
 	  if(p == NULL){
