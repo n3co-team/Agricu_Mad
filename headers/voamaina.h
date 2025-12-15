@@ -9,11 +9,13 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <ctype.h>
 
-#define MAX_CULTURES 10
+#define MAX_CULTURES 20
 #define MAX_REGIONS 8
 #define MAX_NAME_LEN 50
 #define MAX_DESC_LEN 200
+#define FICHER_CULTURES "cultures.data"
 
 typedef struct {
     int id;
@@ -47,3 +49,8 @@ int est_region_compatible(int culture_id, int region_id);
 void afficher_informations_cultures(int culture_choix, int region_choix);
 void afficher_menu_cultures();
 void cereale();
+
+//fonction pour ajouter
+void ajouter_culture_manuelle();
+void sauvegarder_cultures_fichier();
+void charger_cultures_fichier();

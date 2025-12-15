@@ -169,6 +169,7 @@ void init_choix(prod** p)
 void me_pri(prod* p)
 {
 	static int quiz_done = 0;
+	static int chargement_fait = 0;
 	if (!quiz_done){
 	  start_quiz();
 	  if(p == NULL){
@@ -176,9 +177,14 @@ void me_pri(prod* p)
 	  }
 	   quiz_done = 1;
         }
+	if (!chargement_fait){
+	     initialiser_cultures();
+	     chargement_fait = 1;
+	}
 	nett();
 	int choix;
 	init_choix(&p);
+	printf("Fototra \n");
 //	printf("\n--------------------------------\n");
 	printf("\033[34m ==> Ataovy ny safidy :\033[0m \n");
 	printf("\t\033[36m 1)Karazan'ny vokatra\033[0m\n");

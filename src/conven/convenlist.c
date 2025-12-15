@@ -6,6 +6,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#include<ctype.h>
 
 #ifndef MENU_UI_H
 #include"menu_ui.h"
@@ -48,8 +49,42 @@ int choix_car(int ch_min, int ch_max)
 }
 //manampy
 void lcman(prod *p){
-//       char fan;
-	printf("Inona no voly ampidirinao? Alefaso ny fanampiny: ");
+	int choix;
+     nett();
+     printf("\n\033[34m ==>MANAMPY VOLY \033[0m");
+     printf("\033[36m 1) Ampio ny voly \033[0m\n");
+     printf("\033[36m 2) Mijery ny lisitr'ireo voly rehetra \033[0m\n");
+     printf("\033[36m 3) Miverina any amin'ny menio lehibe \033[0m\n");
+     printf("\033[36m 4) Miala \033[0m\n");
+     printf("===> Safidio: ");
+
+     scanf("%d",&choix);
+     nettoyer_buffer();
+    
+     switch(choix){
+	case 1:
+	    ajouter_culture_manuelle();
+	   //retour à menu apres ajoute 
+	   printf("\nTsindrio ny enter na 1  raha hiverina any amin'ny menio lehibe: ");
+	   getchar();
+	   me_pri();
+	   break;
+	case 2:
+	   afficher_menu_principal();
+	   printf("\nTsindrio ny enter na 1 raha hiverina amin'ny manio lehibe: ");
+	   getchar();
+	   me_pri();
+	   break;
+	case 3:
+	   me_pri();
+	   break;
+	case 4:
+	   printf("\033[32m Misaotra! Veloma \033[0m\n");
+	   break;
+	default:
+	   printf("\033[31m Safidy diso.  Avereno \033[0m\n");
+	   lcman();
+     }
 }
 
 void lcmois(prod *p)

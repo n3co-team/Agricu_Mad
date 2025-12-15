@@ -57,6 +57,207 @@ void initialiser_regions()
 
     nombre_regions = 8;
 }
+/**
+   * @fn sauvegarder cultutes fichiers
+   * @brief sauvegarder les cultures dans fichiers binaires
+*/
+void sauvegarder_cultures_fichier(){
+     FILE *fichier = fopen(FICHIER_CULTURES,"wb");
+     if (fichier == NULL){
+	printf("\033[33m Tsy afaka manokatra ny fichier '%s'.\033[0m\n",FICHIER_CULTURES);
+	return;
+     }
+  //ecrire une nombre de cilture
+    fwrite(&nombre_cultures, sizeof(int), 1, fichier);
+  //ecrire chaque cultures
+    for (int i = 0, i < nombre_cultures, i++)
+    {
+	fwrite(&culture[1], sizeof(Culture), 1, fichier);
+    }
+    fclose(fichier);
+    printf("\033[32m Voatahiry ny angona ao amin'ny '%s' \033[0m\n", FICHIER_CULTURES);
+}
+/**
+   * @fn charger_cultures_fichier
+   * @brief charge les cultures depuis  un fichier binaire
+*/
+void charger_cultutes_fichier(){
+   FILE *fichier = fopen(FICHIER_CULTURES, "rb");
+   if (fichier == NULL){
+	printf("\033[33m Tsy misy fichier '%s' teo aloha. \033[0m\n");
+	return;
+   }
+   //lire le nombre de fichier 
+   fread(&nombre_cultures, sizeof(int), 1, fichier);
+   //verifie si le nombre est validé
+   if(nombre_cultures < 0 || nombre_cultures > MAX_CULTURES){
+      printf("\033[33m Angona tsy mety ao amin'ny fichier.\033[0m \n");
+      fclose(fichier);
+      nombre_cultures = 0;
+      return;
+   }
+//lire chaque culture
+  for (int i = 0; i < nombre_cultures; i++){
+     fread(&cultures[i], sizeof(Culture), 1, fichier);
+  }
+  fclose(fichier);
+  printf("\033[32m Nalaina avy amin'ny '%s' ny angona (%d voly ) \033[0m\n", FICHIER_CULTURES, nombre_cultures);
+
+}
+////Azo alana 
+
+/**
+ * @fn ajouter_culture_manuelle
+ * @brief Permet à l'utilisateur d'ajouter une nouvelle culture
+ */
+void ajouter_culture_manuelle() {
+    if (nombre_cultures >= MAX_CULTURES) {
+        printf("\033[31m❌ Tsy afaka manampy voly vaovao intsony, feno ny lisitra (max: %d).\033[0m\n", MAX_CULTURES);
+        return;
+    }
+    
+    Culture nouvelle;
+    char buffer[100];
+    int i, region_id;
+    
+    printf("\n\033[34m═══════════════════════════════════════════════════\033[0m\n");
+    printf("\033[34m              FAMPIANARANA VOLY VAOVAO              \033[0m\n");
+    printf("\033[34m═══════════════════════════════════════════════════\033[0m\n");
+    
+    // ID automatique
+    nouvelle.id = nombre_cultures + 1;
+    
+    // Nom de la culture
+    printf("\n\033[36m[1/6] Anaran'ilay voly vaovao: \033[0m");
+    fgets(buffer, sizeof(buffer), stdin);
+    buffer[strcspn(buffer, "\n")] = '\0';
+    
+    // Vérifier si le nom n'est pas vide
+    if (strlen(buffer) == 0) {
+        printf("\033[31m❌ Tsy maintsy manoro anarana ilay voly!\033[0m\n");
+        return;
+    }
+    
+    // Formater le nom avec des codes couleur
+    sprintf(nouvelle.nom, "\033[35m \t%s \033[0m", buffer);
+    
+    // Saison de plantation
+    printf("\033[36m[2/6] Fotoana fambolena (ohatra: 'Oktobra - Desambra'): \033[0m");
+    fgets(nouvelle.saison_plantation, MAX_NAME_LEN, stdin);
+    nouvelle.saison_plantation[strcspn(nouvelle.saison_plantation, "\n")] = '\0';
+    
+    // Durée de croissance
+    printf("\033[36m[3/6] Faharetan'ny voly (ohatra: '5-6 volana'): \033[0m");
+    fgets(nouvelle.duree_croissance, MAX_NAME_LEN, stdin);
+    nouvelle.duree_croissance[strcspn(nouvelle.duree_croissance, "\n")] = '\0';
+    
+    // Informations techniques
+    printf("\033[36m[4/6] Mombamomba sy teknika fambolena: \033[0m");
+    printf("\n\033[33m(Azo atao manoratra andalana maro, tapaka amin'ny '#')\033[0m\n");
+    
+    i = 0;
+    char ligne[100];
+    nouvelle.informations[0] = '\0';
+    
+    while (i < 5) {  // Maximum 5 lignes
+        printf("Ligne %d: ", i+1);
+        fgets(ligne, sizeof(ligne), stdin);
+        ligne[strcspn(ligne, "\n")] = '\0';
+        
+        if (strcmp(ligne, "#") == 0) break;
+        
+        if (i > 0) strcat(nouvelle.informations, "\n");
+        strcat(nouvelle.informations, "-");
+        strcat(nouvelle.informations, ligne);
+        i++;
+    }
+    
+    // Code (généré automatiquement)
+    if (strlen(buffer) >= 2) {
+        sprintf(nouvelle.code, "%c%c%02d", 
+                toupper(buffer[0]), 
+                toupper(buffer[1]), 
+                nouvelle.id);
+    } else {
+        sprintf(nouvelle.code, "VL%02d", nouvelle.id);
+    }
+    
+    // Régions compatibles
+    printf("\n\033[36m[5/6] Faritra mety aminy:\033[0m\n");
+    printf("\033[33m(Safidio isa 1-8, tapaka amin'ny 0)\033[0m\n");
+    
+    printf("1. Alaotra Mangoro    5. Menabe\n");
+    printf("2. Analamanga         6. Boeny\n");
+    printf("3. Vakinankaratra     7. Anosy\n");
+    printf("4. Atsinanana         8. Diana\n");
+    
+    i = 0;
+    while (i < 10) {
+        printf("Faritra %d: ", i + 1);
+        fgets(buffer, sizeof(buffer), stdin);
+        region_id = atoi(buffer);
+        
+        if (region_id == 0) break;
+        
+        if (region_id >= 1 && region_id <= 8) {
+            // Vérifier si la région n'est pas déjà sélectionnée
+            int deja_selectionnee = 0;
+            for (int j = 0; j < i; j++) {
+                if (nouvelle.regions_compatibles[j] == region_id) {
+                    deja_selectionnee = 1;
+                    break;
+                }
+            }
+            
+            if (!deja_selectionnee) {
+                nouvelle.regions_compatibles[i] = region_id;
+                i++;
+            } else {
+                printf("\033[33m⚠️ Efa voafidy io faritra io. Safidio hafa.\033[0m\n");
+            }
+        } else {
+            printf("\033[31m❌ Faritra tsy mety. Isaina 1 hatramin'ny 8.\033[0m\n");
+        }
+        
+        if (i >= 10) {
+            printf("\033[33m⚠️ Tapitra ny isa faritra azo atao (max: 10).\033[0m\n");
+            break;
+        }
+    }
+    nouvelle.nb_regions = i;
+    
+    // Demander confirmation
+    printf("\n\033[36m[6/6] Fanamarinana:\033[0m\n");
+    printf("Anarana: %s\n", buffer);
+    printf("Fotoana fambolena: %s\n", nouvelle.saison_plantation);
+    printf("Faritra mety: ");
+    for (int j = 0; j < nouvelle.nb_regions; j++) {
+        printf("%d ", nouvelle.regions_compatibles[j]);
+    }
+    printf("\n\n\033[36mHanamarina ve ianao? (y=eny/n=tsy): \033[0m");
+    
+    char confirmation;
+    scanf(" %c", &confirmation);
+    getchar(); // Pour consommer le \n
+    
+    if (confirmation == 'y' || confirmation == 'Y') {
+        // Ajouter à la liste
+        cultures[nombre_cultures] = nouvelle;
+        nombre_cultures++;
+        
+        printf("\n\033[32m✅ Voamarina ilay voly '%s'! Nampiana tamin'ny lisitra.\033[0m\n", buffer);
+        
+        // Sauvegarder dans le fichier
+        sauvegarder_cultures_fichier();
+    } else {
+        printf("\033[33m⚠️ Nesorina ilay voly. Tsy nampiana.\033[0m\n");
+    }
+}
+
+
+
+
+
 
 void initialiser_cultures()
 {
