@@ -15,7 +15,7 @@
 #define MAX_REGIONS 8
 #define MAX_NAME_LEN 50
 #define MAX_DESC_LEN 200
-#define FICHER_CULTURES "cultures.data"
+#define FICHIER_CULTURES "cultures.data"
 
 typedef struct {
     int id;
