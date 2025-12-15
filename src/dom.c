@@ -12,6 +12,7 @@ int nombre_cultures = 0;
 int nombre_regions = 0;
 int choix_cultures;
 // apina
+#define FICHER_CULTURES "cultures.data";
 extern int choix_cultures;
 void initialiser_regions()
 {

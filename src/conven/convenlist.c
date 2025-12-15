@@ -62,9 +62,14 @@ void lcman(prod *p){
      printf("\033[36m 4) Miala \033[0m\n");
      printf("===> Safidio: ");
 
-     scanf("%d",&choix);
+//     scanf("%d",&choix);
+     if(scanf("%d", &choix) != 1){
+      printf("\033[31m Safidy diso!\033[0m\n");
+      nettoyer_buffer();
+      lcman(p);
+      return;
+     }
      nettoyer_buffer();
-    
      switch(choix){
 	case 1:
 	    ajouter_culture_manuelle();
