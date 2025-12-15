@@ -72,7 +72,7 @@ void sauvegarder_cultures_fichier(){
   //ecrire une nombre de cilture
     fwrite(&nombre_cultures, sizeof(int), 1, fichier);
   //ecrire chaque cultures
-    for ( i = 0, i < nombre_cultures, i++)
+    for ( i = 0; i < nombre_cultures; i++)
     {
 	fwrite(&culture[1], sizeof(Culture), 1, fichier);
     }
