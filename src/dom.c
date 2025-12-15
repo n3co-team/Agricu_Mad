@@ -100,7 +100,7 @@ void charger_cultutes_fichier(){
    }
 //lire chaque culture
   for (int i = 0; i < nombre_cultures; i++){
-     fread(&cultures[i], sizeof(Culture), 1, fichier);
+     fread(&cultures[i], sizeof(Cultures), 1, fichier);
   }
   fclose(fichier);
   printf("\033[32m Nalaina avy amin'ny '%s' ny angona (%d voly ) \033[0m\n", FICHIER_CULTURES, nombre_cultures);
