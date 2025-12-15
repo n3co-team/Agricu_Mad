@@ -74,7 +74,7 @@ void sauvegarder_cultures_fichier(){
   //ecrire chaque cultures
     for ( i = 0; i < nombre_cultures; i++)
     {
-	fwrite(&culture[1], sizeof(Culture), 1, fichier);
+	fwrite(&culture[1], sizeof(Cultures), 1, fichier);
     }
     fclose(fichier);
     printf("\033[32m Voatahiry ny angona ao amin'ny '%s' \033[0m\n", FICHIER_CULTURES);
