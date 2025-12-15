@@ -76,16 +76,16 @@ void lcman(prod *p){
 	   //retour à menu apres ajoute 
 	   printf("\nTsindrio ny enter na 1  raha hiverina any amin'ny menio lehibe: ");
 	   getchar();
-	   me_pri();
+	   me_pri(p);
 	   break;
 	case 2:
 	   afficher_menu_principal();
 	   printf("\nTsindrio ny enter na 1 raha hiverina amin'ny manio lehibe: ");
 	   getchar();
-	   me_pri();
+	   me_pri(p);
 	   break;
 	case 3:
-	   me_pri();
+	   me_pri(p);
 	   break;
 	case 4:
 	   printf("\033[32m Misaotra! Veloma \033[0m\n");
