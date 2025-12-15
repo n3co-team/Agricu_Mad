@@ -63,6 +63,7 @@ void initialiser_regions()
    * @brief sauvegarder les cultures dans fichiers binaires
 */
 void sauvegarder_cultures_fichier(){
+     int i;
      FILE *fichier = fopen(FICHIER_CULTURES,"wb");
      if (fichier == NULL){
 	printf("\033[33m Tsy afaka manokatra ny fichier '%s'.\033[0m\n",FICHIER_CULTURES);
@@ -71,7 +72,7 @@ void sauvegarder_cultures_fichier(){
   //ecrire une nombre de cilture
     fwrite(&nombre_cultures, sizeof(int), 1, fichier);
   //ecrire chaque cultures
-    for (int i = 0, i < nombre_cultures, i++)
+    for ( i = 0, i < nombre_cultures, i++)
     {
 	fwrite(&culture[1], sizeof(Culture), 1, fichier);
     }
