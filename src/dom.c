@@ -240,7 +240,7 @@ void ajouter_culture_manuelle() {
     
     char confirmation;
     scanf(" %c", &confirmation);
-    getchar(); // Pour consommer le \n
+    while(getchar() != '\n'); // Pour consommer le \n
     
     if (confirmation == 'y' || confirmation == 'Y') {
         // Ajouter à la liste
