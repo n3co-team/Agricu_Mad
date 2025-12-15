@@ -74,7 +74,7 @@ void sauvegarder_cultures_fichier(){
   //ecrire chaque cultures
     for ( i = 0; i < nombre_cultures; i++)
     {
-	fwrite(&culture[1], sizeof(Cultures), 1, fichier);
+	fwrite(&cultures[1], sizeof(Culture), 1, fichier);
     }
     fclose(fichier);
     printf("\033[32m Voatahiry ny angona ao amin'ny '%s' \033[0m\n", FICHIER_CULTURES);
@@ -100,7 +100,7 @@ void charger_cultutes_fichier(){
    }
 //lire chaque culture
   for (int i = 0; i < nombre_cultures; i++){
-     fread(&cultures[i], sizeof(Cultures), 1, fichier);
+     fread(&cultures[i], sizeof(Culture), 1, fichier);
   }
   fclose(fichier);
   printf("\033[32m Nalaina avy amin'ny '%s' ny angona (%d voly ) \033[0m\n", FICHIER_CULTURES, nombre_cultures);
