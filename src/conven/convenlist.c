@@ -75,13 +75,15 @@ void lcman(prod *p){
 	    ajouter_culture_manuelle();
 	   //retour à menu apres ajoute 
 	   printf("\nTsindrio ny enter na 1  raha hiverina any amin'ny menio lehibe: ");
-	   getchar();
+	   //getchar();
+	   nettoyer_buffer();
 	   me_pri(p);
 	   break;
 	case 2:
 	   afficher_menu_principal();
 	   printf("\nTsindrio ny enter na 1 raha hiverina amin'ny manio lehibe: ");
-	   getchar();
+	   //getchar();
+	   nettoyer_buffer();
 	   me_pri(p);
 	   break;
 	case 3:
@@ -92,7 +94,7 @@ void lcman(prod *p){
 	   break;
 	default:
 	   printf("\033[31m Safidy diso.  Avereno \033[0m\n");
-	   lcman();
+	   lcman(p);
      }
 }
 
