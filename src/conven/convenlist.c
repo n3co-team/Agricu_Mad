@@ -19,6 +19,10 @@
 #ifndef VOAMAINA_H
 #include"voamaina.h"
 #endif
+void nettoyer_buffer(){
+   int c;
+   while((c = getchar()) != '\n' && c != EOF);
+}
 
 int choix_car(int ch_min, int ch_max)
 {
