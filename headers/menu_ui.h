@@ -157,3 +157,4 @@ void afchoix(prod *p);
 void nett();
 void info_cchange();
 int me_auto(prod *choix); 
+void lcman(prod *p);

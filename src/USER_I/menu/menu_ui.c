@@ -210,7 +210,9 @@ void me_pri(prod* p)
 		case 4: lcmois(p);	// affiche le menu du mois
 			 break;
 		case 6: //manamp
-			printf("Ampidiro ny fanampin'ny voly tinao ampiana: ");
+			//printf("Ampidiro ny fanampin'ny voly tinao ampiana: ");
+			lcman(p);
+			break;
 		default: //fprintf(stderr,"Erreur\n");
 			me_auto(p);
 			exit (1); break;

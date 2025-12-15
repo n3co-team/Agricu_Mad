@@ -86,7 +86,7 @@ void sauvegarder_cultures_fichier(){
 void charger_cultutes_fichier(){
    FILE *fichier = fopen(FICHIER_CULTURES, "rb");
    if (fichier == NULL){
-	printf("\033[33m Tsy misy fichier '%s' teo aloha. \033[0m\n");
+	printf("\033[33m Tsy misy fichier teo aloha. \033[0m\n");
 	return;
    }
    //lire le nombre de fichier 
@@ -113,6 +113,8 @@ void charger_cultutes_fichier(){
  * @brief Permet à l'utilisateur d'ajouter une nouvelle culture
  */
 void ajouter_culture_manuelle() {
+	int ch;
+    while ((ch = getchar()) != '\n' && ch != EOF);
     if (nombre_cultures >= MAX_CULTURES) {
         printf("\033[31m❌ Tsy afaka manampy voly vaovao intsony, feno ny lisitra (max: %d).\033[0m\n", MAX_CULTURES);
         return;
