@@ -138,7 +138,7 @@ void ajouter_culture_manuelle() {
     
     // Vérifier si le nom n'est pas vide
     if (strlen(buffer) == 0) {
-        printf("\033[31m❌ Tsy maintsy manoro anarana ilay voly!\033[0m\n");
+        printf("\033[31m❌ Tsy maintsy manoratra anarana ilay voly!\033[0m\n");
         return;
     }
     
@@ -146,18 +146,18 @@ void ajouter_culture_manuelle() {
     sprintf(nouvelle.nom, "\033[35m \t%s \033[0m", buffer);
     
     // Saison de plantation
-    printf("\033[36m[2/6] Fotoana fambolena (ohatra: 'Oktobra - Desambra'): \033[0m");
+    printf("\033[36m[2/6] Volana inona no fambolena azy: \033[0m");
     fgets(nouvelle.saison_plantation, MAX_NAME_LEN, stdin);
     nouvelle.saison_plantation[strcspn(nouvelle.saison_plantation, "\n")] = '\0';
     
     // Durée de croissance
-    printf("\033[36m[3/6] Faharetan'ny voly (ohatra: '5-6 volana'): \033[0m");
+    printf("\033[36m[3/6] Firy volana no faharetany: \033[0m");
     fgets(nouvelle.duree_croissance, MAX_NAME_LEN, stdin);
     nouvelle.duree_croissance[strcspn(nouvelle.duree_croissance, "\n")] = '\0';
     
     // Informations techniques
     printf("\033[36m[4/6] Mombamomba sy teknika fambolena: \033[0m");
-    printf("\n\033[33m(Azo atao manoratra andalana maro, tapaka amin'ny '#')\033[0m\n");
+    printf("\n\033[33m(Azo atao ny manoratra andalana maromaro\033[0m\n");
     
     i = 0;
     char ligne[100];
